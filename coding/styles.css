@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.landing-page-background {
+    background: url(/Aantarya2k24/assets/home-background-reduced.png);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}

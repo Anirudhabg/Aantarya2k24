@@ -1,7 +1,16 @@
-*{
+@font-face {
+    font-family: Miso;
+    src: url(/Aantarya2k24/assets/miso-regular.otf);
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.landingpage {
+    position: relative;
 }
 
 .landing-page-background {
@@ -9,4 +18,108 @@
     background-size: cover;
     height: 100vh;
     width: 100vw;
+}
+
+.row {
+    width: 100vw;
+    position: absolute;
+    top: 10vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.custom-img {
+    width: 80%;
+}
+
+.navigation-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.navigation-list a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+.nav-text {
+    text-align: center;
+    font-family: Miso;
+    font-size: 2.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 12.32px;
+    padding: 1.7vh;
+    transition: background-image 0.3s, color 0.3s, opacity 0.3s;
+    opacity: 0.9; 
+}
+
+.nav-text:hover {
+    background-image: url(/Aantarya2k24/assets/Streak\ Paint.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    opacity: 1; 
+}
+
+.nav-text:hover a{
+    color: #0A579B;
+}
+
+
+/* Larger than 1200px */
+@media (min-width: 1200px) {
+    .row {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "nav logo"; /* Default order for larger screens */
+    }
+}
+
+/* Between 768px and 1199px */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .row {
+        
+    }
+}
+
+/* Smaller than 767px */
+@media (max-width: 767px) {
+    .row {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: start;
+        top: 0;
+    }
+
+    .custom-img {
+        width: 100%; 
+    }
+
+    .navigation-list a {
+        padding: 0.2vh; 
+    }
+
+    .nav-text {
+        font-size: 6vw; 
+        opacity: 1;
+        transition: none;
+    }
+    .nav-text:hover {
+        background-image: none;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        opacity: 1; 
+    }
+    .nav-text:hover a{
+        color: white;
+    }
 }

@@ -1,0 +1,42 @@
+.card {
+position: relative;
+background: #fff;
+border-radius: 15px;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+width: 250px;
+height: 250px;
+box-sizing: border-box;
+position: relative;
+cursor: pointer;
+}
+.card img {
+z-index: 2;
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 15px;
+}
+
+
+
+
+<div class="card">
+<img class="card_bg" src="bg.png" alt="" /> <img src="lemon.jpg" alt="" /> </div>
+
+
+
+
+.card:hover .card_bg { scale: 1.7;
+}
+.card:hover {
+scale: 1.05; transition: all 0.5s ease;
+}
+.card_bg { position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+transition: all 0.5s ease;
+}

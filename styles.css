@@ -12,6 +12,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+
 }
 
 .landingpage {
@@ -261,16 +263,45 @@ button:hover .star-6 {
     font-weight: bolder;
     color: black;
     display: none;
+    transition: transform 0.5s ease-in-out, border 0.5s ease-in-out;
 }
 
 .card.active {
     display: block;
+
 }
 
+
+.card:not(.active) {
+    display: none;
+}
+
+.events-headings h2 {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.events-headings h2.show {
+    opacity: 1;
+}
 
 .arrow-mark-card-left,
 .arrow-mark-card-right {
     cursor: pointer;
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+}
+
+.arrow-mark-card-left:hover,
+.arrow-mark-card-right:hover {
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
+    transform: scale(1.3);
+}
+
+.arrow-mark-card-left:hover,
+.arrow-mark-card-right:hover {
+    filter: brightness(1.2);
+    /* Add a glow effect on hover */
 }
 
 .icon {
@@ -284,6 +315,7 @@ button:hover .star-6 {
 
 .card:active {
     transform: scale(0.95) rotateZ(1.7deg);
+
 }
 
 
@@ -339,6 +371,8 @@ button:hover .star-6 {
     flex-direction: row;
     margin-top: 10vh;
 }
+
+
 
 .left-button {
     width: 5vw;
@@ -438,6 +472,87 @@ button:hover .star-6 {
     }
 }
 
+@keyframes arrowGlow {
+    0% {
+        filter: drop-shadow(0 0 8px #fed201);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 12px #fed201);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 8px #fed201);
+    }
+}
+
+.arrow-mark-card-left:hover,
+.arrow-mark-card-right:hover {
+    animation: arrowGlow 1s infinite;
+}
+
+
+
+.flex-box-card-pg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10vh;
+}
+
+.rules-card{
+    display: flex;
+    justify-content: center;
+    margin-top: 8vh;
+}
+
+.card-rules {
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+    margin: 0 5vw;
+}
+
+
+.card-rules:hover {
+    border: 6px solid #0a579b;
+    box-sizing: border-box;
+}
+
+.card-rules:active {
+    transform: scale(1.0) rotateZ(1.7deg);
+}
+
+.rule-text{
+    font-family: 'Graduate', serif;
+    line-height: 2.4rem;
+    letter-spacing: 1.5px;
+    padding: 2vh 0;
+}
+.list-rules-ul{
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 8vh 5vw;
+}
+
+
+
+
 
 /* Larger than 1200px */
 @media (min-width: 1200px) {
@@ -491,18 +606,18 @@ button:hover .star-6 {
 
     #events-child1 {
         font-size: 8vw;
-        
+
     }
 
     .text-event-with-bg {
         min-height: 13vh;
         min-width: 63vw;
     }
-    
+
     .text-event-with-bg h3 {
         font-size: 5vw;
         letter-spacing: 5px;
-    
+
     }
 
     .card {
@@ -512,20 +627,20 @@ button:hover .star-6 {
 
     .left-button {
         width: 15vw;
-        
+
     }
-    
+
     .right-button {
         width: 15vw;
-        
+
     }
-    
+
     .inside-card-h3 {
         font-size: 3.5vh;
     }
-    
+
     .button-card-inside {
         font-size: 2.2vh;
     }
-    
+
 }

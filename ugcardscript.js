@@ -19,3 +19,26 @@ function showPreviousCard() {
     const previousCardElement = document.getElementById(`card${currentCard}`);
     previousCardElement.classList.add('active');
 }
+
+
+let currentCards = 1;
+
+function showNextCard2() {
+    const currentCardElement = document.getElementById(`cards${currentCards}`);
+    currentCardElement.classList.remove('active');
+
+    currentCards = (currentCards % 11) + 1;
+
+    const nextCardElement = document.getElementById(`cards${currentCards}`);
+    nextCardElement.classList.add('active');
+}
+
+function showPreviousCard2() {
+    const currentCardElement = document.getElementById(`cards${currentCards}`);
+    currentCardElement.classList.remove('active');
+
+    currentCards = (currentCards - 2 + 11) % 11 + 1;
+
+    const previousCardElement = document.getElementById(`cards${currentCards}`);
+    previousCardElement.classList.add('active');
+}

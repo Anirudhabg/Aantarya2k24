@@ -19,17 +19,24 @@
 
 .landingpage {
     position: relative;
-}
-
-.landing-page-background {
     background: url('./assets/images/home-background-reduced.png');
     background-size: cover;
-    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
+/* .landing-page-background {
+    background: url('./assets/images/home-background-reduced.png');
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    
+} */
+
 .row {
-    position: absolute;
-    top: 10vh;
+    padding-top: 5vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -861,12 +868,16 @@ button:hover .star-6 {
     .row {
         display: flex;
         flex-direction: column-reverse;
-        justify-content: start;
-        top: 0;
+        justify-content: center;
+        padding-top: 0;
+    }
+    .col{
+        display: flex;
+        justify-content: center;
     }
 
     .custom-img {
-        width: 100%;
+        width: 80%;
     }
 
     .navigation-list a {

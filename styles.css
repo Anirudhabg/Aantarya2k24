@@ -16,6 +16,7 @@
 
 }
 
+
 .landingpage {
     position: relative;
 }
@@ -501,7 +502,7 @@ button:hover .star-6 {
     margin-top: 10vh;
 }
 
-.rules-card{
+.rules-card {
     display: flex;
     justify-content: center;
     margin-top: 8vh;
@@ -538,13 +539,14 @@ button:hover .star-6 {
     transform: scale(1.0) rotateZ(1.7deg);
 }
 
-.rule-text{
+.rule-text {
     font-family: 'Graduate', serif;
     line-height: 2.4rem;
     letter-spacing: 1.5px;
     padding: 2vh 0;
 }
-.list-rules-ul{
+
+.list-rules-ul {
     text-align: justify;
     text-justify: inter-word;
     padding: 8vh 5vw;
@@ -552,7 +554,291 @@ button:hover .star-6 {
 
 
 
+.schedule-card {
+    display: flex;
+    justify-content: center;
+    margin-top: 8vh;
+}
 
+.card-schedule1 {
+    box-sizing: border-box;
+    height: 90vh;
+    width: 90vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+    margin: 0 5vw;
+}
+
+
+.card-schedule1:hover {
+    border: 6px solid #0a579b;
+    box-sizing: border-box;
+}
+
+.card-schedule1:active {
+    transform: scale(1.0) rotateZ(1.7deg);
+}
+
+.card-schedule2 {
+    box-sizing: border-box;
+    height: 90vh;
+    width: 90vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+    margin: 0 5vw;
+}
+
+
+.card-schedule2:hover {
+    border: 6px solid #0a579b;
+    box-sizing: border-box;
+}
+
+.card-schedule2:active {
+    transform: scale(1.0) rotateZ(1.7deg);
+}
+
+
+.spacing-box {
+    margin-top: 7rem;
+}
+
+
+
+.aboutus-card {
+    display: flex;
+    justify-content: center;
+    margin-top: 8vh;
+}
+
+.card-aboutus {
+    box-sizing: border-box;
+    height: auto;
+    width: 90vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+    margin: 0 5vw;
+    padding: 5vh 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card-aboutus:hover {
+    border: 6px solid #0a579b;
+    box-sizing: border-box;
+}
+
+.card-aboutus:active {
+    transform: scale(1.0) rotateZ(1.7deg);
+}
+
+
+.rows-1-aboutus {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 15vw;
+}
+
+.heading-text {
+    margin: 8vh 0 2vh 0;
+}
+
+.rows-2-aboutus {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 15vw;
+}
+
+.rows-3-aboutus {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 15vw;
+}
+
+
+.cols-rows1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.committee-heading {
+    text-align: center;
+    font-family: Miso;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.44px;
+}
+
+.committee-text {
+    text-align: center;
+    font-family: Miso;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+
+.circular-image {
+    margin: 1.5vh 0;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circular-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.follow-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh 0;
+}
+
+
+.card-social {
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 4vw;
+    gap: 20px;
+
+}
+
+/* for all social containers*/
+.socialContainer {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+/* instagram*/
+.containerOne:hover {
+    background-color: #9b30df;
+    transition-duration: .3s;
+}
+
+/* twitter*/
+.containerTwo:hover {
+    background-color: #ff2020;
+    transition-duration: .3s;
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+}
+
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.rows-1-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 25vw;
+}
+
+.footer-image-bottom {
+    background: url('./assets/images/footer-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 35vh;
+}
+
+
+.linkedin-href {
+    text-decoration: none;
+    color: #000;
+}
+
+.linkedin-href:hover {
+    color: #fed201;
+    transition: all 0.1s ease-in-out;
+}
 
 /* Larger than 1200px */
 @media (min-width: 1200px) {
@@ -641,6 +927,35 @@ button:hover .star-6 {
 
     .button-card-inside {
         font-size: 2.2vh;
+    }
+
+    .schedule-card {
+        flex-direction: column;
+    }
+
+    .card-schedule2 {
+        margin-top: 2rem;
+    }
+
+    .rows-1-aboutus {
+        flex-direction: column;
+    }
+
+    .rows-2-aboutus {
+
+        flex-direction: column;
+    }
+
+    .rows-3-aboutus {
+        flex-direction: column;
+    }
+
+    .cols-rows1 {
+        padding: 5vh 0 0 0;
+    }
+
+    .rows-1-footer {
+        flex-direction: column;
     }
 
 }

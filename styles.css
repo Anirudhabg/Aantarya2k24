@@ -24,7 +24,8 @@
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
-}
+    padding-bottom: 45vh;
+    }
 
 /* .landing-page-background {
     background: url('./assets/images/home-background-reduced.png');

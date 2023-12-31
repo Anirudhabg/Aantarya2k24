@@ -298,6 +298,18 @@ button.ghost {
         box-shadow: none; 
     }
 
+    .main-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('./assets/images/mandala.png');
+        background-size: cover;
+        background-position: 0vh ;
+        background-repeat: no-repeat;
+    }
+    
+
     .form-container {
         padding: 20px; 
     }

@@ -277,13 +277,12 @@ button:hover .star-6 {
 
 .card.active {
     display: block;
-
 }
 
 
-.card:not(.active) {
+/* .card:not(.active) {
     display: none;
-}
+} */
 
 .events-headings h2 {
     opacity: 0;
@@ -307,12 +306,6 @@ button:hover .star-6 {
     transform: scale(1.3);
 }
 
-.arrow-mark-card-left:hover,
-.arrow-mark-card-right:hover {
-    filter: brightness(1.2);
-    /* Add a glow effect on hover */
-}
-
 .icon {
     vertical-align: middle;
 }
@@ -324,10 +317,7 @@ button:hover .star-6 {
 
 .card:active {
     transform: scale(0.95) rotateZ(1.7deg);
-
 }
-
-
 
 
 .events-headings {

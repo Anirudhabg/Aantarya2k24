@@ -35,7 +35,7 @@
     <link rel="preload" href="./assets/images/venuprofile.jpg" as="image">
     <link rel="preload" href="./assets/images/footer-image.png" as="image">
 
-    <script src="ugcardscript.js"></script>
+    <script src="./script.js" defer></script>
 
 </head>
 
@@ -152,393 +152,74 @@
 
 
     <section class="events-section" id="events-section-id">
-        <div class="events-headings">
-            <h3 id="events-child1">EVENTS</h3>
-            <div class="text-event-with-bg">
-                <h3>UG DEPARTMENT</h3>
-            </div>
-        </div>
-        <div class="flex-box-card-ug">
-            <div class="arrow-mark-card-left" onclick="showPreviousCard()">
-                <img class="left-button" src="./assets/images/arrow 1.png.svg" alt="Left Arrow">
-            </div>
-
-            <div class="card active" id="card1">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">MOOK SAMVAD</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
+        <div class="event-details-ug">
+            <div class="events-headings">
+                <h3 id="events-child1">EVENTS</h3>
+                <div class="text-event-with-bg">
+                    <h3>UG DEPARTMENT</h3>
                 </div>
             </div>
-
-            <div class="card" id="card2">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">LIPTH LEKHAN</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
+    
+            <div class="flex-box-card-ug">
+                <div class="arrow-mark-card-left" onclick="showPreviousCard()">
+                    <img class="left-button" src="./assets/images/arrow 1.png.svg" alt="Left Arrow">
+                </div>
+    
+                <div class="card active" id="ug-card">
+                    <div class="inside-card">
+                        <h3 class="inside-card-h3">MOOK SAMVAD</h3>
+    
+                        <div class="button-inside-card">
+                            <button class="button-card-inside">
+                                Read More
+                                <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+                                    <path clip-rule="evenodd"
+                                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                                        fill-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="card" id="card3">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Jaalika</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
+    
+                <div class="arrow-mark-card-right" onclick="showNextCard()">
+                    <img class="right-button" src="./assets/images/arrow 1.png.svg" alt="Right Arrow">
                 </div>
-            </div>
-
-            <div class="card" id="card4">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Pranshnothar</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" id="card5">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Vadah</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" id="card6">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Nrityam</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" id="card7">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Chayachitr</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" id="card8">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Khelan</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" id="card9">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Nidhisangrah</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" id="card10">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Pracharan</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="arrow-mark-card-right" onclick="showNextCard()">
-                <img class="right-button" src="./assets/images/arrow 1.png.svg" alt="Right Arrow">
             </div>
         </div>
 
-
-        <div class="events-headings">
-            <div class="text-event-with-bg">
-                <h3>PG DEPARTMENT</h3>
-            </div>
-        </div>
-
-        <div class="flex-box-card-pg">
-            <div class="arrow-mark-card-left" onclick="showPreviousCard2()">
-                <img class="left-button" src="./assets/images/arrow 1.png.svg" alt="Left Arrow">
-            </div>
-
-            <div class="card active" id="cards1">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">IT Pramukh</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
+        <div class="evet-details-pg">
+            <div class="events-headings">
+                <div class="text-event-with-bg">
+                    <h3>PG DEPARTMENT</h3>
                 </div>
             </div>
-
-            <div class="card" id="cards2">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">LIPTH LEKHAN</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
+    
+            <div class="flex-box-card-pg">
+                <div class="arrow-mark-card-left" onclick="showPreviousCard2()">
+                    <img class="left-button" src="./assets/images/arrow 1.png.svg" alt="Left Arrow">
+                </div>
+    
+                <div class="card active" id="pg-card">
+                    <div class="inside-card">
+                        <h3 class="inside-card-h3">IT Pramukh</h3>
+    
+                        <div class="button-inside-card">
+                            <button class="button-card-inside">
+                                Read More
+                                <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+                                    <path clip-rule="evenodd"
+                                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                                        fill-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="card" id="cards3">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Jaalika</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
+    
+                <div class="arrow-mark-card-right" onclick="showNextCard2()">
+                    <img class="right-button" src="./assets/images/arrow 1.png.svg" alt="Right Arrow">
                 </div>
-            </div>
-
-            <div class="card" id="cards4">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Pranshnothar</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" id="cards5">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Vadah</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" id="cards6">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Nrityam</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" id="cards7">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Chayachitr</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" id="cards8">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Khelan</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" id="cards9">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Nidhisangrah</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" id="cards10">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Pracharan</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" id="cards11">
-                <div class="inside-card">
-                    <h3 class="inside-card-h3">Chitr</h3>
-
-                    <div class="button-inside-card">
-                        <button class="button-card-inside">
-                            Read More
-                            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-                                <path clip-rule="evenodd"
-                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                    fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="arrow-mark-card-right" onclick="showNextCard2()">
-                <img class="right-button" src="./assets/images/arrow 1.png.svg" alt="Right Arrow">
             </div>
         </div>
 
@@ -589,7 +270,6 @@
 
 
     </section>
-
 
 
     <section class="schedule-section" id="schedule-section-id">

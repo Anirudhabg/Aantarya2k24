@@ -8,6 +8,17 @@
     src: url('./assets/fonts/SAMAN___.TTF');
 }
 
+@font-face {
+    font-family: IBM;
+    src: url('./assets/fonts/IBMPlexMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: Graduate;
+    src: url('./assets/fonts/Graduate-Regular.ttf');
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -19,22 +30,13 @@
 
 .landingpage {
     position: relative;
-    background: url('./assets/images/home-background-reduced.png');
+    background: url('./assets/images/home-background-reduced-new.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
     padding-bottom: 45vh;
     }
-
-/* .landing-page-background {
-    background: url('./assets/images/home-background-reduced.png');
-    background-size: auto 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    
-} */
 
 .row {
     padding-top: 5vh;
@@ -105,7 +107,7 @@ button {
     transition: all .3s ease-in-out;
     cursor: pointer;
     text-align: center;
-    font-family: 'IBM Plex Mono';
+    font-family: 'IBM';
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -279,10 +281,6 @@ button:hover .star-6 {
     display: block;
 }
 
-
-/* .card:not(.active) {
-    display: none;
-} */
 
 .events-headings h2 {
     opacity: 0;

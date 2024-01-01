@@ -28,6 +28,7 @@
 }
 
 
+
 .landingpage {
     position: relative;
     background: url('./assets/images/home-background-reduced-new.png');
@@ -36,7 +37,7 @@
     background-repeat: no-repeat;
     min-height: 100vh;
     padding-bottom: 45vh;
-    }
+}
 
 .row {
     padding-top: 5vh;
@@ -253,16 +254,17 @@ button:hover .star-6 {
 
 /*section-2-events */
 
+
 .card {
     box-sizing: border-box;
-    height: 45vh;
+    height: auto;
     min-width: 22rem;
-    background: url(./assets/images/card.jpg);
+    /* background: url(./assets/images/card.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     border: 1px solid white;
     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-    backdrop-filter: blur(6px);
+    /* backdrop-filter: blur(6px); */
     border-radius: 17px;
     text-align: center;
     cursor: pointer;
@@ -317,6 +319,11 @@ button:hover .star-6 {
     transform: scale(0.95) rotateZ(1.7deg);
 }
 
+.all-section{
+    background: url(./assets/images/new-mandala.png);
+    background-size: contain;
+    background-repeat: repeat;
+}
 
 .events-headings {
     display: grid;
@@ -337,39 +344,69 @@ button:hover .star-6 {
     letter-spacing: 8.36px;
 }
 
-.text-event-with-bg {
-    margin-top: 5vh;
-    min-height: 20vh;
+/*testing */
+
+.outer-div-container {
+    margin-top: 15vh;
+}
+
+.container-dpt {
+    position: relative;
+
+}
+
+.center-content-dpt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.streak-bg-img {
+    width: 21.5rem;
     height: auto;
-    min-width: 27vw;
-    background: url('./assets/images/Streak\ Paint\ blue-2.png');
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
 }
 
-.text-event-with-bg h3 {
-    color: #ffffff;
-    text-align: center;
+.center-text-dpt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.center-text-dpt span {
+    color: #FFF;
     font-family: 'Miso';
-    font-size: 2vw;
-    font-style: normal;
+    font-size: 2rem;
     font-weight: 400;
-    line-height: normal;
     letter-spacing: 8.36px;
-
 }
+
 
 .flex-box-card-ug {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin-top: 10vh;
+    margin-top: 30vh;
 }
 
+.image-cardtop {
+    height: 25vh;
+    width: 100%;
+    border-radius: 17px;
+}
 
+.bar-btw {
+    height: 2.8vh;
+    width: 100%;
+    background-color: #0A579B;
+    margin: 2vh 0;
+}
 
 .left-button {
     width: 5vw;
@@ -383,10 +420,9 @@ button:hover .star-6 {
 }
 
 .inside-card {
-    margin-top: 22vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
 }
 
@@ -395,6 +431,16 @@ button:hover .star-6 {
     color: #000;
     text-align: center;
     font-size: 4.5vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.inside-card-normal-h3 {
+    font-family: 'Graduate';
+    color: #000;
+    text-align: center;
+    font-size: 3vh;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -419,7 +465,7 @@ button:hover .star-6 {
     overflow: hidden;
     font-size: 2.5vh;
     font-family: 'Miso';
-    margin-top: 9vh;
+    margin-bottom: 2vh;
 }
 
 .icon {
@@ -495,7 +541,8 @@ button:hover .star-6 {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin-top: 10vh;
+    margin-top: 15vh;
+    padding-top: 15vh;
 }
 
 .rules-card {
@@ -843,12 +890,18 @@ button:hover .star-6 {
         grid-template-areas: "nav logo";
         /* Default order for larger screens */
     }
+    
 }
 
 /* Between 768px and 1199px */
 @media (min-width: 768px) and (max-width: 1199px) {
     /* .row {
         
+    } */
+    /* .all-section{
+        background: url(./assets/images/new-mandala-mobile.png);
+        background-size: contain;
+        background-repeat: repeat;
     } */
 }
 
@@ -860,7 +913,8 @@ button:hover .star-6 {
         justify-content: center;
         padding-top: 0;
     }
-    .col{
+
+    .col {
         display: flex;
         justify-content: center;
     }
@@ -895,19 +949,20 @@ button:hover .star-6 {
 
     }
 
-    .text-event-with-bg {
-        min-height: 13vh;
-        min-width: 63vw;
+
+    .streak-bg-img {
+        width: 18.5rem;
+        
     }
 
-    .text-event-with-bg h3 {
-        font-size: 5vw;
-        letter-spacing: 5px;
-
+    .center-text-dpt span {
+        font-size: 1.5rem;
     }
+    
+
 
     .card {
-        height: 45vh;
+        height: auto;
         min-width: 15rem;
     }
 
@@ -956,6 +1011,12 @@ button:hover .star-6 {
 
     .rows-1-footer {
         flex-direction: column;
+    }
+
+    .all-section{
+        background: url(./assets/images/new-mandala-mobile.png);
+        background-size: contain;
+        background-repeat: repeat;
     }
 
 }

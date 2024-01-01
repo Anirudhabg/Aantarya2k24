@@ -7,18 +7,8 @@
     <title>aantarya</title>
     <link rel="stylesheet" href="./styles.css">
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <!-- <link
-        href="https://fonts.googleapis.com/css2?family=Graduate&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@600&display=swap"
-        rel="stylesheet"> -->
-
-
     <link rel="preload" href="./assets/images/streak-paint.png" as="image">
-    <link rel="preload" href="./assets/images/card.jpg" as="image">
+
     <link rel="preload" href="./assets/images/Streak Paint blue-2.png" as="image">
     <link rel="preload" href="./assets/images/home-background-reduced-new.png" as="image">
 
@@ -28,6 +18,11 @@
     <link rel="preload" href="./assets/images/venuprofile.jpg" as="image">
     <link rel="preload" href="./assets/images/footer-image.png" as="image">
     <link rel="preload" href="./assets/images/aniprofile.jpg" as="image">
+    <link rel="preload" href="./assets/images/splatter-card.png" as="image">
+    <link rel="preload" href="./assets/images/rkprofile.jpg" as="image">
+    <link rel="preload" href="./assets/images/new-mandala-mobile.png" as="image">
+    <link rel="preload" href="./assets/images/new-mandala.png" as="image">
+
 
     <script src="./script.js" defer></script>
 
@@ -35,7 +30,7 @@
 
 <body>
     <section class="landingpage" id="landingpage-id">
-        
+
         <div class="row" id="first-row">
             <div class="col">
                 <nav class="navbar-home">
@@ -55,7 +50,9 @@
         </div>
     </section>
 
+    <section class="all-section">
 
+        
     <div class="button-register-div">
         <a href="register.html">
             <button>REGISTER NOW!
@@ -146,20 +143,37 @@
         <div class="event-details-ug">
             <div class="events-headings">
                 <h3 id="events-child1">EVENTS</h3>
-                <div class="text-event-with-bg">
-                    <h3>UG DEPARTMENT</h3>
+            </div>
+
+            
+            <div class="outer-div-container">
+                <div class="container-dpt">
+                    <div class="center-content-dpt">
+                        <img class="streak-bg-img" src="./assets/images/Streak-Paint-blue-new.png" alt="Your Image">
+                        <div class="center-text-dpt">
+                            <span>UG DEPARTMENT</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-    
+
             <div class="flex-box-card-ug">
                 <div class="arrow-mark-card-left" onclick="showPreviousCard()">
                     <img class="left-button" src="./assets/images/arrow 1.png.svg" alt="Left Arrow">
                 </div>
-    
+
                 <div class="card active" id="ug-card">
+
+
                     <div class="inside-card">
+                        <img class="image-cardtop" src="./assets/images/splatter-card.png">
+
                         <h3 class="inside-card-h3">MOOK SAMVAD</h3>
-    
+                        <h3 class="inside-card-normal-h3">DUMB CHARADES</h3>
+
+                        <div class="bar-btw">
+                        </div>
+
                         <div class="button-inside-card">
                             <button class="button-card-inside">
                                 Read More
@@ -172,7 +186,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="arrow-mark-card-right" onclick="showNextCard()">
                     <img class="right-button" src="./assets/images/arrow 1.png.svg" alt="Right Arrow">
                 </div>
@@ -180,21 +194,41 @@
         </div>
 
         <div class="evet-details-pg">
-            <div class="events-headings">
+            <!-- <div class="events-headings">
                 <div class="text-event-with-bg">
                     <h3>PG DEPARTMENT</h3>
                 </div>
+            </div> -->
+
+            <div class="outer-div-container">
+                <div class="container-dpt">
+                    <div class="center-content-dpt">
+                        <img class="streak-bg-img" src="./assets/images/Streak-Paint-blue-new.png" alt="Your Image">
+                        <div class="center-text-dpt">
+                            <span>PG DEPARTMENT</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-    
+
+
+
             <div class="flex-box-card-pg">
                 <div class="arrow-mark-card-left" onclick="showPreviousCard2()">
                     <img class="left-button" src="./assets/images/arrow 1.png.svg" alt="Left Arrow">
                 </div>
-    
+
                 <div class="card active" id="pg-card">
                     <div class="inside-card">
+                        <img class="image-cardtop" src="./assets/images/splatter-card.png">
                         <h3 class="inside-card-h3">IT Pramukh</h3>
-    
+
+                        <h3 class="inside-card-normal-h3">IT MANAGER</h3>
+
+
+                        <div class="bar-btw">
+                        </div>
+
                         <div class="button-inside-card">
                             <button class="button-card-inside">
                                 Read More
@@ -207,7 +241,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="arrow-mark-card-right" onclick="showNextCard2()">
                     <img class="right-button" src="./assets/images/arrow 1.png.svg" alt="Right Arrow">
                 </div>
@@ -447,7 +481,7 @@
 
 
                         <div class="circular-image">
-                            <img src="./assets/images/profile-dummy.png" alt="Circular Image">
+                            <img src="./assets/images/rkprofile.jpg" alt="Circular Image">
                         </div>
 
                         <p class="committee-text">Mr. Ramesha K</p>
@@ -547,7 +581,7 @@
     <section class="footer-section" id="footer-section-id">
 
         <div class="heading-text">
-            <p class="committee-heading">Website Craftisans</p>
+            <p class="committee-heading">Web Artisans</p>
         </div>
 
         <div class="rows-1-footer">
@@ -596,6 +630,9 @@
         </div>
 
     </section>
+
+    </section>
+
 </body>
 
 </html>

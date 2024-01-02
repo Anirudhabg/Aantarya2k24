@@ -95,3 +95,68 @@ pgRegisterButton.addEventListener("click", () => {
   console.log(pgList[pgIdx]);
   console.log(pgListNorm[pgNIdx]);
 });
+
+
+
+
+
+
+//pg overlay
+const pgListRules = [
+  ["Number of participants: 1", "The competition is open to postgraduate students only.", "Rounds are disclosed on the spot.", "Participants are requested to carry a laptop", "Participants cannot participate in any other events."], // Rules for IT Pramukh
+  ["Rule 1", "Rule 2", "Rule 3", "Rule 4", "Rule 5"], // Rules for LIPTH LEKHAN
+  // ... add rules for other items
+];
+
+
+const pgHeads = [
+  [["Sanket M Teggihalli"], ["Tejashre Kumari"]],
+  [["Teggihalli"], ["Te Kumari"]]
+];
+
+const pgPhone = [
+  [["9876543210"], ["1116543210"]],
+];
+
+
+
+const pgRCard = document.querySelector(".title-text-readmore #title-readmore");
+const pgRNCard = document.querySelector(".title-text-readmore #title-readmore-norm");
+
+const pgRList = document.querySelector('.title-text-readmore #pg-list');
+
+const pgHName1List = document.querySelector('.event-head1-container #event-head1-name');
+const pgHName2List = document.querySelector('.event-head2-container #event-head2-name');
+
+const pgHPhn1List = document.querySelector('.event-head1-container #event-head1-phn-number');
+const pgHPhn2List = document.querySelector('.event-head2-container #event-head2-phn-number');
+
+
+function toggleOverlayPg() {
+  var overlay = document.getElementById('readmore-card-overlay');
+  overlay.style.display = (overlay.style.display === 'none' || overlay.style.display === '') ? 'flex' : 'none';
+
+  pgRList.innerHTML = '';
+
+  const currentEvent = pgList[pgIdx];
+  const currentEventIndex = pgList.indexOf(currentEvent);
+  const rules = pgListRules[currentEventIndex] || ["No specific rules available"];
+
+  pgRCard.innerText = pgList[pgIdx];
+  pgRNCard.innerText = "(" + pgListNorm[pgIdx] + ")";
+
+  pgHName1List.innerText = pgHeads[pgIdx][0];
+  pgHName2List.innerText = pgHeads[pgIdx][1];
+
+  pgHPhn1List.innerText = pgPhone[pgIdx][0];
+  pgHPhn2List.innerText = pgPhone[pgIdx][1];
+
+  rules.forEach(rule => {
+    const li = document.createElement('li');
+    li.textContent = rule;
+    pgRList.appendChild(li);
+  });
+
+}
+
+

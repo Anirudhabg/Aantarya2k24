@@ -70,9 +70,57 @@ ugRegisterButton.addEventListener("click", () => {
 
   window.location.href.replace('readmore.html')
 });
+// const ugList = [
+//   "MOOK SAMVAD",
+//   "LIPTH LEKHAN",
+//   "Jaalika",
+//   "Pranshnothar",
+//   "Vadah",
+//   "Nrityam",
+//   "Chayachitr",
+//   "Khelan",
+//   "Nidhisangrah",
+//   "Pracharan",
+// ];
 
+const ugListRules = [
+  ["Number of participants: 2", "Number of rounds: 3","Knowledge of series, movies of various languages, and expertise in IT is required."], // Rules for Mook Samvad
+  ["Number of participants: 2", "Number of rounds: 3", "Electronic gadgets are not allowed.", "Permissible programming languages: C, C++, Java.", "Systems will be provided."],//Rules for Lipth Lekhan
+  ["Number of participants: 2", "Number of rounds: 3","Knowledge in HTML, CSS, and JavaScript is neccessary.","The details of each round are disclosed on the spot.","Systems will be provided."],//Rules for Jaalika
+  ["Number of participants: 2", "Number of rounds: 3","The Quiz master's verdict is ultimate in the final round.","Electronic gadgets are not allowed."],//Rules for Pranshnothar
+  ["Number of participants: 1", "Number of rounds: 2","Topics will be disclosed 5 minutes prior.","Avoid offensive language and derogatery words.","Electronic gadgets are not allowed."],//Rules for Vadah
+  ["Number of participants: 1", "Number of rounds: 3","Participants must have their personal camera and laptop.","Drones, GoPro, and Gimbals are strictly forbidden.","Participants cannot participate in any other events."],//Rules for ChayaChitr
+  ["Number of participants: 5 to 7","Each team is given 4+1 minutes.","Participants are informed to perform semi fusion dance form.","Submit the music 30 minutes before the event starts.","Maintain decency in costumes.","No use of fire, flammable materials."], //Rules for Nrityam
+  ["Number of participants: 2", "Number of rounds: 3","Hacking or foul play incidents will lead to disqualification.","Keep all maps downloaded in BGMI.","No iPads, triggers are allowed."], //Rules for Khelan
+  ["Number of participants: 2", "Number of rounds: 3","Skipping clues or tampering with another team's clues will lead to disqualification."], //Rules for Nidhisangrah
+  ["Number of participants: 1", "Number of rounds: 2","Submit the product report by 11:30 AM on the event day.","Knowledge in video editing and presentation is mandotory.","Laptop is mandatory."], //Rules for Pracharan
+];
 
+const ugHeads = [
+  [["Reshma A"], ["M Ashwini"]], //Mook Samvad
+  [["P M Venugopala"], ["Shodhan P G"]], //LIPTH LEKHAN
+  [["Mahammad Afnan M"], ["Akshatha S"]], //Jaalika
+  [["K Madhusudha"], ["Rashmitha"]], //Pranshnothar
+  [["Sharanya"], ["Vaishali"]], //Vadah
+  [["Akash C Bhat"], ["Shodhan B C"]],//Chayachitr
+  [["Varsha A"], ["Shalmali P V"]],//Nrityam
+  [["Sharath Holla"], ["Gahan V S"]],//Khelan
+  [["Keerthan"], ["Chidhananda"]],//Nidhisangrah
+  [["Anirudha Somayaji"], ["Ankith Kumar"]],//Pracharan
+];
 
+const ugPhone = [
+  [["9741925562"], ["9902524679"]],//Mook Samvad
+  [["8088611744"], ["8281222814"]],//LIPTH LEKHAN
+  [["8970129113"], ["9902292869"]],//Jaalika
+  [["8088148566"], ["6366466038"]],//Pranshnothar
+  [["9148952471"], ["7259622080"]],//Vadah
+  [["9164662854"], ["9611296484"]],//Chayachitr
+  [["9778708191"], ["9074202726"]],//Nrityam
+  [["6282581299"], ["7349212372"]],//Khelan
+  [["6362441958"], ["9353959843"]],//Nidhisangrah
+  [["8867035467"], ["8861513800"]],//Pracharan
+];
 //pg cards
 function showNextCard2() {
   pgIdx = (pgIdx - 1 + pgList.length) % pgList.length;
@@ -99,23 +147,48 @@ pgRegisterButton.addEventListener("click", () => {
 
 
 
-
-
 //pg overlay
 const pgListRules = [
-  ["Number of participants: 1", "The competition is open to postgraduate students only.", "Rounds are disclosed on the spot.", "Participants are requested to carry a laptop", "Participants cannot participate in any other events."], // Rules for IT Pramukh
-  ["Rule 1", "Rule 2", "Rule 3", "Rule 4", "Rule 5"], // Rules for LIPTH LEKHAN
-  // ... add rules for other items
+  ["Number of participants: 1", "The details of each round are disclosed on the spot.", "Participants are requested to carry a laptop", "Participants cannot participate in any other events."], // Rules for IT Pramukh
+  ["Number of participants: 2", "Number of rounds: 3", "Electronic gadgets are not allowed.", "Permissible programming languages: C, C++, Java.", "Systems will be provided."],//Rules for Lipth Lekhan
+  ["Number of participants: 2", "Number of rounds: 3","Knowledge in HTML, CSS, and JavaScript is neccessary.","The details of each round are disclosed on the spot.","Systems will be provided."],//Rules for Jaalika
+  ["Number of participants: 2", "Number of rounds: 3","The Quiz master's verdict is ultimate in the final round.","Electronic gadgets are not allowed."],//Rules for Pranshnothar
+  ["Number of participants: 1", "Number of rounds: 2","Topics will be disclosed 5 minutes prior.","Avoid offensive language and derogatery words.","Electronic gadgets are not allowed."],//Rules for Vadah
+  ["Number of participants: 1", "Number of rounds: 3","Participants must have their personal camera and laptop.","Drones, GoPro, and Gimbals are strictly forbidden.","Participants cannot participate in any other events."],//Rules for ChayaChitr
+  ["Number of participants: 5 to 7","Each team is given 4+1 minutes.","Participants are informed to perform semi fusion dance form.","Submit the music 30 minutes before the event starts.","Maintain decency in costumes.","No use of fire, flammable materials."], //Rules for Nrityam
+  ["Number of participants: 2", "Number of rounds: 3","Hacking or foul play incidents will lead to disqualification.","Keep all maps downloaded in BGMI.","No iPads, triggers are allowed."], //Rules for Khelan
+  ["Number of participants: 2", "Number of rounds: 3","Skipping clues or tampering with another team's clues will lead to disqualification."], //Rules for Nidhisangrah
+  ["Number of participants: 1", "Number of rounds: 2","Submit the product report by 11:30 AM on the event day.","Knowledge in video editing and presentation is mandotory.","Laptop is mandatory."], //Rules for Pracharan
+  ["Number of participants: 1", "Number of rounds: 2","Participants are advised to bring along a laptop."] // Rules for Chitr
 ];
 
 
 const pgHeads = [
-  [["Sanket M Teggihalli"], ["Tejashre Kumari"]],
-  [["Teggihalli"], ["Te Kumari"]]
+  [["Sanket M Teggihalli"], ["Tejashre Kumari"]], //IT Pramukh
+  [["P M Venugopala"], ["Shodhan P G"]], //LIPTH LEKHAN
+  [["Mahammad Afnan M"], ["Akshatha S"]], //Jaalika
+  [["K Madhusudha"], ["Rashmitha"]], //Pranshnothar
+  [["Sharanya"], ["Vaishali"]], //Vadah
+  [["Akash C Bhat"], ["Shodhan B C"]],//Chayachitr
+  [["Varsha A"], ["Shalmali P V"]],//Nrityam
+  [["Sharath Holla"], ["Gahan V S"]],//Khelan
+  [["Keerthan"], ["Chidhananda"]],//Nidhisangrah
+  [["Anirudha Somayaji"], ["Ankith Kumar"]],//Pracharan
+  [["Mahammad Mubassir"], ["Varsha K"]]//Chitr
 ];
 
 const pgPhone = [
-  [["9876543210"], ["1116543210"]],
+  [["9353835597"], ["8296879660"]],//IT Pramukh
+  [["8088611744"], ["8281222814"]],//LIPTH LEKHAN
+  [["8970129113"], ["9902292869"]],//Jaalika
+  [["8088148566"], ["6366466038"]],//Pranshnothar
+  [["9148952471"], ["7259622080"]],//Vadah
+  [["9164662854"], ["9611296484"]],//Chayachitr
+  [["9778708191"], ["9074202726"]],//Nrityam
+  [["6282581299"], ["7349212372"]],//Khelan
+  [["6362441958"], ["9353959843"]],//Nidhisangrah
+  [["8867035467"], ["8861513800"]],//Pracharan
+  [["9945132091"], ["9148527937"]]//Chitr
 ];
 
 

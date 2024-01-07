@@ -84,16 +84,16 @@ ugRegisterButton.addEventListener("click", () => {
 // ];
 
 const ugListRules = [
-  ["Number of participants: 2", "Number of rounds: 3","Knowledge of series, movies of various languages, and expertise in IT is required."], // Rules for Mook Samvad
+  ["Number of participants: 2", "Number of rounds: 3", "Knowledge of series, movies of various languages, and expertise in IT is required."], // Rules for Mook Samvad
   ["Number of participants: 2", "Number of rounds: 3", "Electronic gadgets are not allowed.", "Permissible programming languages: C, C++, Java.", "Systems will be provided."],//Rules for Lipth Lekhan
-  ["Number of participants: 2", "Number of rounds: 3","Knowledge in HTML, CSS, and JavaScript is neccessary.","The details of each round are disclosed on the spot.","Systems will be provided."],//Rules for Jaalika
-  ["Number of participants: 2", "Number of rounds: 3","The Quiz master's verdict is ultimate in the final round.","Electronic gadgets are not allowed."],//Rules for Pranshnothar
-  ["Number of participants: 1", "Number of rounds: 2","Topics will be disclosed 5 minutes prior.","Avoid offensive language and derogatery words.","Electronic gadgets are not allowed."],//Rules for Vadah
-  ["Number of participants: 1", "Number of rounds: 3","Participants must have their personal camera and laptop.","Drones, GoPro, and Gimbals are strictly forbidden.","Participants cannot participate in any other events."],//Rules for ChayaChitr
-  ["Number of participants: 5 to 7","Each team is given 4+1 minutes.","Participants are informed to perform semi fusion dance form.","Submit the music 30 minutes before the event starts.","Maintain decency in costumes.","No use of fire, flammable materials."], //Rules for Nrityam
-  ["Number of participants: 2", "Number of rounds: 3","Hacking or foul play incidents will lead to disqualification.","Keep all maps downloaded in BGMI.","No iPads, triggers are allowed."], //Rules for Khelan
-  ["Number of participants: 2", "Number of rounds: 3","Skipping clues or tampering with another team's clues will lead to disqualification."], //Rules for Nidhisangrah
-  ["Number of participants: 1", "Number of rounds: 2","Submit the product report by 11:30 AM on the event day.","Knowledge in video editing and presentation is mandotory.","Laptop is mandatory."], //Rules for Pracharan
+  ["Number of participants: 2", "Number of rounds: 3", "Knowledge in HTML, CSS, and JavaScript is neccessary.", "The details of each round are disclosed on the spot.", "Systems will be provided."],//Rules for Jaalika
+  ["Number of participants: 2", "Number of rounds: 3", "The Quiz master's verdict is ultimate in the final round.", "Electronic gadgets are not allowed."],//Rules for Pranshnothar
+  ["Number of participants: 1", "Number of rounds: 2", "Topics will be disclosed 5 minutes prior.", "Avoid offensive language and derogatery words.", "Electronic gadgets are not allowed."],//Rules for Vadah
+  ["Number of participants: 1", "Number of rounds: 3", "Participants must have their personal camera and laptop.", "Drones, GoPro, and Gimbals are strictly forbidden.", "Participants cannot participate in any other events."],//Rules for ChayaChitr
+  ["Number of participants: 5 to 7", "Each team is given 4+1 minutes.", "Participants are informed to perform semi fusion dance form.", "Submit the music 30 minutes before the event starts.", "Maintain decency in costumes.", "No use of fire, flammable materials."], //Rules for Nrityam
+  ["Number of participants: 2", "Number of rounds: 3", "Hacking or foul play incidents will lead to disqualification.", "Keep all maps downloaded in BGMI.", "No iPads, triggers are allowed."], //Rules for Khelan
+  ["Number of participants: 2", "Number of rounds: 3", "Skipping clues or tampering with another team's clues will lead to disqualification."], //Rules for Nidhisangrah
+  ["Number of participants: 1", "Number of rounds: 2", "Submit the product report by 11:30 AM on the event day.", "Knowledge in video editing and presentation is mandotory.", "Laptop is mandatory."], //Rules for Pracharan
 ];
 
 const ugHeads = [
@@ -151,15 +151,15 @@ pgRegisterButton.addEventListener("click", () => {
 const pgListRules = [
   ["Number of participants: 1", "The details of each round are disclosed on the spot.", "Participants are requested to carry a laptop", "Participants cannot participate in any other events."], // Rules for IT Pramukh
   ["Number of participants: 2", "Number of rounds: 3", "Electronic gadgets are not allowed.", "Permissible programming languages: C, C++, Java.", "Systems will be provided."],//Rules for Lipth Lekhan
-  ["Number of participants: 2", "Number of rounds: 3","Knowledge in HTML, CSS, and JavaScript is neccessary.","The details of each round are disclosed on the spot.","Systems will be provided."],//Rules for Jaalika
-  ["Number of participants: 2", "Number of rounds: 3","The Quiz master's verdict is ultimate in the final round.","Electronic gadgets are not allowed."],//Rules for Pranshnothar
-  ["Number of participants: 1", "Number of rounds: 2","Topics will be disclosed 5 minutes prior.","Avoid offensive language and derogatery words.","Electronic gadgets are not allowed."],//Rules for Vadah
-  ["Number of participants: 1", "Number of rounds: 3","Participants must have their personal camera and laptop.","Drones, GoPro, and Gimbals are strictly forbidden.","Participants cannot participate in any other events."],//Rules for ChayaChitr
-  ["Number of participants: 5 to 7","Each team is given 4+1 minutes.","Participants are informed to perform semi fusion dance form.","Submit the music 30 minutes before the event starts.","Maintain decency in costumes.","No use of fire, flammable materials."], //Rules for Nrityam
-  ["Number of participants: 2", "Number of rounds: 3","Hacking or foul play incidents will lead to disqualification.","Keep all maps downloaded in BGMI.","No iPads, triggers are allowed."], //Rules for Khelan
-  ["Number of participants: 2", "Number of rounds: 3","Skipping clues or tampering with another team's clues will lead to disqualification."], //Rules for Nidhisangrah
-  ["Number of participants: 1", "Number of rounds: 2","Submit the product report by 11:30 AM on the event day.","Knowledge in video editing and presentation is mandotory.","Laptop is mandatory."], //Rules for Pracharan
-  ["Number of participants: 1", "Number of rounds: 2","Participants are advised to bring along a laptop."] // Rules for Chitr
+  ["Number of participants: 2", "Number of rounds: 3", "Knowledge in HTML, CSS, and JavaScript is neccessary.", "The details of each round are disclosed on the spot.", "Systems will be provided."],//Rules for Jaalika
+  ["Number of participants: 2", "Number of rounds: 3", "The Quiz master's verdict is ultimate in the final round.", "Electronic gadgets are not allowed."],//Rules for Pranshnothar
+  ["Number of participants: 1", "Number of rounds: 2", "Topics will be disclosed 5 minutes prior.", "Avoid offensive language and derogatery words.", "Electronic gadgets are not allowed."],//Rules for Vadah
+  ["Number of participants: 1", "Number of rounds: 3", "Participants must have their personal camera and laptop.", "Drones, GoPro, and Gimbals are strictly forbidden.", "Participants cannot participate in any other events."],//Rules for ChayaChitr
+  ["Number of participants: 5 to 7", "Each team is given 4+1 minutes.", "Participants are informed to perform semi fusion dance form.", "Submit the music 30 minutes before the event starts.", "Maintain decency in costumes.", "No use of fire, flammable materials."], //Rules for Nrityam
+  ["Number of participants: 2", "Number of rounds: 3", "Hacking or foul play incidents will lead to disqualification.", "Keep all maps downloaded in BGMI.", "No iPads, triggers are allowed."], //Rules for Khelan
+  ["Number of participants: 2", "Number of rounds: 3", "Skipping clues or tampering with another team's clues will lead to disqualification."], //Rules for Nidhisangrah
+  ["Number of participants: 1", "Number of rounds: 2", "Submit the product report by 11:30 AM on the event day.", "Knowledge in video editing and presentation is mandotory.", "Laptop is mandatory."], //Rules for Pracharan
+  ["Number of participants: 1", "Number of rounds: 2", "Participants are advised to bring along a laptop."] // Rules for Chitr
 ];
 
 

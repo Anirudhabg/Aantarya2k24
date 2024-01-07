@@ -1,5 +1,5 @@
 // const API_URL = "http://localhost:3000";
-const API_URL = "https://mca-fest.onrender.com/";
+const API_URL = "https://mca-fest.onrender.com";
 
 const getToken = () => {
   return localStorage.getItem("jwtToken");

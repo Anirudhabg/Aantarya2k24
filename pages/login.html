@@ -6,54 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
 
-    <link rel="stylesheet" href="./stylesregister.css">
+    <link rel="stylesheet" href="../styles/loign.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <script defer src="./regscript.js"></script>
-
-
+    <script src="../js/auth.js" defer></script>
+    <script src="../js/verifyLogin.js" defer></script>
 
 
 </head>
 
 <body>
     <section class="main-section">
+        <div class="loader"></div>
         <div class="container" id="container">
             <div class="form-container sign-up-container">
-                <form action="#">
+                <form name="signUpForm" method="post" onsubmit="return false">
                     <h1>Create Account</h1>
                 
                     <div class="radio-inputs">
                         <label class="radio">
-                          <input type="radio" name="radio" checked="">
+                          <input type="radio" name="isUg" value=true id="ugRadio" checked="">
                           <span class="name">UG</span>
                         </label>
                         <label class="radio">
-                          <input type="radio" name="radio">
+                          <input type="radio"  name="isUg" value=false id="pgRadio">
                           <span class="name">PG</span>
                         </label>
                       </div>
                     
-                    <select id="country" name="country">
-                        <option value="usa">Select College</option>
-                        <option value="usa">St Philomena College, Puttur</option>
-                        <option value="canada">Vivekananda College Puttur</option>
-                        <option value="uk">St. Jospeh Engineering Mangalore</option>
+                    <select id="collegeName" name="college">
+                        <option value="">Select College</option>
+                        <option value="St Philomena College, Puttur">St Philomena College, Puttur</option>
+                        <option value="Vivekananda College Puttur">Vivekananda College Puttur</option>
+                        <option value="St. Jospeh Engineering Mangalore">St. Jospeh Engineering Mangalore</option>
                     </select>
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
-                    <button>Sign Up</button>
+                    <input type="email" name="email" placeholder="Email" />
+                    <input type="password" name="password" placeholder="Password" />
+                    <button id="submitBtn">Sign Up</button>
                 </form>
             </div>
+
             <div class="form-container sign-in-container">
-                <form action="#">
+                <form name="loginForm" method="post" onsubmit="return false">
                     <h1>Sign in</h1>
                     
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
+                    <input type="email" name="email" placeholder="Email" />
+                    <input type="password" name="password" placeholder="Password" />
                     
-                    <button>Sign In</button>
+                    <button id="submitBtnLogin">Sign In</button>
                 </form>
             </div>
             <div class="overlay-container">

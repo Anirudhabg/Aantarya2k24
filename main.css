@@ -72,7 +72,6 @@
     font-family: 'Miso';
     font-size: 2.5vw;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
     letter-spacing: 12.32px;
     padding: 1.7vh;
@@ -376,6 +375,7 @@ button:hover .star-6 {
     width: 80%;
     transform: translate(-50%, -50%);
     color: white;
+    text-align: center;
 }
 
 .center-text-dpt span {

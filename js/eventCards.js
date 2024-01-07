@@ -102,11 +102,11 @@ const ugHeads = [
   [["Mahammad Afnan M"], ["Akshatha S"]], //Jaalika
   [["K Madhusudha"], ["Rashmitha"]], //Pranshnothar
   [["Sharanya"], ["Vaishali"]], //Vadah
-  [["Akash C Bhat"], ["Shodhan B C"]],//Chayachitr
   [["Varsha A"], ["Shalmali P V"]],//Nrityam
+  [["Akash C Bhat"], ["Shodhan B C"]],//Chayachitr
   [["Sharath Holla"], ["Gahan V S"]],//Khelan
   [["Keerthan"], ["Chidhananda"]],//Nidhisangrah
-  [["Anirudha Somayaji"], ["Ankith Kumar"]],//Pracharan
+  [["Anirudha Somayaji"], ["Ankith Kumar"]]//Pracharan
 ];
 
 const ugPhone = [
@@ -115,11 +115,11 @@ const ugPhone = [
   [["8970129113"], ["9902292869"]],//Jaalika
   [["8088148566"], ["6366466038"]],//Pranshnothar
   [["9148952471"], ["7259622080"]],//Vadah
-  [["9164662854"], ["9611296484"]],//Chayachitr
   [["9778708191"], ["9074202726"]],//Nrityam
+  [["9164662854"], ["9611296484"]],//Chayachitr
   [["6282581299"], ["7349212372"]],//Khelan
   [["6362441958"], ["9353959843"]],//Nidhisangrah
-  [["8867035467"], ["8861513800"]],//Pracharan
+  [["8867035467"], ["8861513800"]]//Pracharan
 ];
 //pg cards
 function showNextCard2() {
@@ -262,11 +262,11 @@ function toggleOverlayUg() {
   ugRCard.innerText = ugList[ugIdx];
   ugRNCard.innerText = "(" + ugListNorm[ugIdx] + ")";
 
-  ugHName1List.innerText = ugHeads[pgIdx][0];
-  ugHName2List.innerText = ugHeads[pgIdx][1];
+  ugHName1List.innerText = ugHeads[ugIdx][0];
+  ugHName2List.innerText = ugHeads[ugIdx][1];
 
-  ugHPhn1List.innerText = ugPhone[pgIdx][0];
-  ugHPhn2List.innerText = ugPhone[pgIdx][1];
+  ugHPhn1List.innerText = ugPhone[ugIdx][0];
+  ugHPhn2List.innerText = ugPhone[ugIdx][1];
 
   rules.forEach(rule => {
     const li = document.createElement('li');

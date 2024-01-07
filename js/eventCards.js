@@ -25,7 +25,7 @@ const ugListNorm = [
 
 const pgList = [
   "IT Pramukh",
-  " LIPTH LEKHAN",
+  "LIPTH LEKHAN",
   "Jaalika",
   "Pranshnothar",
   "Vadah",
@@ -228,6 +228,50 @@ function toggleOverlayPg() {
     const li = document.createElement('li');
     li.textContent = rule;
     pgRList.appendChild(li);
+  });
+
+}
+
+
+
+
+
+const ugRCard = document.querySelector(".title-text-readmore #title-readmore");
+const ugRNCard = document.querySelector(".title-text-readmore #title-readmore-norm");
+
+const ugRList = document.querySelector('.title-text-readmore #pg-list');
+
+const ugHName1List = document.querySelector('.event-head1-container #event-head1-name');
+const ugHName2List = document.querySelector('.event-head2-container #event-head2-name');
+
+const ugHPhn1List = document.querySelector('.event-head1-container #event-head1-phn-number');
+const ugHPhn2List = document.querySelector('.event-head2-container #event-head2-phn-number');
+
+
+
+function toggleOverlayUg() {
+  var overlay = document.getElementById('readmore-card-overlay');
+  overlay.style.display = (overlay.style.display === 'none' || overlay.style.display === '') ? 'flex' : 'none';
+
+  pgRList.innerHTML = '';
+
+  const currentEvent = ugList[ugIdx];
+  const currentEventIndex = ugList.indexOf(currentEvent);
+  const rules = ugListRules[currentEventIndex] || ["No specific rules available"];
+
+  ugRCard.innerText = ugList[ugIdx];
+  ugRNCard.innerText = "(" + ugListNorm[ugIdx] + ")";
+
+  ugHName1List.innerText = ugHeads[pgIdx][0];
+  ugHName2List.innerText = ugHeads[pgIdx][1];
+
+  ugHPhn1List.innerText = ugPhone[pgIdx][0];
+  ugHPhn2List.innerText = ugPhone[pgIdx][1];
+
+  rules.forEach(rule => {
+    const li = document.createElement('li');
+    li.textContent = rule;
+    ugRList.appendChild(li);
   });
 
 }

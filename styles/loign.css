@@ -1,16 +1,16 @@
 @font-face {
     font-family: Miso;
-    src: url('./assets/fonts/miso-regular.otf');
+    src: url('../assets/fonts/miso-regular.otf');
 }
 
 @font-face {
     font-family: Samarkan;
-    src: url('./assets/fonts/SAMAN___.TTF');
+    src: url('../assets/fonts/SAMAN___.TTF');
 }
 
 @font-face {
     font-family: IBM;
-    src: url('./assets/fonts/IBMPlexMono-Regular.ttf');
+    src: url('../assets/fonts/IBMPlexMono-Regular.ttf');
 }
 
 * {
@@ -53,7 +53,7 @@ span {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('./assets/images/mandala.png');
+    background-image: url('../assets/images/mandala.png');
     background-size: cover;
     background-position: center;
 }
@@ -307,7 +307,7 @@ button.ghost {
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background-image: url('./assets/images/mandala.png');
+        background-image: url('../assets/images/mandala.png');
         background-size: cover;
         background-position: 0vh;
         background-repeat: no-repeat;

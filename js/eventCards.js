@@ -19,14 +19,23 @@ const ugList = [
 
 
 const ugListNorm = [
-  "DUMB CHARADES", "CODING", "WEB DESIGNING", "QUIZ", "DEBATE", "DANCE", "PHOTOGRAPHY", "GAMING", "TREASURE HUNT", "PRODUCT LAUNCH"
+  "DUMB CHARADES", 
+  "CODING", 
+  "WEB DESIGNING", 
+  "QUIZ", 
+  "DEBATE",
+  "DANCE", 
+  "PHOTOGRAPHY", 
+  "GAMING", 
+  "TREASURE HUNT", 
+  "PRODUCT LAUNCH"
 ]
 
 
 
 const pgList = [
   "IT Pramukh",
-  " LIPTH LEKHAN",
+  "LIPTH LEKHAN",
   "Jaalika",
   "Pranshnothar",
   "Vadah",
@@ -104,19 +113,47 @@ pgRegisterButton.addEventListener("click", () => {
 
 //pg overlay
 const pgListRules = [
-  ["Number of participants: 1", "The competition is open to postgraduate students only.", "Rounds are disclosed on the spot.", "Participants are requested to carry a laptop", "Participants cannot participate in any other events."], // Rules for IT Pramukh
-  ["Rule 1", "Rule 2", "Rule 3", "Rule 4", "Rule 5"], // Rules for LIPTH LEKHAN
+  ["Number of participants: 1", "The competition is open to postgraduate students only.", "The details of each round will be disclosed on the spot.", "Participants are requested to carry a laptop", "Participants cannot participate in any other events."], // Rules for IT Pramukh
+  ["Rule 1", "Rule 2", "Rule 3", "Rule 4", "Rule L"], // Rules for LIPTH LEKHAN
   // ... add rules for other items
+  ["Rule 1", "Rule 2", "Rule 3", "Rule 4", "Rule 5"],
+  ["Rule 1", "Rule 2", "Rule 3", "Rule 4", "Rule 6"],
+  ["Rule 1", "Rule 2", "Rule 3", "Rule 4", "Rule 7"],
+  ["Rule 1", "Rule 2", "Rule 3", "Rule 4", "Rule 8"],
+  ["Rule 1", "Rule 2", "Rule 3", "Rule 4", "Rule 9"],
+  ["Rule 1", "Rule 2", "Rule 3", "Rule 4", "Rule 10"],
+  ["Rule 1", "Rule 2", "Rule 3", "Rule 4", "Rule 11"],
+  ["Rule 1", "Rule 2", "Rule 3", "Rule 4", "Rule 12"],
+  ["Rule 1", "Rule 2", "Rule 3", "Rule 4", "Rule 13"]
 ];
 
 
 const pgHeads = [
-  [["Sanket M Teggihalli"], ["Tejashre Kumari"]],
-  [["Teggihalli"], ["Te Kumari"]]
+  [["Sanket M Teggihalli"], ["Tejashree Kumari"]],
+  [["2"], ["2"]],
+  [["4"], ["4"]],
+  [["5"], ["5"]],
+  [["6"], ["6"]],
+  [["7"], ["7"]],
+  [["8"], ["8"]],
+  [["9"], ["9"]],
+  [["10"], ["10"]],
+  [["11"], ["11"]],
+  [["3"], ["3"]]
 ];
 
 const pgPhone = [
   [["9876543210"], ["1116543210"]],
+  [["2"], ["2"]],
+  [["4"], ["4"]],
+  [["5"], ["5"]],
+  [["6"], ["6"]],
+  [["7"], ["7"]],
+  [["8"], ["8"]],
+  [["9"], ["9"]],
+  [["10"], ["10"]],
+  [["11"], ["11"]],
+  [["3"], ["3"]]
 ];
 
 

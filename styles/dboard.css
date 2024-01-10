@@ -114,6 +114,11 @@ a {
     fill: #fff;
 }
 
+.logo{
+    position: absolute;
+    bottom: 0;
+}
+
 #logo-bottom {
     height: auto;
     width: 18vw;

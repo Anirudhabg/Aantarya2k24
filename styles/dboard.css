@@ -53,7 +53,8 @@ body {
 }
 
 .mandala-top {
-    width: 20rem;
+    width: 20vw;
+    
 }
 
 .text-dash {
@@ -87,8 +88,8 @@ body {
 .nav-text {
     margin-left: 1vw;
     color: #fff;
-    font-family: IBM Plex Mono;
-    font-size: 1rem;
+    font-family: 'IBM', sans-serif;
+    font-size: 1vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;

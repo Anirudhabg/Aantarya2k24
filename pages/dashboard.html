@@ -9,16 +9,7 @@
 
     <title>Dashboard</title>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const burgerMenu = document.querySelector('.burger-click');
-            const navLinks = document.querySelector('.left-fixed-nav');
 
-            burgerMenu.addEventListener('click', function () {
-                navLinks.classList.toggle('show');
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -210,7 +201,7 @@
                     </div>
                     <div class="svg-icon-prof">
 
-                        <button class="Btn">
+                        <button class="Btn" id="logoutBtn">
 
                             <div class="sign">
                                 <svg id="team-icon" xmlns="http://www.w3.org/2000/svg" height="35"
@@ -259,6 +250,26 @@
 
 
     </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const burgerMenu = document.querySelector('.burger-click');
+            const navLinks = document.querySelector('.left-fixed-nav');
+
+            burgerMenu.addEventListener('click', function () {
+                navLinks.classList.toggle('show');
+            });
+        });
+
+        document.getElementById("logoutBtn").addEventListener("click", function () {
+            window.location.href = "./login.html";
+        });
+
+
+    </script>
 </body>
+
+
 
 </html>

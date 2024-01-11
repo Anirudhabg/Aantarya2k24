@@ -270,8 +270,113 @@ input[type]:checked~span.mid {
 }
 
 
+.section-select-dept {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+select {
+    font-family: 'IBM', sans-serif;
+    padding: 0.8vw;
+    border: 1px solid #0A579B;
+    border-radius: 17px;
+    margin: 3vh 1vw;
+    width: 18vw;
+}
 
 
+option {
+    font-family: 'IBM', sans-serif;
+    background-color: #fff;
+    color: #333;
+    border-radius: 17px;
+}
+
+option:hover {
+    background-color: #0A579B;
+}
+
+
+.Btn {
+    --black: #000000;
+    --ch-black: #141414;
+    --eer-black: #1b1b1b;
+    --night-rider: #0A579B;
+    --white: #ffffff;
+    --af-white: #ffffff;
+    --ch-white: #e1e1e1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 3vw;
+    height: 3vw;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: var(--af-white);
+}
+
+/* plus sign */
+.sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign svg {
+    width: 17px;
+}
+
+.sign svg path {
+    fill: var(--night-rider);
+}
+
+
+.text {
+    position: absolute;
+    font-family: 'IBM';
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: black;
+    font-size: 1vw;
+    font-weight: 400;
+    transition-duration: .3s;
+}
+
+
+.Btn:hover {
+    width: 8vw;
+    border-radius: 17px;
+    transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+    width: 40%;
+    transition-duration: .3s;
+    padding-left: 20px;
+}
+
+
+.Btn:hover .text {
+    opacity: 1;
+    width: 60%;
+    transition-duration: .3s;
+    padding-right: 10px;
+}
+
+
+.Btn:active {
+    transform: translate(2px, 2px);
+}
 
 
 
@@ -309,6 +414,7 @@ input[type]:checked~span.mid {
     .burger-menu {
         display: block;
         color: #fff;
+        top: 1.5vh;
     }
 
     .mandala-top {
@@ -329,4 +435,33 @@ input[type]:checked~span.mid {
         height: auto;
         width: 18rem;
     }
+
+    /* Enroll-section1 */
+
+
+    .enroll-title {
+        font-size: 1rem;
+    }
+
+    .Btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+
+    .text {
+        font-size: 0.8rem;
+    }
+
+    .Btn:hover {
+        width: 6rem;
+
+    }
+
+
+
+
+
+
 }

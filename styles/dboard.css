@@ -27,15 +27,28 @@ body {
     background: #f6f5f7;
 }
 
+.main-contents {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.right-contents {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+
 .left-fixed-nav {
     height: 100vh;
     min-width: 20vw;
-    position: fixed;
+    /* position: fixed; */
     background-color: #0A579B;
     display: flex;
     align-items: center;
     flex-direction: column;
-    
+
 }
 
 .heading {
@@ -54,7 +67,7 @@ body {
 
 .mandala-top {
     width: 20vw;
-    
+
 }
 
 .text-dash {
@@ -114,7 +127,7 @@ a {
     fill: #fff;
 }
 
-.logo{
+.logo {
     position: absolute;
     bottom: 0;
 }
@@ -194,6 +207,87 @@ input[type]:checked~span.mid {
 
 
 
+
+
+
+
+
+
+
+
+
+/* Section 1-header */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 1.23vh 0;
+}
+
+.team-name {
+    display: flex;
+    flex-direction: row;
+}
+
+#team-icon {
+    fill: #0A579B;
+}
+
+#team-name-here {
+    margin-left: 1vw;
+    text-shadow: 0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #fed201,
+        0 0 30px #fed201,
+        0 0 40px #fed201,
+        0 0 55px #fed201,
+        0 0 70px #fed201;
+}
+
+.svg-icon-prof {
+    margin: 0 1vw;
+}
+
+
+/* Section 1-Enroll */
+
+.section-heading {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+
+}
+
+.enroll-title {
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1000px) {
     .left-fixed-nav {
         display: none;
@@ -219,13 +313,14 @@ input[type]:checked~span.mid {
 
     .mandala-top {
         width: 20rem;
-        
+
     }
+
     .nav-text {
         font-size: 1rem;
     }
 
-    .logo{
+    .logo {
         position: unset;
         bottom: 0;
     }

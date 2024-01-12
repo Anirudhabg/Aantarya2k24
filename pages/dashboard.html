@@ -212,7 +212,7 @@
 
                             </div>
 
-                            <div class="text">Logout</div>
+                            <div class="text" id="logout-click">Logout</div>
                         </button>
 
 
@@ -232,7 +232,7 @@
                     <p class="enroll-title">ENROLL FOR THE EVENTS...</p>
                 </div>
 
-                <div class="section-select-dept">
+                <!-- <div class="section-select-dept">
                     <p class="select-title">Select the Department</p>
                     <select>
                         <option>BCA</option>
@@ -240,6 +240,95 @@
                         <option>BCom</option>
                         <option>BBA</option>
                     </select>
+                </div> -->
+
+                <div class="forms-events">
+
+                    <div class="event">
+
+                        <div class="event-name">
+                            <p class="sanskrit-name">lipth lekhan</p>
+                            <p class="normal-name">(CODING)</p>
+                        </div>
+
+
+
+                        <div class="member">
+                            <div class="member-name">
+                                <div class="member-title">
+
+                                    <p class="input-title-name">Team Member 1</p>
+
+                                </div>
+                                <div class="member-input">
+
+                                    <input class="form-inputbox memname" id="coding-mem1" type="text" placeholder="NA">
+
+                                </div>
+                            </div>
+
+                            <div class="member-contact">
+                                <div class="contact-title">
+
+                                    <p class="input-title-contact">Contact Number</p>
+
+                                </div>
+                                <div class="contact-input">
+
+                                    <input class="form-inputbox" id="coding-mem1-con1" type="tel" inputmode="numeric"
+                                    pattern="[6789][0-9]{9}" maxlength="10" oninput="validateNumericInput(this)">
+                                    <div id="error-message" class="error-message"></div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="member">
+                            <div class="member-name">
+                                <div class="member-title">
+
+                                    <p class="input-title-name">Team Member 2</p>
+
+                                </div>
+                                <div class="member-input">
+
+                                    <input class="form-inputbox memname" id="coding-mem2" type="text" placeholder="NA">
+
+                                </div>
+                            </div>
+
+                            <div class="member-contact">
+                                <div class="contact-title">
+
+                                    <p class="input-title-contact">Contact Number</p>
+
+                                </div>
+                                <div class="contact-input">
+
+                                    <input class="form-inputbox" id="coding-mem1-con2" type="tel" inputmode="numeric"
+                                        pattern="[6789][0-9]{9}" maxlength="10" oninput="validateNumericInput(this)">
+
+                                    <div id="error-message" class="error-message"></div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+
+
+
+
                 </div>
 
             </div>
@@ -266,6 +355,9 @@
             window.location.href = "./login.html";
         });
 
+        function validateNumericInput(inputElement) {
+            inputElement.value = inputElement.value.replace(/\D/g, '');
+        }
 
     </script>
 </body>

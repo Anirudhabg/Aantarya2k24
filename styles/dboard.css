@@ -49,6 +49,7 @@ body {
     align-items: center;
     flex-direction: column;
 
+
 }
 
 .heading {
@@ -145,7 +146,7 @@ a {
     font-size: 1.5rem;
     position: absolute;
     top: 2vh;
-    z-index: 1;
+
     color: #000000;
     left: 2vw;
 }
@@ -269,7 +270,7 @@ input[type]:checked~span.mid {
     letter-spacing: 0.5px;
 }
 
-
+/* 
 .section-select-dept {
     display: flex;
     flex-direction: row;
@@ -296,7 +297,7 @@ option {
 
 option:hover {
     background-color: #0A579B;
-}
+} */
 
 
 .Btn {
@@ -320,6 +321,7 @@ option:hover {
     transition-duration: .3s;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
     background-color: var(--af-white);
+
 }
 
 /* plus sign */
@@ -380,6 +382,134 @@ option:hover {
 
 
 
+/* Section forms */
+
+
+.forms-events {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3vw 0;
+}
+
+.event {
+    border-radius: 17px;
+    border: 1px solid #0A579B;
+    height: auto;
+    width: 80%;
+    margin: 1vw 0;
+    padding: 2vh 1.5vw;
+    transition: all 0.2s ease-in-out;
+}
+
+.event-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sanskrit-name {
+    font-family: 'Samarkan';
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+
+.normal-name {
+    margin-left: 0.5vw;
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+
+
+.member {
+    display: flex;
+    flex-direction: row;
+    margin: 2vh 0;
+}
+
+.member-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.member-contact {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2vw;
+}
+
+
+.input-title-name {
+    font-family: 'IBM';
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+
+
+.form-inputbox {
+    border: 1px solid #0A579B;
+    border-radius: 17px;
+    padding: 1.5vh 1vw;
+    margin: 1vh 0;
+
+}
+
+.memname {
+    width: 20vw;
+}
+
+input {
+    font-family: 'IBM';
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+
+.input-title-contact {
+    font-family: 'IBM';
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 0.2vh;
+    margin-left: 0.2vh;
+    font-size: 0.8vw;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -402,6 +532,7 @@ option:hover {
         width: auto;
         height: auto;
         text-align: center;
+        z-index: 1;
     }
 
     .left-fixed-nav.show {
@@ -415,6 +546,7 @@ option:hover {
         display: block;
         color: #fff;
         top: 1.5vh;
+        z-index: 2;
     }
 
     .mandala-top {
@@ -436,6 +568,10 @@ option:hover {
         width: 18rem;
     }
 
+    #team-name-here {
+        margin-left: 0.8rem;
+    }
+
     /* Enroll-section1 */
 
 
@@ -444,20 +580,27 @@ option:hover {
     }
 
     .Btn {
-        width: 2.5rem;
+        width: 5rem;
         height: 2.5rem;
         margin-left: 2vw;
         margin-right: 2vw;
+        padding-right: 1rem;
+    }
+
+    .sign {
+        width: 40%;
+        padding-left: 0.2rem;
     }
 
     .text {
         font-size: 0.8rem;
+        opacity: 1;
+        width: 65%;
+        padding-right: 1rem;
     }
 
-    .Btn:hover {
-        width: 6rem;
 
-    }
+
 
 
 

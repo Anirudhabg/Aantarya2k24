@@ -491,7 +491,6 @@ input {
     margin-top: 0.2vh;
     margin-left: 0.2vh;
     font-size: 0.8vw;
-
 }
 
 
@@ -599,6 +598,50 @@ input {
         padding-right: 1rem;
     }
 
+
+
+    .event {
+        width: 90%;
+        padding-left: 10vw;
+    }
+
+    .sanskrit-name {
+        font-size: 1rem;
+    }
+
+    .normal-name {
+        font-size: 0.9rem;
+    }
+
+
+    .input-title-name {
+        font-size: 0.8rem;
+    }
+
+    .member {
+        flex-direction: column;
+        
+    }
+
+    .member-contact {
+        margin: 0 0;
+    }
+
+    .form-inputbox {
+        width: 80%;
+    }
+
+    .memname {
+        width: 80%;
+    }
+
+    input {
+        font-size: 0.8rem;
+    }
+
+    .input-title-contact {
+        font-size: 0.8rem;
+    }
 
 
 

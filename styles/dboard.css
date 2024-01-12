@@ -213,13 +213,6 @@ input[type]:checked~span.mid {
 
 
 
-
-
-
-
-
-
-
 /* Section 1-header */
 
 .header {
@@ -227,14 +220,15 @@ input[type]:checked~span.mid {
     flex-direction: row;
     justify-content: end;
     align-items: center;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
     padding: 1.23vh 0;
 
     /* testing */
     position: fixed;
     right: 0;
     width: 100%;
-    background: white;
+    background: #f6f5f7;
+    box-shadow: -1px -1px 7px black;
     
 }
 

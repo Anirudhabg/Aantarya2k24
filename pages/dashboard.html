@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles/dboard.css">
 
     <title>Dashboard</title>
+    <script src="../js/dborad.js" defer></script>
 
 
 </head>
@@ -1147,26 +1148,6 @@
 
     </div>
 
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const burgerMenu = document.querySelector('.burger-click');
-            const navLinks = document.querySelector('.left-fixed-nav');
-
-            burgerMenu.addEventListener('click', function () {
-                navLinks.classList.toggle('show');
-            });
-        });
-
-        document.getElementById("logoutBtn").addEventListener("click", function () {
-            window.location.href = "./login.html";
-        });
-
-        function validateNumericInput(inputElement) {
-            inputElement.value = inputElement.value.replace(/\D/g, '');
-        }
-
-    </script>
 </body>
 
 

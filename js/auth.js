@@ -102,7 +102,7 @@ loginBtn.onclick = async () => {
       const isPosted = await postDataLogin(email, password);
       if (isPosted) {
         alert("Logged in successfully");
-        window.location.href = "/pages/home.html";
+        window.location.href = "/pages/dashboard.html";
       }
     } catch (error) {
       console.error(error);

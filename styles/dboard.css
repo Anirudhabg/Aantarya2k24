@@ -50,6 +50,10 @@ body {
     flex-direction: column;
 
 
+    
+    z-index: 6;
+
+
 }
 
 .heading {
@@ -225,6 +229,12 @@ input[type]:checked~span.mid {
     align-items: center;
     border-bottom: 1px solid black;
     padding: 1.23vh 0;
+
+    /* testing */
+    position: fixed;
+    right: 0;
+    width: 100%;
+    background: white;
     
 }
 
@@ -259,6 +269,8 @@ input[type]:checked~span.mid {
     display: flex;
     justify-content: center;
     margin-top: 2vh;
+
+    padding-top: 5rem;
 
 }
 
@@ -391,6 +403,8 @@ option:hover {
     justify-content: center;
     align-items: center;
     margin: 3vw 0;
+
+   
 }
 
 .event {
@@ -625,7 +639,6 @@ input {
     }
 
     /* Enroll-section1 */
-
 
     .enroll-title {
         font-size: 1rem;

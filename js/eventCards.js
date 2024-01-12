@@ -22,7 +22,7 @@ const ugListNorm = [
   "DUMB CHARADES", 
   "CODING", 
   "WEB DESIGNING", 
-  "QUIZ", 
+  "IT QUIZ", 
   "DEBATE",
   "DANCE", 
   "PHOTOGRAPHY", 
@@ -48,7 +48,7 @@ const pgList = [
 ];
 
 const pgListNorm = [
-  "IT MANAGER", "CODING", "WEB DESIGNING", "QUIZ", "DEBATE", "PHOTOGRAPHY", "DANCE", "GAMING", "TREASURE HUNT", "PRODUCT LAUNCH", "DESIGNING"
+  "IT MANAGER", "CODING", "WEB DESIGNING", "IT QUIZ", "DEBATE", "PHOTOGRAPHY", "DANCE", "GAMING", "TREASURE HUNT", "PRODUCT LAUNCH", "DESIGNING"
 ]
 
 const ugCard = document.querySelector("#ug-card .inside-card-h3");

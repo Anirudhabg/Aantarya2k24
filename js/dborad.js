@@ -17,7 +17,6 @@ function validateNumericInput(inputElement) {
 }
 
 
-
 const removeToken = () => {
   localStorage.removeItem("jwtToken");
   localStorage.removeItem("teamId");
@@ -30,3 +29,14 @@ logOutBtn.onclick = () => {
   removeToken();
   window.location.href = "/pages/login.html";
 };
+
+
+const checkTokenExist = () => {
+    const token = localStorage.getItem("jwtToken");
+    if(!token){
+        window.location.href = "/pages/login.html";
+        console.log('token not found');
+    }
+  }
+  
+  checkTokenExist()

@@ -1,5 +1,3 @@
-const API_URL = "https://mca-fest.onrender.com";
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll("nav a");

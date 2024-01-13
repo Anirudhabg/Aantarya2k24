@@ -1,5 +1,7 @@
+const API_KEY = "https://mca-fest.onrender.com";
+
 const makeServerActive = async () => {
-    const res = await fetch(`${API_URL}`);
+    const res = await fetch(`${API_KEY}`);
     const data = await res.json();
     if (res.status == 404) {
       console.log(data.message);

@@ -86,3 +86,17 @@ const countdown = setInterval(() => {
     document.getElementById("demo").innerHTML = formatTime(distance);
   }
 }, 100);
+
+
+
+
+function handleFileSelect() {
+  const fileInput = document.getElementById('fileInput');
+  const fileNameDisplay = document.getElementById('fileName');
+
+  // Get the file name
+  const fileName = fileInput.value.split('\\').pop();
+
+  // Display the file name
+  fileNameDisplay.textContent = `Selected file: ${fileName}`;
+}

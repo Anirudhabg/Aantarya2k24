@@ -576,11 +576,21 @@ input {
 }
 
 
+.timer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh 0;
+}
 
+#reg-bef-id{
+    margin-right: 1vw;
+}
 
-
-
-
+#demo{
+    color: red;
+}
 
 
 

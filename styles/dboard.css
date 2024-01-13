@@ -880,14 +880,11 @@ input {
 
     .warning-payment {
         width: 100%;
-        text-align: justify;
     }
 
     .svg-icon-file {
         width: 2rem;
-        /* Set the desired width */
         height: 2rem;
-        /* Set the desired height */
     }
 
 

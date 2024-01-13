@@ -229,7 +229,8 @@ input[type]:checked~span.mid {
     width: 100%;
     background: #f6f5f7;
     box-shadow: -1px -1px 7px black;
-    
+    z-index: 2;
+
 }
 
 .team-name {
@@ -398,7 +399,6 @@ option:hover {
     align-items: center;
     margin: 3vw 0;
 
-   
 }
 
 .event {
@@ -560,8 +560,20 @@ input {
 
 
 
+.forallsec {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    margin: 5.5rem 3rem;
+    margin-bottom: 1rem;
+}
 
-
+.hide {
+    display: none;
+}
 
 
 
@@ -606,7 +618,7 @@ input {
         display: block;
         color: #fff;
         top: 1.5vh;
-        z-index: 2;
+        z-index: 3;
     }
 
     .mandala-top {
@@ -709,7 +721,7 @@ input {
         background-color: #0A579B;
         color: #fff;
     }
-    
+
 
 
 

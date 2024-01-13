@@ -30,3 +30,62 @@ logOutBtn.onclick = () => {
   removeToken();
   window.location.href = "/pages/login.html";
 };
+
+const enrollSec = document.querySelector('#enroll-section-id')
+const paymentSec = document.querySelector('#payment-section-id')
+const accomodationSec = document.querySelector('#accomodation-section-id')
+const settingSec = document.querySelector('#settings-section-id')
+const contactSec = document.querySelector('#contactus-section-id')
+
+const enrollBtn = document.querySelector('#enroll-nav')
+const paymentBtn = document.querySelector('#payment-nav')
+const accomodationBtn = document.querySelector('#accomodation-nav')
+const settingBtn = document.querySelector('#settings-nav')
+const contactBtn = document.querySelector('#contactus-nav')
+
+
+
+
+
+
+enrollBtn.onclick = () => {
+  enrollSec.classList.remove('hide')
+  paymentSec.classList.add('hide')
+  accomodationSec.classList.add('hide')
+  settingSec.classList.add('hide')
+  contactSec.classList.add('hide')
+}
+
+paymentBtn.onclick = () => {
+  enrollSec.classList.add('hide')
+  paymentSec.classList.remove('hide')
+  accomodationSec.classList.add('hide')
+  settingSec.classList.add('hide')
+  contactSec.classList.add('hide')
+  
+}
+
+accomodationBtn.onclick = () => {
+  enrollSec.classList.add('hide')
+  paymentSec.classList.add('hide')
+  accomodationSec.classList.remove('hide')
+  settingSec.classList.add('hide')
+  contactSec.classList.add('hide')
+}
+
+settingBtn.onclick = () => {
+  enrollSec.classList.add('hide')
+  paymentSec.classList.add('hide')
+  accomodationSec.classList.add('hide')
+  settingSec.classList.remove('hide')
+  contactSec.classList.add('hide')
+}
+
+contactBtn.onclick = () => {
+  enrollSec.classList.add('hide')
+  paymentSec.classList.add('hide')
+  accomodationSec.classList.add('hide')
+  settingSec.classList.add('hide')
+  contactSec.classList.remove('hide')
+}
+

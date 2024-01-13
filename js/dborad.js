@@ -17,7 +17,6 @@ function validateNumericInput(inputElement) {
 }
 
 
-
 const removeToken = () => {
   localStorage.removeItem("jwtToken");
   localStorage.removeItem("teamId");

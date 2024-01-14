@@ -593,9 +593,9 @@ saveBtn.onclick = async () => {
     const res = await fetch(`${API_URL}/team/${teamId}`, options);
   
     if (res.status === 200) {
-      console.log('Data saved successfully')
+      alert('Data saved successfully')
     } else {  
-      console.log('Error saving data')
+      alert('Error saving data')
     }
   } catch (error) {
     console.error("ERROR: " + error)

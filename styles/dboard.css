@@ -545,10 +545,9 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 5vw;
     /* justify-content: center; */
     /* border: 1px solid; */
-    margin: 5.5rem 3rem;
-    margin-bottom: 1rem;
 }
 
 .hide {
@@ -596,6 +595,11 @@ input {
 
 .payment-section {
     margin-top: 0;
+    background: url(/assets/images/mandala.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 5vh;
 }
 
 #reg-bef-id {
@@ -725,7 +729,12 @@ input {
 /* Accomodation Section*/
 
 .accomodation-section{
-    margin-top:0
+    margin-top:0;
+    background: url(/assets/images/mandala.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 5vh;
 }
 .acc-points-div {
     margin: 5vh 0;
@@ -866,6 +875,10 @@ input {
 .settings-section{
     margin: 0;
     height: 100vh;
+    background: url(/assets/images/mandala.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .settings-content-div{
@@ -918,6 +931,48 @@ input {
 .settings-foot{
     font-size: 0.7vw;
 }
+
+/* Contact Us */
+
+.contactus-section{
+    margin: 0;
+    background: url(/assets/images/mandala.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.contact-sec1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+.contact-txthead{
+    font-size: 1.1vw;
+    text-align: center;
+}
+.contact-sec2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+.contact-con-div{
+    display: flex;
+    flex-direction: column;
+    margin: 5vh 0;
+}
+.con-txt-div{
+    display: flex;
+    flex-direction: row;
+    margin: 0.7vh 0;
+}
+.con-txt1{
+    font-size: 1vw;
+}
+.con-txt2{
+    margin-left: 1vw;
+    font-size: 1vw;
+}
+
 
 
 
@@ -1073,6 +1128,12 @@ input {
         font-size: 0.8rem;
     }
 
+    .payment-section{
+        background: url(/assets/images/new-mandala-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
 
     .animated-button {
         font-size: 0.8rem;
@@ -1109,8 +1170,18 @@ input {
 
 
     /* Accommodation Section*/
+
+    .accomodation-section{
+        background: url(/assets/images/new-mandala-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
     .acc-points {
         font-size: 1rem;
+    }
+    .acc-points-div{
+        padding: 0 4vw;
     }
     .acc-check-txt {
         font-size: 1rem;
@@ -1145,6 +1216,13 @@ input {
     }
 
     /* Settings*/
+.settings-section{
+    background: url(/assets/images/new-mandala-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+}
+
     .settings-content-div{
         margin: 10vh 10vw;
         height: 50%;
@@ -1176,6 +1254,24 @@ input {
     .settings-foot{
         font-size: 0.8rem;
         text-align: center;
+    }
+
+    /* Contact Us */
+    .contactus-section{
+        margin: 0;
+        background: url(/assets/images/new-mandala-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    .contact-txthead{
+        font-size: 1.1rem;
+    }
+    .con-txt1{
+        font-size: 1rem;
+    }
+    .con-txt2{
+        font-size: 1rem;
     }
     
 

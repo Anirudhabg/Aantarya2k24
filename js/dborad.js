@@ -1,5 +1,5 @@
-// const API_URL = "http://localhost:3000";
-const API_URL = "https://mca-fest.onrender.com";
+const API_URL = "http://localhost:3000";
+// const API_URL = "https://mca-fest.onrender.com";
 
 const token = localStorage.getItem("jwtToken");
 const teamId = localStorage.getItem("teamId");
@@ -15,6 +15,16 @@ burgerMenu.onclick = () => {
 function validateNumericInput(inputElement) {
   inputElement.value = inputElement.value.replace(/\D/g, "");
 }
+
+
+document.addEventListener('click', function () {
+  const activeElement = document.activeElement;
+
+  if (activeElement && activeElement.tagName === 'INPUT' && activeElement.type === 'text' && activeElement.value === 'N/A') {
+    activeElement.value = '';
+  }
+});
+
 
 
 const removeToken = () => {
@@ -211,6 +221,10 @@ class EventData {
     this.data = data || {};
   }
 
+  static repeatObject(object, size) {
+    return Array.from({ length: size }, () => ({ ...object }));
+  }
+
   getITManager() {
     return this.data.events && this.data.events.itManager
       ? this.data.events.itManager
@@ -230,27 +244,27 @@ class EventData {
   }
 
   getDesigning() {
-    return this.data.events && this.data.events.designing
+    return this.data.events && this.data.events.designing 
       ? this.data.events.designing
       : { name: 'N/A', phone: 'N/A' };
   }
 
   getCoding() {
-    return this.data.events && this.data.events.coding
+    return this.data.events && this.data.events.coding && this.data.events.coding.length == 2
       ? this.data.events.coding
-      : [{ name: 'N/A', phone: 'N/A' }];
+      : EventData.repeatObject({ name: 'N/A', phone: 'N/A' }, 2);
   }
 
   getWeb() {
-    return this.data.events && this.data.events.web
+    return this.data.events && this.data.events.web && this.data.events.web.length == 2
       ? this.data.events.web
-      : [{ name: 'N/A', phone: 'N/A' }];
+      :  EventData.repeatObject({ name: 'N/A', phone: 'N/A' }, 2);
   }
 
   getQuiz() {
-    return this.data.events && this.data.events.quiz
+    return this.data.events && this.data.events.quiz && this.data.events.quiz.length == 2
       ? this.data.events.quiz
-      : [{ name: 'N/A', phone: 'N/A' }];
+      : EventData.repeatObject({ name: 'N/A', phone: 'N/A' }, 2);
   }
 
   getDebate() {
@@ -260,27 +274,27 @@ class EventData {
   }
 
   getDance() {
-    return this.data.events && this.data.events.dance
+    return this.data.events && this.data.events.dance && this.data.events.dance.length > 1
       ? this.data.events.dance
-      : [{ name: 'N/A', phone: 'N/A' }];
+      :  EventData.repeatObject({ name: 'N/A', phone: 'N/A' }, 7);
   }
 
   getGaming() {
-    return this.data.events && this.data.events.gaming
+    return this.data.events && this.data.events.gaming && this.data.events.gaming.length  == 2 
       ? this.data.events.gaming
-      : [{ name: 'N/A', phone: 'N/A' }];
+      : EventData.repeatObject({ name: 'N/A', phone: 'N/A' }, 2);
   }
 
   getTreasure() {
-    return this.data.events && this.data.events.treasure
-      ? this.data.events.treasure
-      : [{ name: 'N/A', phone: 'N/A' }];
+    return this.data.events && this.data.events.treasure && this.data.events.treasure.length == 2
+      ? this.data.events.treasure 
+      :  EventData.repeatObject({ name: 'N/A', phone: 'N/A' }, 2);
   }
 
   getDumbCharades() {
-    return this.data.events && this.data.events.dumbCharades
-      ? this.data.events.dumbCharades
-      : [{ name: 'N/A', phone: 'N/A' }];
+    return this.data.events && this.data.events.dumbCharades && this.data.events.dumbCharades.length == 2
+      ? this.data.events.dumbCharades 
+      : EventData.repeatObject({ name: 'N/A', phone: 'N/A' }, 2);
   }
 }
 
@@ -293,7 +307,7 @@ const updateUITextFields = (eventData) => {
 
   let codingData = eventData.getCoding()
 
-  if(codingData){
+  if(codingData && codingData.length == 2){
     codingMem1.value = codingData[0].name;
     codingMemCon1.value = codingData[0].phone;
   
@@ -302,7 +316,7 @@ const updateUITextFields = (eventData) => {
   }
 
   let webData = eventData.getWeb()
-  if (webData) {
+  if (webData && webData.length == 2) {
     webMem1.value = eventData.getWeb()[0].name;
     webMemCon1.value = eventData.getWeb()[0].phone;
 
@@ -312,7 +326,7 @@ const updateUITextFields = (eventData) => {
 
 
   let quizData = eventData.getQuiz()
-  if (quizData) {
+  if (quizData && quizData.length == 2) {
     quizMem1.value = eventData.getQuiz()[0].name;
     quizMemCon1.value = eventData.getQuiz()[0].phone;
 
@@ -328,7 +342,7 @@ const updateUITextFields = (eventData) => {
   }
 
   let danceData = eventData.getDance()
-  if (danceData) {
+  if (danceData && danceData.length > 1) {
     const danceMembers = [
       {name: danceMem1, phone: danceMemCon1},
       {name: danceMem2, phone: danceMemCon2},
@@ -357,7 +371,7 @@ const updateUITextFields = (eventData) => {
   }
 
   let gamingData = eventData.getGaming()
-  if (gamingData) {
+  if (gamingData && gamingData.length == 2) {
     gamingMem1.value = eventData.getGaming()[0].name;
     gamingMemCon1.value = eventData.getGaming()[0].phone;
 
@@ -366,7 +380,7 @@ const updateUITextFields = (eventData) => {
   }
 
   let treasureData = eventData.getTreasure()
-  if (treasureData) {
+  if (treasureData && treasureData.length == 2) {
     treasureMem1.value = eventData.getTreasure()[0].name;
     treasureMemCon1.value = eventData.getTreasure()[0].phone;
 
@@ -381,7 +395,7 @@ const updateUITextFields = (eventData) => {
   }
 
   let dumbCharadesData = eventData.getDumbCharades()
-  if (dumbCharadesData && dumbCharadesData.length > 0) {
+  if (dumbCharadesData && dumbCharadesData.length == 2) {
     dumbchMem1.value = eventData.getDumbCharades()[0].name;
     dumbchMemCon1.value = eventData.getDumbCharades()[0].phone;
 

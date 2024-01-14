@@ -90,6 +90,25 @@
     color: #0A579B;
 }
 
+
+/*Date Display*/
+#date-display{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+#date-p{
+    font-family: 'IBM';
+    font-size: 5vw;
+    color: #0A579B;
+    transition: color 0.5s ease-in-out;
+}
+#date-p:hover{
+    color: #FED201;
+    transition: color 0.5s ease-in-out;
+}
+
 .button-register-div {
     display: flex;
     justify-content: center;
@@ -1096,6 +1115,19 @@ button:hover .star-6 {
     transition: all 0.1s ease-in-out;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Larger than 1200px */
 @media (min-width: 1200px) {
     .row {
@@ -1155,6 +1187,10 @@ button:hover .star-6 {
 
     .nav-text:hover a {
         color: white;
+    }
+
+    #date-p{
+        font-size: 7vw;
     }
 
     #events-child1 {

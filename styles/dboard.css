@@ -861,6 +861,66 @@ input {
 }
 
 
+/* Settings*/
+
+.settings-section{
+    margin: 0;
+    height: 100vh;
+}
+
+.settings-content-div{
+    margin: 10vh 0;
+    height: 60%;
+}
+.settings-con1-div{
+    display: flex;
+    flex-direction: row;
+}
+.settings-con2-div{
+    display: flex;
+    flex-direction: row;
+    margin: 5vh 0;
+}
+
+.settings-con3-div{
+    display: flex;
+    flex-direction: row;
+}
+.settings-teamname{
+    display: flex;
+    flex-direction: row;
+}
+.settings-txt{
+    margin-left: 1vw;
+}
+#set-team-name{
+    text-shadow: 0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #fed201,
+        0 0 30px #fed201,
+        0 0 40px #fed201,
+        0 0 55px #fed201,
+        0 0 70px #fed201;
+}
+#set-reg-status-complete{
+    color: green;
+    display: none;
+}
+#set-reg-status-not{
+    color: red;
+    
+}
+.settings-foot-div{
+    display: flex;
+    justify-content: start;
+
+}
+.settings-foot{
+    font-size: 0.7vw;
+}
+
+
+
 
 
 
@@ -1082,6 +1142,40 @@ input {
     }
     .acc-contacts{
         width: 100vw;
+    }
+
+    /* Settings*/
+    .settings-content-div{
+        margin: 10vh 10vw;
+        height: 50%;
+    }
+    .settings-con1-div{
+        flex-direction: column;
+        text-align: center;
+    }
+    .settings-txt{
+        margin-top: 1vh;
+    }
+    .settings-con2-div{
+        flex-direction: column;
+        text-align: center;
+    }
+    .settings-teamname{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #set-team-name{
+        margin-left: 2vw;
+    }
+    .settings-con3-div{
+        flex-direction: column;
+        text-align: center;
+    }
+    .settings-foot{
+        font-size: 0.8rem;
+        text-align: center;
     }
     
 

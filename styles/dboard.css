@@ -101,7 +101,15 @@ body {
     border: 2px solid transparent;
     border-radius: 17px;
     margin: 1vh 0;
+    justify-content: center;
+    align-items: center;
 }
+.links{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .nav-text {
     margin-left: 1vw;
@@ -277,35 +285,6 @@ input[type]:checked~span.mid {
     line-height: normal;
     letter-spacing: 0.5px;
 }
-
-/* 
-.section-select-dept {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-select {
-    font-family: 'IBM', sans-serif;
-    padding: 0.8vw;
-    border: 1px solid #0A579B;
-    border-radius: 17px;
-    margin: 3vh 1vw;
-    width: 18vw;
-}
-
-
-option {
-    font-family: 'IBM', sans-serif;
-    background-color: #fff;
-    color: #333;
-    border-radius: 17px;
-}
-
-option:hover {
-    background-color: #0A579B;
-} */
 
 
 .Btn {
@@ -566,10 +545,9 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 5vw;
     /* justify-content: center; */
     /* border: 1px solid; */
-    margin: 5.5rem 3rem;
-    margin-bottom: 1rem;
 }
 
 .hide {
@@ -600,17 +578,28 @@ input {
     width: 50px;
     height: 50px;
     animation: spin 1s linear infinite;
-    display: none; /* Initially hidden */
+    display: none;
+    /* Initially hidden */
     z-index: 999;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .payment-section {
     margin-top: 0;
+    background: url(/assets/images/mandala.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 5vh;
 }
 
 #reg-bef-id {
@@ -737,6 +726,261 @@ input {
 }
 
 
+/* Accomodation Section*/
+
+.accomodation-section{
+    margin-top:0;
+    background: url(/assets/images/mandala.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 5vh;
+}
+.acc-points-div {
+    margin: 5vh 0;
+}
+
+.acc-points {
+    margin: 1vh 0;
+    font-size: 1.2vw;
+}
+
+.acc-check-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 7vh 0;
+    text-align: center;
+}
+
+.acc-check-txt {
+    margin: auto 1vw;
+    text-align: center;
+}
+
+.check {
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    width: 18px;
+    height: 18px;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+}
+
+
+.check svg {
+    position: relative;
+    z-index: 1;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #c8ccd4;
+    stroke-width: 1.5;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease;
+}
+
+.check svg path {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 0;
+}
+
+.check svg polyline {
+    stroke-dasharray: 22;
+    stroke-dashoffset: 66;
+}
+
+.check:hover:before {
+    opacity: 1;
+}
+
+.check:hover svg {
+    stroke: #4285f4;
+}
+
+#cbx:checked+.check svg {
+    stroke: #4285f4;
+}
+
+#cbx:checked+.check svg path {
+    stroke-dashoffset: 60;
+    transition: all 0.3s linear;
+}
+
+#cbx:checked+.check svg polyline {
+    stroke-dashoffset: 42;
+    transition: all 0.2s linear;
+    transition-delay: 0.15s;
+}
+
+.acc-nums-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+    opacity: 0.2;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.acc-nums-div.show {
+    opacity: 1;
+}
+
+.acc-nums {
+    padding: 2vh 2vw;
+    border-radius: 17px;
+    border: 1px solid black;
+    pointer-events: none;   
+}
+.acc-nums-div.show .acc-nums {
+    pointer-events: auto;
+}
+
+.acc-nums-txt1 {
+    margin: 7vh 0;
+}
+
+.acc-check-txt1 {
+    font-size: 1.2vw;
+}
+
+.acc-contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+    margin-bottom: 4vh;
+}
+
+.acc-con {
+    display: flex;
+    flex-direction: column;
+}
+
+.acc-con-name {
+    font-size: 1.2vw;
+}
+
+.acc-con-number {
+    font-size: 1.2vw;
+}
+
+
+/* Settings*/
+
+.settings-section{
+    margin: 0;
+    height: 100vh;
+    background: url(/assets/images/mandala.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.settings-content-div{
+    margin: 10vh 0;
+    height: 60%;
+}
+.settings-con1-div{
+    display: flex;
+    flex-direction: row;
+}
+.settings-con2-div{
+    display: flex;
+    flex-direction: row;
+    margin: 5vh 0;
+}
+
+.settings-con3-div{
+    display: flex;
+    flex-direction: row;
+}
+.settings-teamname{
+    display: flex;
+    flex-direction: row;
+}
+.settings-txt{
+    margin-left: 1vw;
+}
+#set-team-name{
+    text-shadow: 0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #fed201,
+        0 0 30px #fed201,
+        0 0 40px #fed201,
+        0 0 55px #fed201,
+        0 0 70px #fed201;
+}
+#set-reg-status-complete{
+    color: green;
+    display: none;
+}
+#set-reg-status-not{
+    color: red;
+    
+}
+.settings-foot-div{
+    display: flex;
+    justify-content: start;
+
+}
+.settings-foot{
+    font-size: 0.7vw;
+}
+
+/* Contact Us */
+
+.contactus-section{
+    margin: 0;
+    background: url(/assets/images/mandala.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.contact-sec1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+.contact-txthead{
+    font-size: 1.1vw;
+    text-align: center;
+}
+.contact-sec2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+.contact-con-div{
+    display: flex;
+    flex-direction: column;
+    margin: 5vh 0;
+}
+.con-txt-div{
+    display: flex;
+    flex-direction: row;
+    margin: 0.7vh 0;
+}
+.con-txt1{
+    font-size: 1vw;
+}
+.con-txt2{
+    margin-left: 1vw;
+    font-size: 1vw;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -795,7 +1039,7 @@ input {
 
     #logo-bottom {
         height: auto;
-        width: 18rem;
+        width: 16rem;
     }
 
     #team-name-here {
@@ -804,12 +1048,12 @@ input {
 
     /* Enroll-section1 */
 
-    .enroll{
+    .enroll {
         padding: 1.5vw 4.5vw;
         align-items: center;
     }
 
-    .icons{
+    .icons {
         margin-right: 1vw;
         display: flex;
         align-items: center;
@@ -884,6 +1128,12 @@ input {
         font-size: 0.8rem;
     }
 
+    .payment-section{
+        background: url(/assets/images/new-mandala-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
 
     .animated-button {
         font-size: 0.8rem;
@@ -914,10 +1164,115 @@ input {
     }
 
 
-    .file-name{
+    .file-name {
         text-align: center;
     }
 
 
+    /* Accommodation Section*/
+
+    .accomodation-section{
+        background: url(/assets/images/new-mandala-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    .acc-points {
+        font-size: 1rem;
+    }
+    .acc-points-div{
+        padding: 0 4vw;
+    }
+    .acc-check-txt {
+        font-size: 1rem;
+    }
+    .acc-check-div{
+        margin: 2vh 0;
+    }
+    .acc-checkbox{
+        height: 2rem;
+        width: 2rem;
+    }
+    .acc-check-txt1 {
+        font-size: 1rem;
+    }
+    .acc-con-name {
+        font-size: 1rem;
+    }
+    
+    .acc-con-number {
+        font-size: 1rem;
+    }
+    .acc-nums-div{
+        flex-direction: column;
+        height: 20vh;
+        margin: 0;
+    }
+    .acc-nums{
+        width: 76vw;
+    }
+    .acc-contacts{
+        width: 100vw;
+    }
+
+    /* Settings*/
+.settings-section{
+    background: url(/assets/images/new-mandala-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+}
+
+    .settings-content-div{
+        margin: 10vh 10vw;
+        height: 50%;
+    }
+    .settings-con1-div{
+        flex-direction: column;
+        text-align: center;
+    }
+    .settings-txt{
+        margin-top: 1vh;
+    }
+    .settings-con2-div{
+        flex-direction: column;
+        text-align: center;
+    }
+    .settings-teamname{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #set-team-name{
+        margin-left: 2vw;
+    }
+    .settings-con3-div{
+        flex-direction: column;
+        text-align: center;
+    }
+    .settings-foot{
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    /* Contact Us */
+    .contactus-section{
+        margin: 0;
+        background: url(/assets/images/new-mandala-mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    .contact-txthead{
+        font-size: 1.1rem;
+    }
+    .con-txt1{
+        font-size: 1rem;
+    }
+    .con-txt2{
+        font-size: 1rem;
+    }
+    
 
 }

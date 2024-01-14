@@ -7,6 +7,7 @@ const teamId = localStorage.getItem("teamId");
 const burgerMenu = document.querySelector(".burger-click");
 const navLinks = document.querySelector(".left-fixed-nav");
 
+
 burgerMenu.onclick = () => {
   navLinks.classList.toggle("show");
 };
@@ -26,6 +27,15 @@ document.addEventListener('click', function () {
 });
 
 
+const checkTokenExist = () => {
+  const token = localStorage.getItem("jwtToken");
+  if(!token){
+      window.location.href = "/pages/login.html";
+  }
+}
+
+checkTokenExist()
+
 
 const removeToken = () => {
   localStorage.removeItem("jwtToken");
@@ -33,10 +43,14 @@ const removeToken = () => {
 };
 
 
+
 const logOutBtn = document.querySelector("#logoutBtn");
 
 logOutBtn.onclick = () => {
   removeToken();
+  if (history.replaceState) {
+    history.replaceState(null, null, window.location.href);
+  }
   window.location.href = "/pages/login.html";
 };
 

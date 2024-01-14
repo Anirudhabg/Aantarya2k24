@@ -101,7 +101,7 @@
 #date-p{
     font-family: 'IBM';
     font-size: 5vw;
-    color: #0A579B;
+    color: #000;
     transition: color 0.5s ease-in-out;
 }
 #date-p:hover{

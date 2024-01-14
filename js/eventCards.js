@@ -287,16 +287,20 @@ function toggleOverlayUg() {
 }
 
 /* For scaling of date */
-// Get the date-display element
 const dateDisplay = document.getElementById('date-display');
 
-// Add a scroll event listener
 window.addEventListener('scroll', () => {
-  // Calculate the scale based on the scroll position
-  const scale = 0.5 + (window.scrollY / window.innerHeight) * 0.5;
+  // Get the bounding rectangle of the date-display element
+  const rect = dateDisplay.getBoundingClientRect();
 
-  // Apply the scale transformation to the date-display element
-  dateDisplay.style.transform = `scale(${scale})`;
+  // Check if the date-display element is still in the viewport
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    // Calculate the scale based on the scroll position
+    const scale = 0.5 + (window.scrollY / window.innerHeight) * 0.5;
+
+    // Apply the scale transformation to the date-display element
+    dateDisplay.style.transform = `scale(${scale})`;
+  }
 });
 
 

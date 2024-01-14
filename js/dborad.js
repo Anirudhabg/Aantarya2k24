@@ -24,6 +24,10 @@ document.addEventListener('click', function () {
   if (activeElement && activeElement.tagName === 'INPUT' && activeElement.type === 'text' && activeElement.value === 'N/A') {
     activeElement.value = '';
   }
+
+  if (activeElement && activeElement.tagName === 'INPUT' && activeElement.type === 'tel' && activeElement.value === 'N/A') {
+    activeElement.value = '';
+  }
 });
 
 

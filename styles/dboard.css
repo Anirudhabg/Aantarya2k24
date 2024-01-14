@@ -101,7 +101,15 @@ body {
     border: 2px solid transparent;
     border-radius: 17px;
     margin: 1vh 0;
+    justify-content: center;
+    align-items: center;
 }
+.links{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .nav-text {
     margin-left: 1vw;
@@ -277,35 +285,6 @@ input[type]:checked~span.mid {
     line-height: normal;
     letter-spacing: 0.5px;
 }
-
-/* 
-.section-select-dept {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-select {
-    font-family: 'IBM', sans-serif;
-    padding: 0.8vw;
-    border: 1px solid #0A579B;
-    border-radius: 17px;
-    margin: 3vh 1vw;
-    width: 18vw;
-}
-
-
-option {
-    font-family: 'IBM', sans-serif;
-    background-color: #fff;
-    color: #333;
-    border-radius: 17px;
-}
-
-option:hover {
-    background-color: #0A579B;
-} */
 
 
 .Btn {

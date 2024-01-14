@@ -600,13 +600,19 @@ input {
     width: 50px;
     height: 50px;
     animation: spin 1s linear infinite;
-    display: none; /* Initially hidden */
+    display: none;
+    /* Initially hidden */
     z-index: 999;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .payment-section {
@@ -737,6 +743,150 @@ input {
 }
 
 
+/* Accomodation Section*/
+
+.accomodation-section{
+    margin-top:0
+}
+.acc-points-div {
+    margin: 5vh 0;
+}
+
+.acc-points {
+    margin: 1vh 0;
+    font-size: 1.2vw;
+}
+
+.acc-check-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 7vh 0;
+    text-align: center;
+}
+
+.acc-check-txt {
+    margin: auto 1vw;
+    text-align: center;
+}
+
+.check {
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    width: 18px;
+    height: 18px;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+}
+
+
+.check svg {
+    position: relative;
+    z-index: 1;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #c8ccd4;
+    stroke-width: 1.5;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease;
+}
+
+.check svg path {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 0;
+}
+
+.check svg polyline {
+    stroke-dasharray: 22;
+    stroke-dashoffset: 66;
+}
+
+.check:hover:before {
+    opacity: 1;
+}
+
+.check:hover svg {
+    stroke: #4285f4;
+}
+
+#cbx:checked+.check svg {
+    stroke: #4285f4;
+}
+
+#cbx:checked+.check svg path {
+    stroke-dashoffset: 60;
+    transition: all 0.3s linear;
+}
+
+#cbx:checked+.check svg polyline {
+    stroke-dashoffset: 42;
+    transition: all 0.2s linear;
+    transition-delay: 0.15s;
+}
+
+.acc-nums-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+    opacity: 0.2;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.acc-nums-div.show {
+    opacity: 1;
+}
+
+.acc-nums {
+    padding: 2vh 2vw;
+    border-radius: 17px;
+    border: 1px solid black;
+    pointer-events: none;   
+}
+.acc-nums-div.show .acc-nums {
+    pointer-events: auto;
+}
+
+.acc-nums-txt1 {
+    margin: 7vh 0;
+}
+
+.acc-check-txt1 {
+    font-size: 1.2vw;
+}
+
+.acc-contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+    margin-bottom: 4vh;
+}
+
+.acc-con {
+    display: flex;
+    flex-direction: column;
+}
+
+.acc-con-name {
+    font-size: 1.2vw;
+}
+
+.acc-con-number {
+    font-size: 1.2vw;
+}
+
+
+
+
+
+
+
 
 
 
@@ -804,12 +954,12 @@ input {
 
     /* Enroll-section1 */
 
-    .enroll{
+    .enroll {
         padding: 1.5vw 4.5vw;
         align-items: center;
     }
 
-    .icons{
+    .icons {
         margin-right: 1vw;
         display: flex;
         align-items: center;
@@ -914,10 +1064,46 @@ input {
     }
 
 
-    .file-name{
+    .file-name {
         text-align: center;
     }
 
 
+    /* Accommodation Section*/
+    .acc-points {
+        font-size: 1rem;
+    }
+    .acc-check-txt {
+        font-size: 1rem;
+    }
+    .acc-check-div{
+        margin: 2vh 0;
+    }
+    .acc-checkbox{
+        height: 2rem;
+        width: 2rem;
+    }
+    .acc-check-txt1 {
+        font-size: 1rem;
+    }
+    .acc-con-name {
+        font-size: 1rem;
+    }
+    
+    .acc-con-number {
+        font-size: 1rem;
+    }
+    .acc-nums-div{
+        flex-direction: column;
+        height: 20vh;
+        margin: 0;
+    }
+    .acc-nums{
+        width: 76vw;
+    }
+    .acc-contacts{
+        width: 100vw;
+    }
+    
 
 }

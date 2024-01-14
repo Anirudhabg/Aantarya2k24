@@ -144,7 +144,7 @@
                             </svg>
                         </div>
                         <a class="links" href="#accomodation-section-id" id="accomodation-nav">
-                            <p class="nav-text">ACCOMODATION</p>
+                            <p class="nav-text">ACCOMMODATION</p>
                         </a>
                     </div>
 
@@ -1197,7 +1197,59 @@
             </div>
 
             <div class="accomodation-section forallsec hide" id="accomodation-section-id">
-                ACCOMODATION
+                
+                <div class="section-heading">
+                    <p class="enroll-title">ACCOMMODATION</p>
+                </div>
+
+                <div class="acc-points-div">
+                    <ul>
+                        <li class="acc-points">Accommodation is free from all charges throughout the event.</li>
+                        <li class="acc-points">Breakfast and Lunch will be provided.</li>
+                    </ul>
+                </div>
+
+                <div class="acc-check-div">
+                    <div class="container">
+                        <input type="checkbox" id="cbx"  onchange="toggleAccNumsDiv()" style="display: none;">
+                        <label for="cbx" class="check">
+                            <svg class="acc-checkbox" width="2.5vw" height="2.5vw" viewBox="0 0 18 18">
+                                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                <polyline points="1 9 7 14 15 4"></polyline>
+                            </svg>
+                        </label>
+                    </div>
+                    <p class="acc-check-txt">Accomodation Required!</p>
+                </div>
+
+                <div class="acc-nums-div acc-hide">
+                    <input class="acc-nums" type="number" oninput="this.value = this.value.slice(0, 2)" placeholder="Number of Boys">
+                    <input class="acc-nums" type="number" oninput="this.value = this.value.slice(0, 2)"  placeholder="Number of Girls">
+                </div>
+
+                <div class="acc-nums-txt1">
+                    <p class="acc-check-txt1">For any queries regarding Accommodation, Please feel free to contact:</p>
+                </div>
+
+                <div class="acc-contacts">
+                    <div class="acc-con">
+                        <p class="acc-con-name">Mahadev Reddy</p>
+                        <p class="acc-con-number">+91 6360097559</p>
+                    </div>
+                    <div class="acc-con">
+                        <p class="acc-con-name">Jeevan</p>
+                        <p class="acc-con-number">+91 9019825483</p>
+                    </div>
+                </div>
+
+                <button class="animated-button" onclick="uploadImage()">
+                    <span>SAVE</span>
+                    <span></span>
+                </button>
+
+
+
+
             </div>
 
             <div class="settings-section forallsec hide" id="settings-section-id">

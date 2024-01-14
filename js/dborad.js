@@ -356,7 +356,30 @@ const updateUITextFields = (eventData) => {
   }
 
   let danceData = eventData.getDance()
+
   if (danceData && danceData.length > 1) {
+
+    danceMem1.value = 'N/A';
+    danceMemCon1.value = 'N/A';
+  
+    danceMem2.value = 'N/A';
+    danceMemCon2.value = 'N/A';
+  
+    danceMem3.value = 'N/A';
+    danceMemCon3.value = 'N/A';
+  
+    danceMem4.value = 'N/A';
+    danceMemCon4.value = 'N/A';
+  
+    danceMem5.value = 'N/A';
+    danceMemCon5.value = 'N/A';
+  
+    danceMem6.value = 'N/A';
+    danceMemCon6.value = 'N/A';
+  
+    danceMem7.value = 'N/A';
+    danceMemCon7.value = 'N/A';
+
     const danceMembers = [
       {name: danceMem1, phone: danceMemCon1},
       {name: danceMem2, phone: danceMemCon2},
@@ -366,7 +389,8 @@ const updateUITextFields = (eventData) => {
       {name: danceMem6, phone: danceMemCon6},
       {name: danceMem7, phone: danceMemCon7}
     ];
-    
+
+
     const danceData = eventData.getDance();
     
     danceMembers.forEach((member, index) => {
@@ -483,4 +507,99 @@ const fetchDataAndUpdateUI = async () => {
 };
 
 fetchDataAndUpdateUI();
+
+
+
+const getEventData = () => {
+  const codingData = [
+    { name: codingMem1.value, phone: codingMemCon1.value },
+    { name: codingMem2.value, phone: codingMemCon2.value },
+  ];
+
+  const webData = [
+    { name: webMem1.value, phone: webMemCon1.value },
+    { name: webMem2.value, phone: webMemCon2.value },
+  ];
+
+  const quizData = [
+    { name: quizMem1.value, phone: quizMemCon1.value },
+    { name: quizMem2.value, phone: quizMemCon2.value },
+  ];
+
+  const danceData = [
+    { name: danceMem1.value, phone: danceMemCon1.value },
+    { name: danceMem2.value, phone: danceMemCon2.value },
+    { name: danceMem3.value, phone: danceMemCon3.value },
+    { name: danceMem4.value, phone: danceMemCon4.value },
+    { name: danceMem5.value, phone: danceMemCon5.value },
+    { name: danceMem6.value, phone: danceMemCon6.value },
+    { name: danceMem7.value, phone: danceMemCon7.value },
+  ];
+
+  const gamingData = [
+    { name: gamingMem1.value, phone: gamingMemCon1.value },
+    { name: gamingMem2.value, phone: gamingMemCon2.value },
+  ];
+
+  const treasureData = [
+    { name: treasureMem1.value, phone: treasureMemCon1.value },
+    { name: treasureMem2.value, phone: treasureMemCon2.value },
+  ];
+
+  const dumbCharadesData = [
+    { name: dumbchMem1.value, phone: dumbchMemCon1.value },
+    { name: dumbchMem2.value, phone: dumbchMemCon2.value },
+  ];
+
+  const eventData = {
+    events: {
+      coding: codingData,
+      web: webData,
+      quiz: quizData,
+      dance: danceData,
+      gaming: gamingData,
+      treasure: treasureData,
+      dumbCharades: dumbCharadesData,
+      itManager: { name: itManagerMem1.value, phone: itManagerMemCon1.value },
+      photography: { name: photographyMem1.value, phone: photographyMemCon1.value },
+      productLaunch: { name: productMem1.value, phone: productMemCon1.value },
+      designing: { name: designingMem1.value, phone: designingMemCon1.value },
+      debate: { name: debateMem1.value, phone: debateMemCon1.value },
+    },
+  };
+
+  return eventData
+}
+
+const saveBtn = document.querySelector('#enroll-save-btn');
+
+saveBtn.onclick = async () => {
+  
+  const eventData = getEventData()
+
+  const options = {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(eventData),
+  }
+
+  try {
+    const res = await fetch(`${API_URL}/team/${teamId}`, options);
+  
+    if (res.status === 200) {
+      console.log('Data saved successfully')
+    } else {  
+      console.log('Error saving data')
+    }
+  } catch (error) {
+    console.error("ERROR: " + error)
+  }
+    
+  
+  
+  
+}
+
 

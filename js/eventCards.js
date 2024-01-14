@@ -297,16 +297,16 @@ window.addEventListener('scroll', () => {
 });
 
 
-window.addEventListener('scroll', () => {
-  // Get the bounding rectangle of the date-display element
-  const rect = dateDisplay.getBoundingClientRect();
+// window.addEventListener('scroll', () => {
+//   // Get the bounding rectangle of the date-display element
+//   const rect = dateDisplay.getBoundingClientRect();
 
-  // Check if the date-display element is still in the viewport
-  if (rect.top < window.innerHeight && rect.bottom > 0) {
-    // Calculate the scale based on the scroll position
-    const scale = 0.3 + (window.scrollY / window.innerHeight) * 0.5;
+//   // Check if the date-display element is still in the viewport
+//   if (rect.top < window.innerHeight && rect.bottom > 0) {
+//     // Calculate the scale based on the scroll position
+//     const scale = 0.3 + (window.scrollY / window.innerHeight) * 0.5;
 
-    // Apply the scale transformation to the date-display element
-    dateDisplay.style.transform = `scale(${scale})`;
-  }
-});
+//     // Apply the scale transformation to the date-display element
+//     dateDisplay.style.transform = `scale(${scale})`;
+//   }
+// });

@@ -310,3 +310,26 @@ window.addEventListener('scroll', () => {
 //     dateDisplay.style.transform = `scale(${scale})`;
 //   }
 // });
+
+//FOR REGISTRATION POPUP
+document.addEventListener("DOMContentLoaded", function () {
+  const delay = 5000;
+
+  // Set a timeout to display the popup after the specified delay
+  setTimeout(function () {
+      showPopup();
+  }, delay);
+});
+
+function showPopup() {
+  // Show the popup container
+  document.getElementById("popup-container").style.display = "block";
+  document.getElementById("popup-bg-div").style.display = "block";
+}
+
+function closePopup() {
+  // Close the popup container
+  document.getElementById("popup-container").style.display = "none";
+  document.getElementById("popup-bg-div").style.display = "none";
+}
+

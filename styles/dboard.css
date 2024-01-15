@@ -1061,6 +1061,7 @@ input {
         color: #fff;
         top: 1.5vh;
         z-index: 3;
+        position: fixed;
     }
 
     .mandala-top {

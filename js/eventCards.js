@@ -99,8 +99,8 @@ const ugListRules = [
   ["Number of participants: 2", "Number of rounds: 3", "Knowledge in HTML, CSS, and JavaScript is neccessary.", "The details of each round are disclosed on the spot.", "Systems will be provided."],//Rules for Jaalika
   ["Number of participants: 2", "Number of rounds: 3", "The Quiz master's verdict is ultimate in the final round.", "Electronic gadgets are not allowed."],//Rules for Pranshnothar
   ["Number of participants: 1", "Number of rounds: 2", "Topics will be disclosed 5 minutes prior.", "Avoid offensive language and derogatery words.", "Electronic gadgets are not allowed."],//Rules for Vadah
-  ["Number of participants: 1", "Number of rounds: 3", "Participants must have their personal camera and laptop.", "Drones, GoPro, and Gimbals are strictly forbidden.", "Participants cannot participate in any other events."],//Rules for ChayaChitr
   ["Number of participants: 5 to 7", "Each team is given 4+1 minutes.", "Participants are informed to perform semi fusion dance form.", "Submit the music 30 minutes before the event starts.", "Maintain decency in costumes.", "No use of fire, flammable materials."], //Rules for Nrityam
+  ["Number of participants: 1", "Number of rounds: 3", "Participants must have their personal camera and laptop.", "Drones, GoPro, and Gimbals are strictly forbidden.", "Participants cannot participate in any other events."],//Rules for ChayaChitr
   ["Number of participants: 2", "Number of rounds: 3", "Hacking or foul play incidents will lead to disqualification.", "Keep all maps downloaded in BGMI.", "No iPads, triggers are allowed."], //Rules for Khelan
   ["Number of participants: 2", "Number of rounds: 3", "Skipping clues or tampering with another team's clues will lead to disqualification."], //Rules for Nidhisangrah
   ["Number of participants: 1", "Number of rounds: 2", "Knowledge in video editing and presentation is mandotory.", "Laptop is mandatory."], //Rules for Pracharan
@@ -286,21 +286,50 @@ function toggleOverlayUg() {
 
 }
 
-/* For scaling of date */
+
 const dateDisplay = document.getElementById('date-display');
-
 window.addEventListener('scroll', () => {
-  // Get the bounding rectangle of the date-display element
-  const rect = dateDisplay.getBoundingClientRect();
-
-  // Check if the date-display element is still in the viewport
-  if (rect.top < window.innerHeight && rect.bottom > 0) {
-    // Calculate the scale based on the scroll position
-    const scale = 0.3 + (window.scrollY / window.innerHeight) * 0.5;
-
-    // Apply the scale transformation to the date-display element
-    dateDisplay.style.transform = `scale(${scale})`;
-  }
+  
+  let scale = 0.5 + (window.scrollY / window.innerHeight) * 0.5;
+  scale = scale < 1 ? scale : 1;
+  
+  dateDisplay.style.transform = `scale(${scale})`;
 });
 
+
+// window.addEventListener('scroll', () => {
+//   // Get the bounding rectangle of the date-display element
+//   const rect = dateDisplay.getBoundingClientRect();
+
+//   // Check if the date-display element is still in the viewport
+//   if (rect.top < window.innerHeight && rect.bottom > 0) {
+//     // Calculate the scale based on the scroll position
+//     const scale = 0.3 + (window.scrollY / window.innerHeight) * 0.5;
+
+//     // Apply the scale transformation to the date-display element
+//     dateDisplay.style.transform = `scale(${scale})`;
+//   }
+// });
+
+//FOR REGISTRATION POPUP
+document.addEventListener("DOMContentLoaded", function () {
+  const delay = 5000;
+
+  // Set a timeout to display the popup after the specified delay
+  setTimeout(function () {
+      showPopup();
+  }, delay);
+});
+
+function showPopup() {
+  // Show the popup container
+  document.getElementById("popup-container").style.display = "block";
+  document.getElementById("popup-bg-div").style.display = "block";
+}
+
+function closePopup() {
+  // Close the popup container
+  document.getElementById("popup-container").style.display = "none";
+  document.getElementById("popup-bg-div").style.display = "none";
+}
 

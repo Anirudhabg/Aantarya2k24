@@ -27,24 +27,25 @@
 
 }
 
-/* .loader-container {
+.loader-container {
     position: fixed;
     top: 0;
     left: 0;
+    /* Optional background  */
     width: 100%;
     height: 100%;
-    /* Optional background 
     z-index: 9;
-/* Ensure it's above other content 
-} */
+    /* Ensure it's above other content  */
+}
 
-/* 
+
 #loader-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Adjust video within container } 
-*/
+    /* Adjust video within container */
+ }  
+
 
 
 

@@ -604,3 +604,28 @@ function handleClick(linkId) {
     }
   });
 }
+
+
+
+/* ALERT */
+
+document.addEventListener('DOMContentLoaded', function() {
+  const alertBox = document.querySelector('.info');
+  const alertTitle = document.getElementById('alert-title');
+  const closeButton = document.querySelector('.info__close');
+
+  // Set the alert title (you can dynamically set this based on your requirement)
+  alertTitle.textContent = 'Your Alert Title';
+
+  // Function to close the alert box
+  function closeAlert() {
+    alertBox.style.display = 'none';
+  }
+
+  // Close the alert box after 3 seconds
+  setTimeout(closeAlert, 3000);
+
+  // Add an event listener to the close button to allow manual closing
+  closeButton.addEventListener('click', closeAlert);
+});
+

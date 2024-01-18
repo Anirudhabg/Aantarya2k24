@@ -1,4 +1,4 @@
-const AUTH_URL = "http://localhost:3000/team/65a3493d83b5adcb87eca8e5/verify";
+const AUTH_URL = `${API_URL}/team/65a3493d83b5adcb87eca8e5/verify`;
 
 
 const imagekit = new ImageKit({
@@ -8,6 +8,7 @@ const imagekit = new ImageKit({
 });
 
 // Function to handle image upload
+
 function uploadImage() {
   loader.style.display = "block";
   const fileInput = document.getElementById("fileInput");
@@ -38,13 +39,14 @@ function uploadImage() {
             });
             updateScreenshot(imgUrl);
             console.log(imgUrl);
-            loader.style.display = "none";
             if (err) {
               console.error("Error uploading image:", err);
               alert("Error uploading image. Please try again.")
+              loader.style.display = "none";
             } else {
-                console.log("Image uploaded successfully:", result);
-                alert("Payment screenshot uploaded successfully")
+              console.log("Image uploaded successfully:", result);
+              alert("Payment screenshot uploaded successfully")
+              loader.style.display = "none";
             }
         }
         );

@@ -10,11 +10,17 @@ const imagekit = new ImageKit({
 // Function to handle image upload
 
 function uploadImage() {
-  loader.style.display = "block";
+  const transactionId = document.querySelector(".acc-nums1").value;
   const fileInput = document.getElementById("fileInput");
   const file = fileInput.files[0];
 
   if (file) {
+    if (verifyTransactionId(transactionId)) {
+      alert("transaction id is required");
+      return;
+    }
+
+    loader.style.display = "block";
     // Fetch authentication parameters from the backend
     fetch(AUTH_URL)
       .then((response) => response.json())
@@ -34,35 +40,35 @@ function uploadImage() {
           },
           (err, result) => {
             const imgUrl = imagekit.url({
-              src: result.url,
-              transformation: [{ height: 300, width: 400 }],
+              src: result.url
             });
-            updateScreenshot(imgUrl);
+            updateScreenshot(imgUrl, transactionId);
             console.log(imgUrl);
             if (err) {
+              alert("Error uploading image. Please try again.");
               console.error("Error uploading image:", err);
-              alert("Error uploading image. Please try again.")
-              loader.style.display = "none";
             } else {
+              alert("Payment screenshot uploaded successfully");
               console.log("Image uploaded successfully:", result);
-              alert("Payment screenshot uploaded successfully")
-              loader.style.display = "none";
             }
-        }
+            loader.style.display = "none";
+          }
         );
-    })
-    .catch((error) =>
-    console.error("Error fetching authentication parameters:", error)
-    );
-} else {
+      })
+      .catch((error) => {
+        console.error("Error fetching authentication parameters:", error);
+        setTimeout(() => {
+          loader.style.display = "none";
+          alert("Error uploading image. Please try again");
+        }, 2000);
+      });
+  } else {
     console.error("No file selected.");
-    alert("no files selected.")
     loader.style.display = "none";
   }
-
 }
 
-const updateScreenshot = async (imageUrl) => {
+const updateScreenshot = async (imageUrl, transactionId) => {
   if (!teamId) {
     console.error("Team ID is missing.");
     return;
@@ -71,8 +77,9 @@ const updateScreenshot = async (imageUrl) => {
   const paymentData = {
     paymentStatus: {
       screenshot: imageUrl,
+      transactionId: transactionId,
     },
-  };    
+  };
   try {
     const res = await fetch(`${API_URL}/team/${teamId}`, {
       method: "PUT",
@@ -81,22 +88,36 @@ const updateScreenshot = async (imageUrl) => {
       },
       body: JSON.stringify(paymentData),
     });
-    const data  = await res.json();
+    const data = await res.json();
     console.log(data);
-
   } catch (err) {
     console.error(err);
   }
 };
 
+const verifyTransactionId = (transactionId) => {
+  return transactionId.length == 0 || transactionId == "" || transactionId == null;
+};
 
 function handleFileSelect() {
-    const fileInput = document.getElementById('fileInput');
-    const fileNameDisplay = document.getElementById('fileName');
-  
-    // Get the file name
-    const fileName = fileInput.value.split('\\').pop();
-  
-    // Display the file name
-    fileNameDisplay.textContent = `Selected file: ${fileName}`;
+  const fileInput = document.getElementById("fileInput");
+  const fileNameDisplay = document.getElementById("fileName");
+
+  // Get the file name
+  const fileName = fileInput.value.split("\\").pop();
+
+  // Display the file name
+  fileNameDisplay.textContent = `Selected file: ${fileName}`;
 }
+
+
+const updateTransactionID = async () => {
+
+  const transactionId = document.querySelector(".acc-nums1");
+  const data = await fetchData();
+  console.log(data.paymentStatus.transactionId);
+  transactionId.value = data.paymentStatus.transactionId;
+
+}
+
+updateTransactionID()

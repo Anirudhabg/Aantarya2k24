@@ -1,15 +1,18 @@
 
-const loaderContainer = document.querySelector('.loader-container');
+const loaderPc = document.querySelector('.loader-pc');
+const loaderMobile = document.querySelector('.loader-mobile');
+
 
 window.addEventListener('load', () => {
 
     setTimeout(() => {
         // loaderContainer.style.display = 'none';
-        loaderContainer.classList.add("loader-hidden");
+        loaderPc.classList.add("loader-hidden");
+        loaderMobile.classList.add("loader-hidden");
     }, 3000);
 
     // setTimeout(() => {
     //     loaderContainer.style.display = 'none';
     // }, 3000);
-    
+
 });

@@ -313,7 +313,7 @@ window.addEventListener('scroll', () => {
 
 //FOR REGISTRATION POPUP
 document.addEventListener("DOMContentLoaded", function () {
-  const delay = 5000;
+  const delay = 8000;
 
   // Set a timeout to display the popup after the specified delay
   setTimeout(function () {

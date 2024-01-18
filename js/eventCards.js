@@ -19,15 +19,15 @@ const ugList = [
 
 
 const ugListNorm = [
-  "DUMB CHARADES", 
-  "CODING", 
-  "WEB DESIGNING", 
-  "IT QUIZ", 
+  "DUMB CHARADES",
+  "CODING",
+  "WEB DESIGNING",
+  "IT QUIZ",
   "DEBATE",
-  "DANCE", 
-  "PHOTOGRAPHY", 
-  "GAMING", 
-  "TREASURE HUNT", 
+  "DANCE",
+  "PHOTOGRAPHY",
+  "GAMING",
+  "TREASURE HUNT",
   "PRODUCT LAUNCH"
 ]
 
@@ -289,47 +289,53 @@ function toggleOverlayUg() {
 
 const dateDisplay = document.getElementById('date-display');
 window.addEventListener('scroll', () => {
-  
+
   let scale = 0.5 + (window.scrollY / window.innerHeight) * 0.5;
   scale = scale < 1 ? scale : 1;
-  
+
   dateDisplay.style.transform = `scale(${scale})`;
 });
 
 
-// window.addEventListener('scroll', () => {
-//   // Get the bounding rectangle of the date-display element
-//   const rect = dateDisplay.getBoundingClientRect();
 
-//   // Check if the date-display element is still in the viewport
-//   if (rect.top < window.innerHeight && rect.bottom > 0) {
-//     // Calculate the scale based on the scroll position
-//     const scale = 0.3 + (window.scrollY / window.innerHeight) * 0.5;
-
-//     // Apply the scale transformation to the date-display element
-//     dateDisplay.style.transform = `scale(${scale})`;
-//   }
-// });
 
 //FOR REGISTRATION POPUP
 document.addEventListener("DOMContentLoaded", function () {
   const delay = 8000;
 
-  // Set a timeout to display the popup after the specified delay
+  
   setTimeout(function () {
-      showPopup();
+    showPopup();
   }, delay);
 });
 
 function showPopup() {
-  // Show the popup container
+
   document.getElementById("popup-container").style.display = "block";
   document.getElementById("popup-bg-div").style.display = "block";
 }
 
 function closePopup() {
-  // Close the popup container
+  
   document.getElementById("popup-container").style.display = "none";
   document.getElementById("popup-bg-div").style.display = "none";
 }
 
+
+function downloadPDF() {
+  
+  const pdfPath = '/assets/pdf/schedule.pdf';
+
+  const link = document.createElement('a');
+
+  link.href = pdfPath;
+
+  link.download = 'Aantarya2k24_schedule.pdf';
+
+  
+  document.body.appendChild(link);
+
+  link.click();
+
+  document.body.removeChild(link);
+}

@@ -54,7 +54,7 @@
     visibility: hidden;
 }
 
-.loader-mobile{
+.loader-mobile {
     display: none;
 }
 
@@ -814,13 +814,13 @@ button:hover .star-6 {
     padding-top: 15vh;
 }
 
-#linktologin{
+#linktologin {
     text-decoration: none;
     color: black;
     transition: color 0.5s ease-in-out;
 }
 
-#linktologin:hover{
+#linktologin:hover {
     color: #fed201;
     transition: color 0.5s ease-in-out;
 }
@@ -886,11 +886,11 @@ button:hover .star-6 {
 
 .card-schedule1 {
     box-sizing: border-box;
-    height: 90vh;
-    width: 90vw;
+    height: auto;
+    width: auto;
     background-size: cover;
     background-repeat: no-repeat;
-    border: 1px solid white;
+    border: 2px solid white;
     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(6px);
     border-radius: 17px;
@@ -906,8 +906,16 @@ button:hover .star-6 {
 }
 
 
+.day-schedule-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 17px;
+}
+
+
 .card-schedule1:hover {
-    border: 6px solid #0a579b;
+    border: 2px solid #fed201;
     box-sizing: border-box;
 }
 
@@ -917,11 +925,11 @@ button:hover .star-6 {
 
 .card-schedule2 {
     box-sizing: border-box;
-    height: 90vh; 
-    width: 90vw;
+    height: auto;
+    width: auto;
     background-size: cover;
     background-repeat: no-repeat;
-    border: 1px solid white;
+    border: 2px solid white;
     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(6px);
     border-radius: 17px;
@@ -939,7 +947,7 @@ button:hover .star-6 {
 
 
 .card-schedule2:hover {
-    border: 6px solid #0a579b;
+    border: 2px solid #fed201;
     box-sizing: border-box;
 }
 
@@ -1341,8 +1349,8 @@ button:hover .star-6 {
 
 /* Smaller than 767px */
 @media (max-width: 767px) {
-    
-    .loader-mobile{
+
+    .loader-mobile {
         display: block;
     }
 
@@ -1513,21 +1521,6 @@ button:hover .star-6 {
         width: 30px;
     }
 
-
-    
-.card-schedule1 {
-    
-    height: 30vh;
-    width: 90vw;
-    margin: 0 5vw;
-}
-
-.card-schedule2 {
-    height: 30vh; 
-    width: 90vw;
-    margin: 0 5vw;
-    margin-top: 5vh;
-}
 
 
     /* POPUP */

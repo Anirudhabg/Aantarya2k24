@@ -103,7 +103,7 @@ const ugListRules = [
   ["Number of participants: 1", "Number of rounds: 3", "Participants must have their personal camera and laptop.", "Drones, GoPro, and Gimbals are strictly forbidden.", "Participants cannot participate in any other events."],//Rules for ChayaChitr
   ["Number of participants: 2", "Number of rounds: 3", "Hacking or foul play incidents will lead to disqualification.", "Keep all maps downloaded in BGMI.", "No iPads, triggers are allowed."], //Rules for Khelan
   ["Number of participants: 2", "Number of rounds: 3", "Skipping clues or tampering with another team's clues will lead to disqualification."], //Rules for Nidhisangrah
-  ["Number of participants: 1", "Number of rounds: 2", "Knowledge in video editing and presentation is mandotory.", "Laptop is mandatory."], //Rules for Pracharan
+  ["Number of participants: 1", "Number of rounds: 2", "Participants must submit their product report on or before 11AM on the day of event.", "Original and novel ideas related to the IT field are encouraged."], //Rules for Pracharan
 ];
 
 const ugHeads = [
@@ -168,7 +168,7 @@ const pgListRules = [
   ["Number of participants: 5 to 7", "Each team is given 4+1 minutes.", "Participants are informed to perform semi fusion dance form.", "Submit the music 30 minutes before the event starts.", "Maintain decency in costumes.", "No use of fire, flammable materials."], //Rules for Nrityam
   ["Number of participants: 2", "Number of rounds: 3", "Hacking or foul play incidents will lead to disqualification.", "Keep all maps downloaded in BGMI.", "No iPads, triggers are allowed."], //Rules for Khelan
   ["Number of participants: 2", "Number of rounds: 3", "Skipping clues or tampering with another team's clues will lead to disqualification."], //Rules for Nidhisangrah
-  ["Number of participants: 1", "Number of rounds: 2", "Knowledge in video editing and presentation is mandotory.", "Laptop is mandatory."], //Rules for Pracharan
+  ["Number of participants: 1", "Number of rounds: 2", "Participants must submit their product report on or before 11AM on the day of event.", "Original and novel ideas related to the IT field are encouraged."], //Rules for Pracharan
   ["Number of participants: 1", "Number of rounds: 2", "Participants are advised to bring along a laptop."] // Rules for Chitr
 ];
 

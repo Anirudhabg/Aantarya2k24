@@ -70,6 +70,15 @@ body {
     cursor: pointer;
     margin-left: auto;
   }
+
+
+  
+  /*Error msg*/
+  .error-msg{
+    font-size: 14px;
+    color: red;
+    display: none;
+  }
   
   .info__close path {
     fill: #fff;

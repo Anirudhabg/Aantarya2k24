@@ -1,4 +1,4 @@
-const AUTH_URL = `${API_URL}/team/${teamId}/verify`;
+const AUTH_URL = `localhost:3000/team/${teamId}/verify`;
 console.log(teamId);
 
 const imagekit = new ImageKit({
@@ -40,20 +40,24 @@ function uploadImage() {
             updateScreenshot(imgUrl);
             console.log(imgUrl);
             if (err) {
-              console.error("Error uploading image:", err);
+              loader.style.display = "none";
               alert("Error uploading image. Please try again.")
-              loader.style.display = "none";
+              console.error("Error uploading image:", err);
             } else {
-              console.log("Image uploaded successfully:", result);
-              alert("Payment screenshot uploaded successfully")
               loader.style.display = "none";
+              alert("Payment screenshot uploaded successfully")
+              console.log("Image uploaded successfully:", result);
             }
         }
         );
     })
-    .catch((error) =>
-    console.error("Error fetching authentication parameters:", error)
-    );
+    .catch((error) => {
+      console.error("Error fetching authentication parameters:", error)
+      setTimeout(() => {
+        loader.style.display = 'none'
+        alert("Error uploading image. Please try again")
+      }, 2000);
+    });
 } else {
     console.error("No file selected.");
     alert("no files selected.")

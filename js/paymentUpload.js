@@ -116,7 +116,7 @@ const updateTransactionID = async () => {
   const transactionId = document.querySelector(".acc-nums1");
   const data = await fetchData();
   console.log(data.paymentStatus.transactionId);
-  transactionId.value = data.paymentStatus.transactionId;
+  transactionId.value = data.paymentStatus.transactionId || "";
 
 }
 

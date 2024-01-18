@@ -45,9 +45,13 @@
     height: 100%;
     object-fit: cover;
     /* Adjust video within container */
- }  
+}
 
 
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
 
 
 .landingpage {

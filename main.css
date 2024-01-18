@@ -106,7 +106,7 @@
     line-height: normal;
     letter-spacing: 12.32px;
     padding: 1.7vh;
-    transition: background-image 0.3s, color 0.3s, opacity 0.3s;
+    transition: background-image 0.3s ease-in-out;
     opacity: 0.9;
 }
 
@@ -115,6 +115,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 1;
+    transition: background-image 0.3s ease-in-out;
 }
 
 .nav-text:hover a {
@@ -811,6 +812,17 @@ button:hover .star-6 {
     flex-direction: row;
     margin-top: 15vh;
     padding-top: 15vh;
+}
+
+#linktologin{
+    text-decoration: none;
+    color: black;
+    transition: color 0.5s ease-in-out;
+}
+
+#linktologin:hover{
+    color: #fed201;
+    transition: color 0.5s ease-in-out;
 }
 
 .rules-card {

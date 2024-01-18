@@ -634,28 +634,25 @@ input {
 .loader {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 58%;
     transform: translate(-50%, -50%);
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid #3498db;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
+    width: 150px;
+    transition: 1.5s ease-in-out;
     display: none;
-    /* Initially hidden */
     z-index: 999;
 }
 
-@keyframes spin {
-    0% {
+/* @keyframes spin {
+    from {
         transform: rotate(0deg);
+        opacity: 0.2;
     }
 
-    100% {
+    to{
         transform: rotate(360deg);
+        opacity: 1;
     }
-}
+} */
 
 .payment-section {
     margin-top: 0;

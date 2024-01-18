@@ -133,6 +133,11 @@ a {
     transition: 0.2s ease-in-out;
 }
 
+.enroll-clicked {
+    border: 2px solid #fed201;
+    border-radius: 17px;
+}
+
 #setting-icon {
     fill: #fff;
 }

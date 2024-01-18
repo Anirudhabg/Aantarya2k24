@@ -583,10 +583,24 @@ function toggleAccNumsDiv() {
   var accNumsDiv = document.querySelector(".acc-nums-div");
 
   if (checkBox.checked) {
-    
-      accNumsDiv.classList.add("show");
+
+    accNumsDiv.classList.add("show");
   } else {
- 
-      accNumsDiv.classList.remove("show");
+
+    accNumsDiv.classList.remove("show");
   }
+}
+
+/* Nav active border */
+
+function handleClick(linkId) {
+  var clickedElement = document.getElementById(linkId).closest('.enroll');
+  clickedElement.classList.toggle('enroll-clicked');
+
+  var enrollElements = document.querySelectorAll('.enroll');
+  enrollElements.forEach(function (element) {
+    if (element !== clickedElement) {
+      element.classList.remove('enroll-clicked');
+    }
+  });
 }

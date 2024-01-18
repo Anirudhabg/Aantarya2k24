@@ -30,7 +30,7 @@ body {
 /* ALERT */
 .info {
     font-family: 'IBM';
-    width: 320px;
+    width: 25vw;
     padding: 12px;
     position: absolute;
     top:1vh;
@@ -1091,6 +1091,14 @@ input {
 
 
 @media only screen and (max-width: 1000px) {
+
+/* ALERT */
+.info {
+    width: 18rem;
+    padding: 12px;
+   
+  }
+
     .left-fixed-nav {
         display: none;
         flex-direction: column;

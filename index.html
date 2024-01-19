@@ -30,6 +30,7 @@
     <link rel="preload" href="./assets/images/shnyprofile.png" as="image">
 
 
+    <script type="module" src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script>
     <script src="./js/logoLoader.js" defer></script>
     <script src="./js/eventCards.js" defer></script>
     <script src="./js/preventLinks.js"></script>
@@ -37,13 +38,25 @@
 </head>
 
 <body>
+    <div id="loader-lottie-div" class="loader-lottie">
+        <dotlottie-player id="loader-lottie" autoplay loop mode="normal" src="/assets/icon/loader-yellow.lottie"
+            style="width: 70px;height:70px;"></dotlottie-player>
+    </div>
 
     <div class="loader-container loader-pc">
+        
         <video class="loader-video" autoplay muted loop>
             <source src="/assets/video/loader.mp4" type="video/mp4">
         </video>
     </div>
+    
     <div class="loader-container loader-mobile">
+
+        <div id="loader-lottie-div">
+            <dotlottie-player id="loader-lottie" autoplay loop mode="normal" src="/assets/icon/loader-yellow.lottie"
+                style="width: 70px;height:70px;"></dotlottie-player>
+        </div>
+
         <video class="loader-video" autoplay muted loop>
             <source src="/assets/video/loader-mob.mp4" type="video/mp4">
         </video>
@@ -489,10 +502,12 @@
             <div class="schedule-card">
                 <div class="card-schedule1">
 
+                    <img src="/assets/images/day1-schedule.jpg" class="day-schedule-img">
+
                 </div>
 
                 <div class="card-schedule2">
-
+                    <img src="/assets/images/day2-schedule.jpg" class="day-schedule-img">
                 </div>
 
             </div>

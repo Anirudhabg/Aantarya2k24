@@ -16,3 +16,12 @@ window.addEventListener('load', () => {
     // }, 3000);
 
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector('.loader-container').style.display = 'none';
+    document.querySelector('#loader-lottie-div').style.display = 'block';
+    document.querySelector('.loader-video').addEventListener('loadeddata', function() {
+      document.querySelector('#loader-lottie-div').style.display = 'none';
+      document.querySelector('.loader-container').style.display = 'block';
+    });
+  });

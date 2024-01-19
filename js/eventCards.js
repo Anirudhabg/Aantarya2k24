@@ -169,7 +169,7 @@ const pgListRules = [
   ["Number of participants: 2", "Number of rounds: 3", "Hacking or foul play incidents will lead to disqualification.", "Keep all maps downloaded in BGMI.", "No iPads, triggers are allowed."], //Rules for Khelan
   ["Number of participants: 2", "Number of rounds: 3", "Skipping clues or tampering with another team's clues will lead to disqualification."], //Rules for Nidhisangrah
   ["Number of participants: 1", "Number of rounds: 2", "Participants must submit their product report on or before 11AM on the day of event.", "Original and novel ideas related to the IT field are encouraged."], //Rules for Pracharan
-  ["Number of participants: 1", "Number of rounds: 2", "Participants are advised to bring along a laptop."] // Rules for Chitr
+  ["Number of participants: 1", "Number of rounds: 3", "Participants are advised to bring along a laptop.", "Knowledge of Figma is must."] // Rules for Chitr
 ];
 
 

@@ -458,5 +458,18 @@ const downloadPDF = document.getElementById('download-schedule')
 const API_URL = "https://mca-fest.onrender.com";
 
 downloadPDF.onclick = async (req, res) => {
-  
+  try {
+    const res = await fetch(`${API_URL}/team/download-schedule`);
+    const data = await res.arrayBuffer();
+
+    const blob = new Blob([data], { type: 'application/pdf' });
+    const link = document.createElement('a');
+    link.href = window.URL.createObjectURL(blob);
+    link.download = 'schedule.pdf';
+    link.click();
+    link.remove();
+
+  } catch (err) {
+    console.error(err);
+  }
 };

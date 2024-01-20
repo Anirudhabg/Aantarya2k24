@@ -90,33 +90,6 @@ const showSection = (section) => {
 };
 
 
-enrollBtn.onclick = () => {
-  burgerCheck.checked=false;
-  navLinks.classList.toggle("show");
-  showSection(enrollSec);
-}
-
-paymentBtn.onclick = () => {
-  burgerCheck.checked=false;
-  navLinks.classList.toggle("show");
-  showSection(paymentSec);
-}
-accomodationBtn.onclick = () => {
-  burgerCheck.checked=false;
-  navLinks.classList.toggle("show");
-  showSection(accomodationSec);
-}
-settingBtn.onclick = () => {
-  burgerCheck.checked=false;
-  navLinks.classList.toggle("show");
-  showSection(settingSec);
-}
-contactBtn.onclick = () => {
-  burgerCheck.checked=false;
-  navLinks.classList.toggle("show");
-  showSection(contactSec);
-}
-
 const hideHambergerMenu = () => {
   navLinks.classList.toggle("show");
   burgerMenu.checked = false;

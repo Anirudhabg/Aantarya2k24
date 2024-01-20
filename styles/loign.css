@@ -428,5 +428,10 @@ button.ghost {
 
 
     
+/* ALERT */
+.info {
+    width: 90%; 
+  }
+  
 
 }

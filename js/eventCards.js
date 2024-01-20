@@ -1,3 +1,5 @@
+const API_URL = "https://mca-fest.up.railway.app";
+
 let ugIdx = 0;
 let pgIdx = 0;
 
@@ -455,7 +457,7 @@ function closePopup() {
 
 
 const downloadPDF = document.getElementById('download-schedule')
-const API_URL = "https://mca-fest.onrender.com";
+
 
 downloadPDF.onclick = async (req, res) => {
   try {

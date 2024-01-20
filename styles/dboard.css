@@ -928,10 +928,13 @@ input {
 
 .acc-nums-txt1 {
     margin: 7vh 0;
+    padding-right: 2vw;
+    
 }
 
 .acc-check-txt1 {
     font-size: 1.2vw;
+    text-align: justify;
 }
 
 .acc-contacts {
@@ -1296,6 +1299,7 @@ input {
 
     .acc-points {
         font-size: 1rem;
+        text-align: justify;
     }
 
     .acc-points-div {

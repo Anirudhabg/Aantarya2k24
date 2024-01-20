@@ -901,7 +901,7 @@ button:hover .star-6 {
 .card-schedule1 {
     box-sizing: border-box;
     height: auto;
-    width: auto;
+    width: 60vw;
     background-size: cover;
     background-repeat: no-repeat;
     border: 2px solid white;
@@ -916,7 +916,7 @@ button:hover .star-6 {
     user-select: none;
     font-weight: bolder;
     color: black;
-    margin: 0 5vw;
+    margin: 0 auto;
 }
 
 
@@ -940,7 +940,7 @@ button:hover .star-6 {
 .card-schedule2 {
     box-sizing: border-box;
     height: auto;
-    width: auto;
+    width: 60vw;
     background-size: cover;
     background-repeat: no-repeat;
     border: 2px solid white;
@@ -955,7 +955,7 @@ button:hover .star-6 {
     user-select: none;
     font-weight: bolder;
     color: black;
-    margin: 0 5vw;
+    margin: 0 auto;
     margin-top: 5vh;
 }
 
@@ -1504,8 +1504,13 @@ button:hover .star-6 {
         flex-direction: column;
     }
 
+    .card-schedule1{
+        width: 90vw;
+    }
+  
+
     .card-schedule2 {
-        margin-top: 2rem;
+        width: 90vw;
     }
 
     .rows-1-aboutus {

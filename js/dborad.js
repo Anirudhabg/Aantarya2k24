@@ -2,13 +2,11 @@
 // const API_URL = "https://mca-fest.up.railway.app";
 const API_URL = "https://mca-fest.onrender.com";
 
-
 const token = localStorage.getItem("jwtToken");
 const teamId = localStorage.getItem("teamId");
 
 const burgerMenu = document.querySelector(".burger-click");
 const navLinks = document.querySelector(".left-fixed-nav");
-
 
 burgerMenu.onclick = () => {
   navLinks.classList.toggle("show");
@@ -90,11 +88,32 @@ const showSection = (section) => {
   section.classList.remove("hide");
 };
 
-enrollBtn.onclick = () => showSection(enrollSec);
-paymentBtn.onclick = () => showSection(paymentSec);
-accomodationBtn.onclick = () => showSection(accomodationSec);
-settingBtn.onclick = () => showSection(settingSec);
-contactBtn.onclick = () => showSection(contactSec);
+const hideHambergerMenu = () => {
+  navLinks.classList.toggle("show");
+  burgerMenu.checked = false;
+};
+
+enrollBtn.onclick = () => {
+  showSection(enrollSec);
+  hideHambergerMenu();
+};
+
+paymentBtn.onclick = () => {
+  showSection(paymentSec);
+  hideHambergerMenu()
+};
+accomodationBtn.onclick = () => {
+  showSection(accomodationSec);
+  hideHambergerMenu();
+};
+settingBtn.onclick = () => {
+  showSection(settingSec);
+  hideHambergerMenu();
+};
+contactBtn.onclick = () => {
+  showSection(contactSec);
+  hideHambergerMenu();
+};
 
 const countDownDate = new Date("February 15, 2024 23:59:00").getTime();
 
@@ -614,15 +633,12 @@ const isEventDataEmpty = (data) => {
 };
 */
 
-
 const saveBtn = document.querySelector("#enroll-save-btn");
 
 saveBtn.onclick = async () => {
-
   if (checkValidation() == true) {
     loader.style.display = "block";
     const eventData = getEventData();
-    
 
     const options = {
       method: "PUT",
@@ -645,10 +661,7 @@ saveBtn.onclick = async () => {
     }
     loader.style.display = "none";
   }
-
-
 };
-
 
 /* Accomodation toggle */
 function toggleAccNumsDiv() {
@@ -656,10 +669,8 @@ function toggleAccNumsDiv() {
   var accNumsDiv = document.querySelector(".acc-nums-div");
 
   if (checkBox.checked) {
-
     accNumsDiv.classList.add("show");
   } else {
-
     accNumsDiv.classList.remove("show");
   }
 }
@@ -667,24 +678,22 @@ function toggleAccNumsDiv() {
 /* Nav active border */
 
 function handleClick(linkId) {
-  var clickedElement = document.getElementById(linkId).closest('.enroll');
-  clickedElement.classList.toggle('enroll-clicked');
+  var clickedElement = document.getElementById(linkId).closest(".enroll");
+  clickedElement.classList.toggle("enroll-clicked");
 
-  var enrollElements = document.querySelectorAll('.enroll');
+  var enrollElements = document.querySelectorAll(".enroll");
   enrollElements.forEach(function (element) {
     if (element !== clickedElement) {
-      element.classList.remove('enroll-clicked');
+      element.classList.remove("enroll-clicked");
     }
   });
 }
 
-
-
 /* ALERT */
 function openAlert(text) {
-  const alertBox = document.querySelector('.info');
-  const alertTitle = document.getElementById('alert-title');
-  const closeButton = document.querySelector('.info__close');
+  const alertBox = document.querySelector(".info");
+  const alertTitle = document.getElementById("alert-title");
+  const closeButton = document.querySelector(".info__close");
 
   // Check if text is provided
   if (text) {
@@ -692,44 +701,41 @@ function openAlert(text) {
     alertTitle.textContent = text;
 
     // Display the alert box
-    alertBox.style.display = 'flex';
+    alertBox.style.display = "flex";
 
     // Close the alert box after 3 seconds
     setTimeout(closeAlert, 3000);
-    closeButton.addEventListener('click', closeAlert);
+    closeButton.addEventListener("click", closeAlert);
   }
 }
 
 function closeAlert() {
-  const alertBox = document.querySelector('.info');
-  alertBox.style.display = 'none';
+  const alertBox = document.querySelector(".info");
+  alertBox.style.display = "none";
 }
 //To close using close button
-document.querySelector('.info__close').addEventListener('click', function () {
+document.querySelector(".info__close").addEventListener("click", function () {
   closeAlert();
 });
 
-
-
 //CHECK VALIDATION FUNCTION
 function checkValidation() {
-
-
   //If nothing is entered
-  if((codingMem1.value === "" || codingMem1.value === "N/A") &&
-  (codingMem2.value === "" || codingMem2.value === "N/A") &&
-  (codingMemCon1.value === "" || codingMemCon1.value === "N/A") &&
-  (codingMemCon2.value === "" || codingMemCon2.value === "N/A")&&
-  (webMem1.value === "" || webMem1.value === "N/A") &&
+  if (
+    (codingMem1.value === "" || codingMem1.value === "N/A") &&
+    (codingMem2.value === "" || codingMem2.value === "N/A") &&
+    (codingMemCon1.value === "" || codingMemCon1.value === "N/A") &&
+    (codingMemCon2.value === "" || codingMemCon2.value === "N/A") &&
+    (webMem1.value === "" || webMem1.value === "N/A") &&
     (webMem2.value === "" || webMem2.value === "N/A") &&
     (webMemCon1.value === "" || webMemCon1.value === "N/A") &&
-    (webMemCon2.value === "" || webMemCon2.value === "N/A")&&
+    (webMemCon2.value === "" || webMemCon2.value === "N/A") &&
     (quizMem1.value === "" || quizMem1.value === "N/A") &&
     (quizMem2.value === "" || quizMem2.value === "N/A") &&
     (quizMemCon1.value === "" || quizMemCon1.value === "N/A") &&
     (quizMemCon2.value === "" || quizMemCon2.value === "N/A") &&
     (debateMem1.value === "" || debateMem1.value === "N/A") &&
-    (debateMemCon1.value === "" || debateMemCon1.value === "N/A")&&
+    (debateMemCon1.value === "" || debateMemCon1.value === "N/A") &&
     (danceMem1.value === "" || danceMem1.value === "N/A") &&
     (danceMemCon1.value === "" || danceMemCon1.value === "N/A") &&
     (danceMem2.value === "" || danceMem2.value === "N/A") &&
@@ -743,29 +749,27 @@ function checkValidation() {
     (danceMem6.value === "" || danceMem6.value === "N/A") &&
     (danceMemCon6.value === "" || danceMemCon6.value === "N/A") &&
     (danceMem7.value === "" || danceMem7.value === "N/A") &&
-    (danceMemCon7.value === "" || danceMemCon7.value === "N/A")&&
+    (danceMemCon7.value === "" || danceMemCon7.value === "N/A") &&
     (photographyMem1.value === "" || photographyMem1.value === "N/A") &&
-    (photographyMemCon1.value === "" || photographyMemCon1.value === "N/A")&&
+    (photographyMemCon1.value === "" || photographyMemCon1.value === "N/A") &&
     (gamingMem1.value === "" || gamingMem1.value === "N/A") &&
     (gamingMem2.value === "" || gamingMem2.value === "N/A") &&
     (gamingMemCon1.value === "" || gamingMemCon1.value === "N/A") &&
-    (gamingMemCon2.value === "" || gamingMemCon2.value === "N/A")&&
+    (gamingMemCon2.value === "" || gamingMemCon2.value === "N/A") &&
     (treasureMem1.value === "" || treasureMem1.value === "N/A") &&
     (treasureMem2.value === "" || treasureMem2.value === "N/A") &&
     (treasureMemCon1.value === "" || treasureMemCon1.value === "N/A") &&
-    (treasureMemCon2.value === "" || treasureMemCon2.value === "N/A")&&
+    (treasureMemCon2.value === "" || treasureMemCon2.value === "N/A") &&
     (productMem1.value === "" || productMem1.value === "N/A") &&
-    (productMemCon1.value === "" || productMemCon1.value === "N/A")&&
+    (productMemCon1.value === "" || productMemCon1.value === "N/A") &&
     (itManagerMem1.value === "" || itManagerMem1.value === "N/A") &&
-    (itManagerMemCon1.value === "" || itManagerMemCon1.value === "N/A")&&
+    (itManagerMemCon1.value === "" || itManagerMemCon1.value === "N/A") &&
     (designingMem1.value === "" || designingMem1.value === "N/A") &&
     (designingMemCon1.value === "" || designingMemCon1.value === "N/A")
-  ){
-      openAlert("Please fill all the details!")
-      return false;
+  ) {
+    openAlert("Please fill all the details!");
+    return false;
   }
-
-
 
   const displayErr = document.querySelector(".displayErr");
 
@@ -807,10 +811,12 @@ function checkValidation() {
   }
 
   //Web Designing
-  if ((webMem1.value === "" || webMem1.value === "N/A") &&
+  if (
+    (webMem1.value === "" || webMem1.value === "N/A") &&
     (webMem2.value === "" || webMem2.value === "N/A") &&
     (webMemCon1.value === "" || webMemCon1.value === "N/A") &&
-    (webMemCon2.value === "" || webMemCon2.value === "N/A")) {
+    (webMemCon2.value === "" || webMemCon2.value === "N/A")
+  ) {
     // All are empty, don't return anything
   } else {
     if (webMem1.value === "" || webMem1.value === "N/A") {
@@ -835,12 +841,13 @@ function checkValidation() {
     }
   }
 
-
   //IT Quiz
-  if ((quizMem1.value === "" || quizMem1.value === "N/A") &&
+  if (
+    (quizMem1.value === "" || quizMem1.value === "N/A") &&
     (quizMem2.value === "" || quizMem2.value === "N/A") &&
     (quizMemCon1.value === "" || quizMemCon1.value === "N/A") &&
-    (quizMemCon2.value === "" || quizMemCon2.value === "N/A")) {
+    (quizMemCon2.value === "" || quizMemCon2.value === "N/A")
+  ) {
     // All are empty, don't return anything
   } else {
     if (quizMem1.value === "" || quizMem1.value === "N/A") {
@@ -865,10 +872,11 @@ function checkValidation() {
     }
   }
 
-
   //Debate
-  if ((debateMem1.value === "" || debateMem1.value === "N/A") &&
-    (debateMemCon1.value === "" || debateMemCon1.value === "N/A")) {
+  if (
+    (debateMem1.value === "" || debateMem1.value === "N/A") &&
+    (debateMemCon1.value === "" || debateMemCon1.value === "N/A")
+  ) {
     // All are empty, don't return anything
   } else {
     if (debateMem1.value === "" || debateMem1.value === "N/A") {
@@ -883,9 +891,9 @@ function checkValidation() {
     }
   }
 
-
   //Dance
-  if ((danceMem1.value === "" || danceMem1.value === "N/A") &&
+  if (
+    (danceMem1.value === "" || danceMem1.value === "N/A") &&
     (danceMemCon1.value === "" || danceMemCon1.value === "N/A") &&
     (danceMem2.value === "" || danceMem2.value === "N/A") &&
     (danceMemCon2.value === "" || danceMemCon2.value === "N/A") &&
@@ -968,10 +976,11 @@ function checkValidation() {
     }
   }
 
-
   //Photography
-  if ((photographyMem1.value === "" || photographyMem1.value === "N/A") &&
-    (photographyMemCon1.value === "" || photographyMemCon1.value === "N/A")) {
+  if (
+    (photographyMem1.value === "" || photographyMem1.value === "N/A") &&
+    (photographyMemCon1.value === "" || photographyMemCon1.value === "N/A")
+  ) {
     // All are empty, don't return anything
   } else {
     if (photographyMem1.value === "" || photographyMem1.value === "N/A") {
@@ -986,12 +995,13 @@ function checkValidation() {
     }
   }
 
-
   //Gaming
-  if ((gamingMem1.value === "" || gamingMem1.value === "N/A") &&
+  if (
+    (gamingMem1.value === "" || gamingMem1.value === "N/A") &&
     (gamingMem2.value === "" || gamingMem2.value === "N/A") &&
     (gamingMemCon1.value === "" || gamingMemCon1.value === "N/A") &&
-    (gamingMemCon2.value === "" || gamingMemCon2.value === "N/A")) {
+    (gamingMemCon2.value === "" || gamingMemCon2.value === "N/A")
+  ) {
     // All are empty, don't return anything
   } else {
     if (gamingMem1.value === "" || gamingMem1.value === "N/A") {
@@ -1016,12 +1026,13 @@ function checkValidation() {
     }
   }
 
-
   //Treasure Hunt
-  if ((treasureMem1.value === "" || treasureMem1.value === "N/A") &&
+  if (
+    (treasureMem1.value === "" || treasureMem1.value === "N/A") &&
     (treasureMem2.value === "" || treasureMem2.value === "N/A") &&
     (treasureMemCon1.value === "" || treasureMemCon1.value === "N/A") &&
-    (treasureMemCon2.value === "" || treasureMemCon2.value === "N/A")) {
+    (treasureMemCon2.value === "" || treasureMemCon2.value === "N/A")
+  ) {
     // All are empty, don't return anything
   } else {
     if (treasureMem1.value === "" || treasureMem1.value === "N/A") {
@@ -1046,10 +1057,11 @@ function checkValidation() {
     }
   }
 
-
   //Product Launch
-  if ((productMem1.value === "" || productMem1.value === "N/A") &&
-    (productMemCon1.value === "" || productMemCon1.value === "N/A")) {
+  if (
+    (productMem1.value === "" || productMem1.value === "N/A") &&
+    (productMemCon1.value === "" || productMemCon1.value === "N/A")
+  ) {
     // All are empty, don't return anything
   } else {
     if (productMem1.value === "" || productMem1.value === "N/A") {
@@ -1065,8 +1077,10 @@ function checkValidation() {
   }
 
   //IT Manager
-  if ((itManagerMem1.value === "" || itManagerMem1.value === "N/A") &&
-    (itManagerMemCon1.value === "" || itManagerMemCon1.value === "N/A")) {
+  if (
+    (itManagerMem1.value === "" || itManagerMem1.value === "N/A") &&
+    (itManagerMemCon1.value === "" || itManagerMemCon1.value === "N/A")
+  ) {
     // All are empty, don't return anything
   } else {
     if (itManagerMem1.value === "" || itManagerMem1.value === "N/A") {
@@ -1082,8 +1096,10 @@ function checkValidation() {
   }
 
   //Designing
-  if ((designingMem1.value === "" || designingMem1.value === "N/A") &&
-    (designingMemCon1.value === "" || designingMemCon1.value === "N/A")) {
+  if (
+    (designingMem1.value === "" || designingMem1.value === "N/A") &&
+    (designingMemCon1.value === "" || designingMemCon1.value === "N/A")
+  ) {
     // All are empty, don't return anything
   } else {
     if (designingMem1.value === "" || designingMem1.value === "N/A") {
@@ -1099,14 +1115,8 @@ function checkValidation() {
   }
 
   return true;
-
-
 }
 
 function scrollToElement(element) {
-  element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  element.scrollIntoView({ behavior: "smooth", block: "center" });
 }
-
-
-
-

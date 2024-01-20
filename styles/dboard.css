@@ -1116,7 +1116,7 @@ input {
         width: auto;
         height: auto;
         text-align: center;
-        z-index: 1;
+        z-index: 2;
     }
 
     .left-fixed-nav.show {
@@ -1130,7 +1130,7 @@ input {
         display: block;
         color: #fff;
         top: 1.5vh;
-        z-index: 3;
+        z-index: 4;
         position: fixed;
     }
 

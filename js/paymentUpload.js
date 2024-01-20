@@ -16,7 +16,7 @@ function uploadImage() {
 
   if (file) {
     if (verifyTransactionId(transactionId)) {
-      alert("transaction id is required");
+      openAlert("Enter Transaction id!");
       return;
     }
 
@@ -65,6 +65,7 @@ function uploadImage() {
   } else {
     console.error("No file selected.");
     loader.style.display = "none";
+    openAlert("No file selected!");
   }
 }
 
@@ -121,3 +122,33 @@ const updateTransactionID = async () => {
 }
 
 updateTransactionID()
+
+
+
+//ACCOMMODATION
+function uploadAccommo() {
+  const checkbox = document.getElementById('cbx');
+  const num_boys = document.getElementById('no-b');
+  const num_girls = document.getElementById('no-g');
+  if (checkbox.checked) {
+    openAlert("Contact officials for details about Accommodation!");
+    if (num_boys.value === "") {
+      openAlert("Specify number of Men! (0-if none)");
+    }
+    else if (num_girls.value === "") {
+      openAlert("Specify number of Women! (0-if none)");
+    }
+    else if (num_boys.value === 0 && num_girls.value === 0) {
+      openAlert("Please specify proper counts!");
+    }
+    else{
+      //DATA IS VALIDATED
+      
+    }
+
+
+  } else {
+    // The checkbox is not checked
+    openAlert('Accommodation is not needed!');
+  }
+}

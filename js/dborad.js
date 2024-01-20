@@ -666,18 +666,6 @@ saveBtn.onclick = async () => {
   }
 };
 
-/* Accomodation toggle */
-function toggleAccNumsDiv() {
-  var checkBox = document.getElementById("cbx");
-  var accNumsDiv = document.querySelector(".acc-nums-div");
-
-  if (checkBox.checked) {
-    accNumsDiv.classList.add("show");
-  } else {
-    accNumsDiv.classList.remove("show");
-  }
-}
-
 /* Nav active border */
 
 function handleClick(linkId) {

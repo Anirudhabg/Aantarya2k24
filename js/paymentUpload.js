@@ -124,6 +124,18 @@ const updateTransactionID = async () => {
 updateTransactionID()
 
 
+//to copy upi id to clipboard
+document.getElementById('upiId').addEventListener('click', function () {
+  const text = this.innerText; // Get the inner text of the <b> element
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+  openAlert("Copied to clipboard!");
+});
+
 
 //ACCOMMODATION
 function uploadAccommo() {
@@ -131,19 +143,19 @@ function uploadAccommo() {
   const num_boys = document.getElementById('no-b');
   const num_girls = document.getElementById('no-g');
   if (checkbox.checked) {
-    openAlert("Contact officials for details about Accommodation!");
+    openAlert("Details Updated! Contact officials for details about Accommodation!");
     if (num_boys.value === "") {
       openAlert("Specify number of Men! (0-if none)");
     }
     else if (num_girls.value === "") {
       openAlert("Specify number of Women! (0-if none)");
     }
-    else if (num_boys.value === 0 && num_girls.value === 0) {
+    else if (num_boys.value <= 0 && num_girls.value <= 0) {
       openAlert("Please specify proper counts!");
     }
-    else{
+    else {
       //DATA IS VALIDATED
-      
+
     }
 
 

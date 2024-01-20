@@ -786,15 +786,19 @@ function checkValidation() {
   } else {
     if (codingMem1.value === "" || codingMem1.value === "N/A") {
       codingMem1err.classList.add("displayErr");
+      return false;
     }
     if (codingMemCon1.value === "" || codingMemCon1.value === "N/A") {
       codingMemCon1err.classList.add("displayErr");
+      return false;
     }
     if (codingMem2.value === "" || codingMem2.value === "N/A") {
       codingMem2err.classList.add("displayErr");
+      return false;
     }
     if (codingMemCon2.value === "" || codingMemCon2.value === "N/A") {
       codingMemCon2err.classList.add("displayErr");
+      return false;
     }
   }
 
@@ -807,15 +811,19 @@ function checkValidation() {
   } else {
     if (webMem1.value === "" || webMem1.value === "N/A") {
       webMem1err.classList.add("displayErr");
+      return false;
     }
     if (webMemCon1.value === "" || webMemCon1.value === "N/A") {
       webMemCon1err.classList.add("displayErr");
+      return false;
     }
     if (webMem2.value === "" || webMem2.value === "N/A") {
       webMem2err.classList.add("displayErr");
+      return false;
     }
     if (webMemCon2.value === "" || webMemCon2.value === "N/A") {
       webMemCon2err.classList.add("displayErr");
+      return false;
     }
   }
 
@@ -829,15 +837,19 @@ function checkValidation() {
   } else {
     if (quizMem1.value === "" || quizMem1.value === "N/A") {
       quizMem1err.classList.add("displayErr");
+      return false;
     }
     if (quizMemCon1.value === "" || quizMemCon1.value === "N/A") {
       quizMemCon1err.classList.add("displayErr");
+      return false;
     }
     if (quizMem2.value === "" || quizMem2.value === "N/A") {
       quizMem2err.classList.add("displayErr");
+      return false;
     }
     if (quizMemCon2.value === "" || quizMemCon2.value === "N/A") {
       quizMemCon2err.classList.add("displayErr");
+      return false;
     }
   }
 
@@ -849,9 +861,11 @@ function checkValidation() {
   } else {
     if (debateMem1.value === "" || debateMem1.value === "N/A") {
       debateMem1err.classList.add("displayErr");
+      return false;
     }
     if (debateMemCon1.value === "" || debateMemCon1.value === "N/A") {
       debateMemCon1err.classList.add("displayErr");
+      return false;
     }
   }
 
@@ -876,42 +890,54 @@ function checkValidation() {
   } else {
     if (danceMem1.value === "" || danceMem1.value === "N/A") {
       danceMem1err.classList.add("displayErr");
+      return false;
     }
     if (danceMemCon1.value === "" || danceMemCon1.value === "N/A") {
       danceMemCon1err.classList.add("displayErr");
+      return false;
     }
     if (danceMem2.value === "" || danceMem2.value === "N/A") {
       danceMem2err.classList.add("displayErr");
+      return false;
     }
     if (danceMemCon2.value === "" || danceMemCon2.value === "N/A") {
       danceMemCon2err.classList.add("displayErr");
+      return false;
     }
     if (danceMem3.value === "" || danceMem3.value === "N/A") {
       danceMem3err.classList.add("displayErr");
+      return false;
     }
     if (danceMemCon3.value === "" || danceMemCon3.value === "N/A") {
       danceMemCon3err.classList.add("displayErr");
+      return false;
     }
     if (danceMem4.value === "" || danceMem4.value === "N/A") {
       danceMem4err.classList.add("displayErr");
+      return false;
     }
     if (danceMemCon4.value === "" || danceMemCon4.value === "N/A") {
       danceMemCon4err.classList.add("displayErr");
+      return false;
     }
     if (danceMem5.value === "" || danceMem5.value === "N/A") {
       danceMem5err.classList.add("displayErr");
+      return false;
     }
     if (danceMemCon5.value === "" || danceMemCon5.value === "N/A") {
       danceMemCon5err.classList.add("displayErr");
+      return false;
     }
     if (danceMem6.value !== "" && danceMem6.value !== "N/A") {
       if (danceMemCon6.value === "" || danceMemCon6.value === "N/A") {
         danceMemCon6err.classList.add("displayErr");
+        return false;
       }
     }
     if (danceMem7.value !== "" && danceMem7.value !== "N/A") {
       if (danceMemCon7.value === "" || danceMemCon7.value === "N/A") {
         danceMemCon7err.classList.add("displayErr");
+        return false;
       }
     }
   }
@@ -924,9 +950,11 @@ function checkValidation() {
   } else {
     if (photographyMem1.value === "" || photographyMem1.value === "N/A") {
       photoMem1err.classList.add("displayErr");
+      return false;
     }
     if (photographyMemCon1.value === "" || photographyMemCon1.value === "N/A") {
       photoMemCon1err.classList.add("displayErr");
+      return false;
     }
   }
 
@@ -940,15 +968,19 @@ function checkValidation() {
   } else {
     if (gamingMem1.value === "" || gamingMem1.value === "N/A") {
       gameMem1err.classList.add("displayErr");
+      return false;
     }
     if (gamingMemCon1.value === "" || gamingMemCon1.value === "N/A") {
       gameMemCon1err.classList.add("displayErr");
+      return false;
     }
     if (gamingMem2.value === "" || gamingMem2.value === "N/A") {
       gameMem2err.classList.add("displayErr");
+      return false;
     }
     if (gamingMemCon2.value === "" || gamingMemCon2.value === "N/A") {
       gameMemCon2err.classList.add("displayErr");
+      return false;
     }
   }
 
@@ -962,15 +994,19 @@ function checkValidation() {
   } else {
     if (treasureMem1.value === "" || treasureMem1.value === "N/A") {
       treasureMem1err.classList.add("displayErr");
+      return false;
     }
     if (treasureMemCon1.value === "" || treasureMemCon1.value === "N/A") {
       treasureMemCon1err.classList.add("displayErr");
+      return false;
     }
     if (treasureMem2.value === "" || treasureMem2.value === "N/A") {
       treasureMem2err.classList.add("displayErr");
+      return false;
     }
     if (treasureMemCon2.value === "" || treasureMemCon2.value === "N/A") {
       treasureMemCon2err.classList.add("displayErr");
+      return false;
     }
   }
 
@@ -982,9 +1018,11 @@ function checkValidation() {
   } else {
     if (productMem1.value === "" || productMem1.value === "N/A") {
       productMem1err.classList.add("displayErr");
+      return false;
     }
     if (productMemCon1.value === "" || productMemCon1.value === "N/A") {
       productMemCon1err.classList.add("displayErr");
+      return false;
     }
   }
 
@@ -995,9 +1033,11 @@ function checkValidation() {
   } else {
     if (itManagerMem1.value === "" || itManagerMem1.value === "N/A") {
       itManagerMem1err.classList.add("displayErr");
+      return false;
     }
     if (itManagerMemCon1.value === "" || itManagerMemCon1.value === "N/A") {
       itManagerMemCon1err.classList.add("displayErr");
+      return false;
     }
   }
 
@@ -1008,9 +1048,11 @@ function checkValidation() {
   } else {
     if (designingMem1.value === "" || designingMem1.value === "N/A") {
       designingMem1err.classList.add("displayErr");
+      return false;
     }
     if (designingMemCon1.value === "" || designingMemCon1.value === "N/A") {
       designingCon1err.classList.add("displayErr");
+      return false;
     }
   }
 

@@ -49,7 +49,7 @@ function uploadImage() {
             } else {
               if(sendPaymentMail1()){
                 updateScreenshot(imgUrl, transactionId);
-                // openAlert("Payment screenshot uploaded successfully");
+                openAlert("Payment screenshot uploaded successfully");
                 console.log("Image uploaded successfully:", result);
               }
             }
@@ -129,7 +129,10 @@ const sendPaymentMail1 = async () => {
   try {
     const res = await fetch(`${API_URL}/team/${teamId}/sendPayment1`);
     const data = await res.json();
-    openAlert(data.message);
+
+    if(res.status === 400){
+      openAlert(data.message);
+    }
     
     return res.status === 400? false : true;
 

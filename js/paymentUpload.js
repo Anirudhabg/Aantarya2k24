@@ -124,6 +124,18 @@ const updateTransactionID = async () => {
 updateTransactionID()
 
 
+//to copy upi id to clipboard
+document.getElementById('upiId').addEventListener('click', function () {
+  const text = this.innerText; // Get the inner text of the <b> element
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+  openAlert("Copied to clipboard!");
+});
+
 
 //ACCOMMODATION
 function uploadAccommo() {
@@ -141,7 +153,7 @@ function uploadAccommo() {
     else if (num_boys.value <= 0 && num_girls.value <= 0) {
       openAlert("Please specify proper counts!");
     }
-    else{
+    else {
       //DATA IS VALIDATED
 
     }

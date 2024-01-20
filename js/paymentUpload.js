@@ -150,7 +150,7 @@ function uploadAccommo() {
     else if (num_girls.value === "") {
       openAlert("Specify number of Women! (0-if none)");
     }
-    else if (num_boys.value <= 0 && num_girls.value <= 0) {
+    else if (num_boys.value <= 0 && num_girls.value <= 0 && num_boys>15 && num_girls>15) {
       openAlert("Please specify proper counts!");
     }
     else {

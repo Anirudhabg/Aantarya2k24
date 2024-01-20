@@ -37,7 +37,7 @@ body {
     left: 50%;
     transform: translate(-50%, 0%);
     z-index: 10;
-    display: flex; /* Display need to be none */
+    display: none; /* Display need to be none */
     flex-direction: row;
     align-items: center;
     justify-content: start;
@@ -79,6 +79,9 @@ body {
     font-size: 14px;
     color: red;
     display: none;
+  }
+  .displayErr{
+    display: block;
   }
   
   .info__close path {

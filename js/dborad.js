@@ -7,6 +7,7 @@ const teamId = localStorage.getItem("teamId");
 const burgerMenu = document.querySelector(".burger-click");
 const navLinks = document.querySelector(".left-fixed-nav");
 
+
 burgerMenu.onclick = () => {
   navLinks.classList.toggle("show");
 };
@@ -129,86 +130,134 @@ const countdown = setInterval(() => {
 // coding
 const codingMem1 = document.getElementById("coding-mem1");
 const codingMemCon1 = document.getElementById("coding-mem1-con1");
+const codingMem1err = document.getElementById("coding-tmem1-err");
+const codingMemCon1err = document.getElementById("coding-con1-err");
 
 const codingMem2 = document.getElementById("coding-mem2");
 const codingMemCon2 = document.getElementById("coding-mem2-con2");
+const codingMem2err = document.getElementById("coding-tmem2-err");
+const codingMemCon2err = document.getElementById("coding-con2-err");
 
 // web desinging
 const webMem1 = document.getElementById("webdesgn-mem1");
 const webMemCon1 = document.getElementById("webdesgn-mem1-con1");
+const webMem1err = document.getElementById("web-tmem1-err");
+const webMemCon1err = document.getElementById("web-con1-err");
 
 const webMem2 = document.getElementById("webdesgn-mem2");
 const webMemCon2 = document.getElementById("webdesgn-mem2-con2");
+const webMem2err = document.getElementById("web-tmem2-err");
+const webMemCon2err = document.getElementById("web-con2-err");
 
 // quiz
 const quizMem1 = document.getElementById("quiz-mem1");
 const quizMemCon1 = document.getElementById("quiz-mem1-con1");
+const quizMem1err = document.getElementById("quiz-tmem1-err");
+const quizMemCon1err = document.getElementById("quiz-con1-err");
 
 const quizMem2 = document.getElementById("quiz-mem2");
 const quizMemCon2 = document.getElementById("quiz-mem2-con2");
+const quizMem2err = document.getElementById("quiz-tmem2-err");
+const quizMemCon2err = document.getElementById("quiz-con2-err");
 
 // debate
 const debateMem1 = document.getElementById("debate-mem1");
 const debateMemCon1 = document.getElementById("debate-mem1-con1");
+const debateMem1err = document.getElementById("debate-tmem1-err");
+const debateMemCon1err = document.getElementById("debate-con1-err");
 
 // dance
 const danceMem1 = document.getElementById("dance-mem1");
 const danceMemCon1 = document.getElementById("dance-mem1-con1");
+const danceMem1err = document.getElementById("dance-tmem1-err");
+const danceMemCon1err = document.getElementById("dance-con1-err");
 
 const danceMem2 = document.getElementById("dance-mem2");
 const danceMemCon2 = document.getElementById("dance-mem2-con2");
+const danceMem2err = document.getElementById("dance-tmem2-err");
+const danceMemCon2err = document.getElementById("dance-con2-err");
 
 const danceMem3 = document.getElementById("dance-mem3");
 const danceMemCon3 = document.getElementById("dance-mem3-con3");
+const danceMem3err = document.getElementById("dance-tmem3-err");
+const danceMemCon3err = document.getElementById("dance-con3-err");
 
 const danceMem4 = document.getElementById("dance-mem4");
 const danceMemCon4 = document.getElementById("dance-mem4-con4");
+const danceMem4err = document.getElementById("dance-tmem4-err");
+const danceMemCon4err = document.getElementById("dance-con4-err");
 
 const danceMem5 = document.getElementById("dance-mem5");
 const danceMemCon5 = document.getElementById("dance-mem5-con5");
+const danceMem5err = document.getElementById("dance-tmem5-err");
+const danceMemCon5err = document.getElementById("dance-con5-err");
 
 const danceMem6 = document.getElementById("dance-mem6");
 const danceMemCon6 = document.getElementById("dance-mem6-con6");
+const danceMem6err = document.getElementById("dance-tmem6-err");
+const danceMemCon6err = document.getElementById("dance-con6-err");
 
 const danceMem7 = document.getElementById("dance-mem7");
 const danceMemCon7 = document.getElementById("dance-mem7-con7");
+const danceMem7err = document.getElementById("dance-tmem7-err");
+const danceMemCon7err = document.getElementById("dance-con7-err");
 
 // photography
 const photographyMem1 = document.getElementById("photo-mem1");
 const photographyMemCon1 = document.getElementById("photo-mem1-con1");
+const photoMem1err = document.getElementById("photo-tmem1-err");
+const photoMemCon1err = document.getElementById("photo-con1-err");
 
 // gaming
 const gamingMem1 = document.getElementById("gaming-mem1");
 const gamingMemCon1 = document.getElementById("gaming-mem1-con1");
+const gameMem1err = document.getElementById("game-tmem1-err");
+const gameMemCon1err = document.getElementById("game-con1-err");
 
 const gamingMem2 = document.getElementById("gaming-mem2");
 const gamingMemCon2 = document.getElementById("gaming-mem2-con2");
+const gameMem2err = document.getElementById("game-tmem2-err");
+const gameMemCon2err = document.getElementById("game-con2-err");
 
 // treasure hunt
 const treasureMem1 = document.getElementById("treasure-mem1");
 const treasureMemCon1 = document.getElementById("treasure-mem1-con1");
+const treasureMem1err = document.getElementById("thunt-tmem1-err");
+const treasureMemCon1err = document.getElementById("tres-con1-err");
 
 const treasureMem2 = document.getElementById("treasure-mem2");
 const treasureMemCon2 = document.getElementById("treasure-mem2-con2");
+const treasureMem2err = document.getElementById("thunt-tmem2-err");
+const treasureMemCon2err = document.getElementById("tres-con2-err");
 
 // product launch
 const productMem1 = document.getElementById("product-mem1");
 const productMemCon1 = document.getElementById("product-mem1-con1");
+const productMem1err = document.getElementById("product-tmem1-err");
+const productMemCon1err = document.getElementById("product-con1-err");
 
 // dumb charades
 const dumbchMem1 = document.getElementById("dumbch-mem1");
 const dumbchMemCon1 = document.getElementById("dumbch-mem1-con1");
+const dumbchMem1err = document.getElementById("dumb-tmem1-err");
+const dumbchMemCon1err = document.getElementById("dumb-con1-err");
 
 const dumbchMem2 = document.getElementById("dumbch-mem2");
 const dumbchMemCon2 = document.getElementById("dumbch-mem2-con2");
+const dumbchMem2err = document.getElementById("dumb-tmem2-err");
+const dumbchMemCon2err = document.getElementById("dumb-con2-err");
 
 // it manager
 const itManagerMem1 = document.getElementById("itmng-mem1");
 const itManagerMemCon1 = document.getElementById("itmng-mem1-con1");
+const itManagerMem1err = document.getElementById("itman-tmem1-err");
+const itManagerMemCon1err = document.getElementById("itman-con1-err");
 
 // designing
 const designingMem1 = document.getElementById("design-mem1");
 const designingMemCon1 = document.getElementById("design-mem1-con1");
+const designingMem1err = document.getElementById("desig-tmem1-err");
+const designingCon1err = document.getElementById("desig-con1-err");
 
 class EventData {
   constructor(data) {
@@ -548,32 +597,54 @@ const getEventData = () => {
   return eventData;
 };
 
+/*
+const isEventDataEmpty = (data) => {
+  for (const category in data.events) {
+    for (const participant of data.events[category]) {
+      for (const key in participant) {
+        if (participant[key] && (participant[key] !== "N/A")) {
+          return false; // If any value is non-empty, return false
+        }
+      }
+    }
+  }
+  return true; // If all values are empty, return true
+};
+*/
+
+
 const saveBtn = document.querySelector("#enroll-save-btn");
 
 saveBtn.onclick = async () => {
-  loader.style.display = "block";
-  const eventData = getEventData();
 
-  const options = {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(eventData),
-  };
+  if (checkValidation() == true) {
+    loader.style.display = "block";
+    const eventData = getEventData();
 
-  try {
-    const res = await fetch(`${API_URL}/team/${teamId}`, options);
 
-    if (res.status === 200) {
-      alert("Data saved successfully");
-    } else {
-      alert("Error saving data");
+    const options = {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(eventData),
+    };
+
+    try {
+      const res = await fetch(`${API_URL}/team/${teamId}`, options);
+
+      if (res.status === 200) {
+        openAlert("Data saved successfully");
+      } else {
+        openAlert("Error saving data");
+      }
+    } catch (error) {
+      console.error("ERROR: " + error);
     }
-  } catch (error) {
-    console.error("ERROR: " + error);
+    loader.style.display = "none";
   }
-  loader.style.display = "none";
+
+
 };
 
 
@@ -608,24 +679,290 @@ function handleClick(linkId) {
 
 
 /* ALERT */
-
-document.addEventListener('DOMContentLoaded', function() {
+function openAlert(text) {
   const alertBox = document.querySelector('.info');
   const alertTitle = document.getElementById('alert-title');
   const closeButton = document.querySelector('.info__close');
 
-  // Set the alert title (you can dynamically set this based on your requirement)
-  alertTitle.textContent = 'Your Alert Title';
+  // Check if text is provided
+  if (text) {
+    // Set the alert title dynamically
+    alertTitle.textContent = text;
 
-  // Function to close the alert box
-  function closeAlert() {
-    alertBox.style.display = 'none';
+    // Display the alert box
+    alertBox.style.display = 'flex';
+
+    // Close the alert box after 3 seconds
+    setTimeout(closeAlert, 3000);
+    closeButton.addEventListener('click', closeAlert);
+  }
+}
+
+function closeAlert() {
+  const alertBox = document.querySelector('.info');
+  alertBox.style.display = 'none';
+}
+//To close using close button
+document.querySelector('.info__close').addEventListener('click', function () {
+  closeAlert();
+});
+
+
+
+//CHECK VALIDATION FUNCTION
+function checkValidation() {
+  const displayErr = document.querySelector(".displayErr");
+
+  // To remove existing "displayErr" classes
+  const errorElements = document.querySelectorAll(".displayErr");
+  errorElements.forEach((element) => {
+    element.classList.remove("displayErr");
+  });
+
+  // Coding
+  if (
+    (codingMem1.value === "" || codingMem1.value === "N/A") &&
+    (codingMem2.value === "" || codingMem2.value === "N/A") &&
+    (codingMemCon1.value === "" || codingMemCon1.value === "N/A") &&
+    (codingMemCon2.value === "" || codingMemCon2.value === "N/A")
+  ) {
+    // All are empty, don't return anything
+  } else {
+    if (codingMem1.value === "" || codingMem1.value === "N/A") {
+      codingMem1err.classList.add("displayErr");
+    }
+    if (codingMemCon1.value === "" || codingMemCon1.value === "N/A") {
+      codingMemCon1err.classList.add("displayErr");
+    }
+    if (codingMem2.value === "" || codingMem2.value === "N/A") {
+      codingMem2err.classList.add("displayErr");
+    }
+    if (codingMemCon2.value === "" || codingMemCon2.value === "N/A") {
+      codingMemCon2err.classList.add("displayErr");
+    }
   }
 
-  // Close the alert box after 3 seconds
-  setTimeout(closeAlert, 3000);
+  //Web Designing
+  if ((webMem1.value === "" || webMem1.value === "N/A") &&
+    (webMem2.value === "" || webMem2.value === "N/A") &&
+    (webMemCon1.value === "" || webMemCon1.value === "N/A") &&
+    (webMemCon2.value === "" || webMemCon2.value === "N/A")) {
+    // All are empty, don't return anything
+  } else {
+    if (webMem1.value === "" || webMem1.value === "N/A") {
+      webMem1err.classList.add("displayErr");
+    }
+    if (webMemCon1.value === "" || webMemCon1.value === "N/A") {
+      webMemCon1err.classList.add("displayErr");
+    }
+    if (webMem2.value === "" || webMem2.value === "N/A") {
+      webMem2err.classList.add("displayErr");
+    }
+    if (webMemCon2.value === "" || webMemCon2.value === "N/A") {
+      webMemCon2err.classList.add("displayErr");
+    }
+  }
 
-  // Add an event listener to the close button to allow manual closing
-  closeButton.addEventListener('click', closeAlert);
-});
+
+  //IT Quiz
+  if ((quizMem1.value === "" || quizMem1.value === "N/A") &&
+    (quizMem2.value === "" || quizMem2.value === "N/A") &&
+    (quizMemCon1.value === "" || quizMemCon1.value === "N/A") &&
+    (quizMemCon2.value === "" || quizMemCon2.value === "N/A")) {
+    // All are empty, don't return anything
+  } else {
+    if (quizMem1.value === "" || quizMem1.value === "N/A") {
+      quizMem1err.classList.add("displayErr");
+    }
+    if (quizMemCon1.value === "" || quizMemCon1.value === "N/A") {
+      quizMemCon1err.classList.add("displayErr");
+    }
+    if (quizMem2.value === "" || quizMem2.value === "N/A") {
+      quizMem2err.classList.add("displayErr");
+    }
+    if (quizMemCon2.value === "" || quizMemCon2.value === "N/A") {
+      quizMemCon2err.classList.add("displayErr");
+    }
+  }
+
+
+  //Debate
+  if ((debateMem1.value === "" || debateMem1.value === "N/A") &&
+    (debateMemCon1.value === "" || debateMemCon1.value === "N/A")) {
+    // All are empty, don't return anything
+  } else {
+    if (debateMem1.value === "" || debateMem1.value === "N/A") {
+      debateMem1err.classList.add("displayErr");
+    }
+    if (debateMemCon1.value === "" || debateMemCon1.value === "N/A") {
+      debateMemCon1err.classList.add("displayErr");
+    }
+  }
+
+
+  //Dance
+  if ((danceMem1.value === "" || danceMem1.value === "N/A") &&
+    (danceMemCon1.value === "" || danceMemCon1.value === "N/A") &&
+    (danceMem2.value === "" || danceMem2.value === "N/A") &&
+    (danceMemCon2.value === "" || danceMemCon2.value === "N/A") &&
+    (danceMem3.value === "" || danceMem3.value === "N/A") &&
+    (danceMemCon3.value === "" || danceMemCon3.value === "N/A") &&
+    (danceMem4.value === "" || danceMem4.value === "N/A") &&
+    (danceMemCon4.value === "" || danceMemCon4.value === "N/A") &&
+    (danceMem5.value === "" || danceMem5.value === "N/A") &&
+    (danceMemCon5.value === "" || danceMemCon5.value === "N/A") &&
+    (danceMem6.value === "" || danceMem6.value === "N/A") &&
+    (danceMemCon6.value === "" || danceMemCon6.value === "N/A") &&
+    (danceMem7.value === "" || danceMem7.value === "N/A") &&
+    (danceMemCon7.value === "" || danceMemCon7.value === "N/A")
+  ) {
+    // All are empty, don't return anything
+  } else {
+    if (danceMem1.value === "" || danceMem1.value === "N/A") {
+      danceMem1err.classList.add("displayErr");
+    }
+    if (danceMemCon1.value === "" || danceMemCon1.value === "N/A") {
+      danceMemCon1err.classList.add("displayErr");
+    }
+    if (danceMem2.value === "" || danceMem2.value === "N/A") {
+      danceMem2err.classList.add("displayErr");
+    }
+    if (danceMemCon2.value === "" || danceMemCon2.value === "N/A") {
+      danceMemCon2err.classList.add("displayErr");
+    }
+    if (danceMem3.value === "" || danceMem3.value === "N/A") {
+      danceMem3err.classList.add("displayErr");
+    }
+    if (danceMemCon3.value === "" || danceMemCon3.value === "N/A") {
+      danceMemCon3err.classList.add("displayErr");
+    }
+    if (danceMem4.value === "" || danceMem4.value === "N/A") {
+      danceMem4err.classList.add("displayErr");
+    }
+    if (danceMemCon4.value === "" || danceMemCon4.value === "N/A") {
+      danceMemCon4err.classList.add("displayErr");
+    }
+    if (danceMem5.value === "" || danceMem5.value === "N/A") {
+      danceMem5err.classList.add("displayErr");
+    }
+    if (danceMemCon5.value === "" || danceMemCon5.value === "N/A") {
+      danceMemCon5err.classList.add("displayErr");
+    }
+    if (danceMem6.value !== "" && danceMem6.value !== "N/A") {
+      if (danceMemCon6.value === "" || danceMemCon6.value === "N/A") {
+        danceMemCon6err.classList.add("displayErr");
+      }
+    }
+    if (danceMem7.value !== "" && danceMem7.value !== "N/A") {
+      if (danceMemCon7.value === "" || danceMemCon7.value === "N/A") {
+        danceMemCon7err.classList.add("displayErr");
+      }
+    }
+  }
+
+
+  //Photography
+  if ((photographyMem1.value === "" || photographyMem1.value === "N/A") &&
+    (photographyMemCon1.value === "" || photographyMemCon1.value === "N/A")) {
+    // All are empty, don't return anything
+  } else {
+    if (photographyMem1.value === "" || photographyMem1.value === "N/A") {
+      photoMem1err.classList.add("displayErr");
+    }
+    if (photographyMemCon1.value === "" || photographyMemCon1.value === "N/A") {
+      photoMemCon1err.classList.add("displayErr");
+    }
+  }
+
+
+  //Gaming
+  if ((gamingMem1.value === "" || gamingMem1.value === "N/A") &&
+    (gamingMem2.value === "" || gamingMem2.value === "N/A") &&
+    (gamingMemCon1.value === "" || gamingMemCon1.value === "N/A") &&
+    (gamingMemCon2.value === "" || gamingMemCon2.value === "N/A")) {
+    // All are empty, don't return anything
+  } else {
+    if (gamingMem1.value === "" || gamingMem1.value === "N/A") {
+      gameMem1err.classList.add("displayErr");
+    }
+    if (gamingMemCon1.value === "" || gamingMemCon1.value === "N/A") {
+      gameMemCon1err.classList.add("displayErr");
+    }
+    if (gamingMem2.value === "" || gamingMem2.value === "N/A") {
+      gameMem2err.classList.add("displayErr");
+    }
+    if (gamingMemCon2.value === "" || gamingMemCon2.value === "N/A") {
+      gameMemCon2err.classList.add("displayErr");
+    }
+  }
+
+
+  //Treasure Hunt
+  if ((treasureMem1.value === "" || treasureMem1.value === "N/A") &&
+    (treasureMem2.value === "" || treasureMem2.value === "N/A") &&
+    (treasureMemCon1.value === "" || treasureMemCon1.value === "N/A") &&
+    (treasureMemCon2.value === "" || treasureMemCon2.value === "N/A")) {
+    // All are empty, don't return anything
+  } else {
+    if (treasureMem1.value === "" || treasureMem1.value === "N/A") {
+      treasureMem1err.classList.add("displayErr");
+    }
+    if (treasureMemCon1.value === "" || treasureMemCon1.value === "N/A") {
+      treasureMemCon1err.classList.add("displayErr");
+    }
+    if (treasureMem2.value === "" || treasureMem2.value === "N/A") {
+      treasureMem2err.classList.add("displayErr");
+    }
+    if (treasureMemCon2.value === "" || treasureMemCon2.value === "N/A") {
+      treasureMemCon2err.classList.add("displayErr");
+    }
+  }
+
+
+  //Product Launch
+  if ((productMem1.value === "" || productMem1.value === "N/A") &&
+    (productMemCon1.value === "" || productMemCon1.value === "N/A")) {
+    // All are empty, don't return anything
+  } else {
+    if (productMem1.value === "" || productMem1.value === "N/A") {
+      productMem1err.classList.add("displayErr");
+    }
+    if (productMemCon1.value === "" || productMemCon1.value === "N/A") {
+      productMemCon1err.classList.add("displayErr");
+    }
+  }
+
+  //IT Manager
+  if ((itManagerMem1.value === "" || itManagerMem1.value === "N/A") &&
+    (itManagerMemCon1.value === "" || itManagerMemCon1.value === "N/A")) {
+    // All are empty, don't return anything
+  } else {
+    if (itManagerMem1.value === "" || itManagerMem1.value === "N/A") {
+      itManagerMem1err.classList.add("displayErr");
+    }
+    if (itManagerMemCon1.value === "" || itManagerMemCon1.value === "N/A") {
+      itManagerMemCon1err.classList.add("displayErr");
+    }
+  }
+
+  //Designing
+  if ((designingMem1.value === "" || designingMem1.value === "N/A") &&
+    (designingMemCon1.value === "" || designingMemCon1.value === "N/A")) {
+    // All are empty, don't return anything
+  } else {
+    if (designingMem1.value === "" || designingMem1.value === "N/A") {
+      designingMem1err.classList.add("displayErr");
+    }
+    if (designingMemCon1.value === "" || designingMemCon1.value === "N/A") {
+      designingCon1err.classList.add("displayErr");
+    }
+  }
+
+return true;
+
+
+}
+
+
+
 

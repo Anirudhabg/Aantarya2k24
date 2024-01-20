@@ -8,6 +8,7 @@ const teamId = localStorage.getItem("teamId");
 const burgerMenu = document.querySelector(".burger-click");
 const navLinks = document.querySelector(".left-fixed-nav");
 
+
 burgerMenu.onclick = () => {
   navLinks.classList.toggle("show");
 };
@@ -88,32 +89,11 @@ const showSection = (section) => {
   section.classList.remove("hide");
 };
 
-const hideHambergerMenu = () => {
-  navLinks.classList.toggle("show");
-  burgerMenu.checked = false;
-};
-
-enrollBtn.onclick = () => {
-  showSection(enrollSec);
-  hideHambergerMenu();
-};
-
-paymentBtn.onclick = () => {
-  showSection(paymentSec);
-  hideHambergerMenu()
-};
-accomodationBtn.onclick = () => {
-  showSection(accomodationSec);
-  hideHambergerMenu();
-};
-settingBtn.onclick = () => {
-  showSection(settingSec);
-  hideHambergerMenu();
-};
-contactBtn.onclick = () => {
-  showSection(contactSec);
-  hideHambergerMenu();
-};
+enrollBtn.onclick = () => showSection(enrollSec);
+paymentBtn.onclick = () => showSection(paymentSec);
+accomodationBtn.onclick = () => showSection(accomodationSec);
+settingBtn.onclick = () => showSection(settingSec);
+contactBtn.onclick = () => showSection(contactSec);
 
 const countDownDate = new Date("February 15, 2024 23:59:00").getTime();
 

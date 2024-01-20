@@ -1,4 +1,6 @@
-const API_URL = "https://mca-fest.up.railway.app";
+// const API_URL = "https://mca-fest.up.railway.app";
+const API_URL = "https://mca-fest.onrender.com";
+
 
 let ugIdx = 0;
 let pgIdx = 0;

@@ -623,7 +623,6 @@ saveBtn.onclick = async () => {
     loader.style.display = "block";
     const eventData = getEventData();
 
-
     const options = {
       method: "PUT",
       headers: {

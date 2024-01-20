@@ -70,7 +70,9 @@ body {
     cursor: pointer;
     margin-left: auto;
   }
-  
+  .info__close path {
+    fill: #fff;
+  }
 
 
   
@@ -84,9 +86,7 @@ body {
     display: block;
   }
   
-  .info__close path {
-    fill: #fff;
-  }
+  
 
 .main-contents {
     display: flex;

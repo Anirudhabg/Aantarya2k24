@@ -18,7 +18,7 @@ signInAnim.onclick = () => {
 //SignUP LOGIN
 const validateSignUp = (collegeName, email, password, isUg) => {
   if (collegeName === "" || email === "" || password === "" || isUg === "") {
-    alert("Please fill all the fields");
+    openAlert("Please fill all the fields");
     return false;
   }
 
@@ -42,7 +42,7 @@ signUpButton.onclick = async () => {
 
   const isPosted = await postDataSignUp(collegeName, email, password, isUg);
   if (isPosted) {
-    alert("account created successfully");
+    openAlert("account created successfully");
     container.classList.remove("right-panel-active");
   }
 
@@ -67,7 +67,7 @@ const postDataSignUp = async (collegeName, email, password, isUg) => {
     const data = await res.json();
 
     if (res.status == 400) {
-      alert(data.error);
+      openAlert(data.error);
       return;
     }
 
@@ -81,7 +81,7 @@ const postDataSignUp = async (collegeName, email, password, isUg) => {
 
 const validateLogin = (email, password) => {
   if (email === "" || password === "") {
-    alert("Please fill all the fields");
+    openAlert("Please fill all the fields");
     return false;
   }
   return true;
@@ -102,12 +102,12 @@ loginBtn.onclick = async () => {
     try {
       const isPosted = await postDataLogin(email, password);
       if (isPosted) {
-        alert("Logged in successfully");
+        openAlert("Logged in successfully");
         window.location.href = "/pages/dashboard.html";
       }
     } catch (error) {
       console.error(error);
-      alert("Error logging in. Please try again.");
+      openAlert("Error logging in. Please try again.");
     } finally {
       loader.style.display = "none";
     }
@@ -136,7 +136,7 @@ const postDataLogin = async (email, password) => {
     const data = await res.json();
 
     if (res.status == 400) {
-      alert(data.error);
+     openAlert(data.error);
       return false;
     }
 
@@ -158,3 +158,37 @@ const checkTokenExist = () => {
 }
 
 checkTokenExist()
+
+
+
+
+
+
+/* ALERT */
+function openAlert(text) {
+  const alertBox = document.querySelector('.info');
+  const alertTitle = document.getElementById('alert-title');
+  const closeButton = document.querySelector('.info__close');
+
+  // Check if text is provided
+  if (text) {
+    // Set the alert title dynamically
+    alertTitle.textContent = text;
+
+    // Display the alert box
+    alertBox.style.display = 'flex';
+
+    // Close the alert box after 3 seconds
+    setTimeout(closeAlert, 3000);
+    closeButton.addEventListener('click', closeAlert);
+  }
+}
+
+function closeAlert() {
+  const alertBox = document.querySelector('.info');
+  alertBox.style.display = 'none';
+}
+//To close using close button
+document.querySelector('.info__close').addEventListener('click', function () {
+  closeAlert();
+});

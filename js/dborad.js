@@ -713,6 +713,60 @@ document.querySelector('.info__close').addEventListener('click', function () {
 
 //CHECK VALIDATION FUNCTION
 function checkValidation() {
+
+
+  //If nothing is entered
+  if((codingMem1.value === "" || codingMem1.value === "N/A") &&
+  (codingMem2.value === "" || codingMem2.value === "N/A") &&
+  (codingMemCon1.value === "" || codingMemCon1.value === "N/A") &&
+  (codingMemCon2.value === "" || codingMemCon2.value === "N/A")&&
+  (webMem1.value === "" || webMem1.value === "N/A") &&
+    (webMem2.value === "" || webMem2.value === "N/A") &&
+    (webMemCon1.value === "" || webMemCon1.value === "N/A") &&
+    (webMemCon2.value === "" || webMemCon2.value === "N/A")&&
+    (quizMem1.value === "" || quizMem1.value === "N/A") &&
+    (quizMem2.value === "" || quizMem2.value === "N/A") &&
+    (quizMemCon1.value === "" || quizMemCon1.value === "N/A") &&
+    (quizMemCon2.value === "" || quizMemCon2.value === "N/A") &&
+    (debateMem1.value === "" || debateMem1.value === "N/A") &&
+    (debateMemCon1.value === "" || debateMemCon1.value === "N/A")&&
+    (danceMem1.value === "" || danceMem1.value === "N/A") &&
+    (danceMemCon1.value === "" || danceMemCon1.value === "N/A") &&
+    (danceMem2.value === "" || danceMem2.value === "N/A") &&
+    (danceMemCon2.value === "" || danceMemCon2.value === "N/A") &&
+    (danceMem3.value === "" || danceMem3.value === "N/A") &&
+    (danceMemCon3.value === "" || danceMemCon3.value === "N/A") &&
+    (danceMem4.value === "" || danceMem4.value === "N/A") &&
+    (danceMemCon4.value === "" || danceMemCon4.value === "N/A") &&
+    (danceMem5.value === "" || danceMem5.value === "N/A") &&
+    (danceMemCon5.value === "" || danceMemCon5.value === "N/A") &&
+    (danceMem6.value === "" || danceMem6.value === "N/A") &&
+    (danceMemCon6.value === "" || danceMemCon6.value === "N/A") &&
+    (danceMem7.value === "" || danceMem7.value === "N/A") &&
+    (danceMemCon7.value === "" || danceMemCon7.value === "N/A")&&
+    (photographyMem1.value === "" || photographyMem1.value === "N/A") &&
+    (photographyMemCon1.value === "" || photographyMemCon1.value === "N/A")&&
+    (gamingMem1.value === "" || gamingMem1.value === "N/A") &&
+    (gamingMem2.value === "" || gamingMem2.value === "N/A") &&
+    (gamingMemCon1.value === "" || gamingMemCon1.value === "N/A") &&
+    (gamingMemCon2.value === "" || gamingMemCon2.value === "N/A")&&
+    (treasureMem1.value === "" || treasureMem1.value === "N/A") &&
+    (treasureMem2.value === "" || treasureMem2.value === "N/A") &&
+    (treasureMemCon1.value === "" || treasureMemCon1.value === "N/A") &&
+    (treasureMemCon2.value === "" || treasureMemCon2.value === "N/A")&&
+    (productMem1.value === "" || productMem1.value === "N/A") &&
+    (productMemCon1.value === "" || productMemCon1.value === "N/A")&&
+    (itManagerMem1.value === "" || itManagerMem1.value === "N/A") &&
+    (itManagerMemCon1.value === "" || itManagerMemCon1.value === "N/A")&&
+    (designingMem1.value === "" || designingMem1.value === "N/A") &&
+    (designingMemCon1.value === "" || designingMemCon1.value === "N/A")
+  ){
+      openAlert("Please fill all the details!")
+      return false;
+  }
+
+
+
   const displayErr = document.querySelector(".displayErr");
 
   // To remove existing "displayErr" classes
@@ -960,7 +1014,7 @@ function checkValidation() {
     }
   }
 
-return true;
+  return true;
 
 
 }

@@ -622,6 +622,7 @@ saveBtn.onclick = async () => {
   if (checkValidation() == true) {
     loader.style.display = "block";
     const eventData = getEventData();
+    
 
     const options = {
       method: "PUT",

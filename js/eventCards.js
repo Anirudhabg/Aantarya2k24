@@ -457,4 +457,3 @@ function closePopup() {
   document.getElementById("popup-bg-div").style.display = "none";
 }
 
-

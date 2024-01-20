@@ -7,7 +7,7 @@ const teamId = localStorage.getItem("teamId");
 
 const burgerMenu = document.querySelector(".burger-click");
 const navLinks = document.querySelector(".left-fixed-nav");
-
+const burgerCheck=document.getElementById("check");
 
 burgerMenu.onclick = () => {
   navLinks.classList.toggle("show");
@@ -89,11 +89,61 @@ const showSection = (section) => {
   section.classList.remove("hide");
 };
 
-enrollBtn.onclick = () => showSection(enrollSec);
-paymentBtn.onclick = () => showSection(paymentSec);
-accomodationBtn.onclick = () => showSection(accomodationSec);
-settingBtn.onclick = () => showSection(settingSec);
-contactBtn.onclick = () => showSection(contactSec);
+
+enrollBtn.onclick = () => {
+  burgerCheck.checked=false;
+  navLinks.classList.toggle("show");
+  showSection(enrollSec);
+}
+
+paymentBtn.onclick = () => {
+  burgerCheck.checked=false;
+  navLinks.classList.toggle("show");
+  showSection(paymentSec);
+}
+accomodationBtn.onclick = () => {
+  burgerCheck.checked=false;
+  navLinks.classList.toggle("show");
+  showSection(accomodationSec);
+}
+settingBtn.onclick = () => {
+  burgerCheck.checked=false;
+  navLinks.classList.toggle("show");
+  showSection(settingSec);
+}
+contactBtn.onclick = () => {
+  burgerCheck.checked=false;
+  navLinks.classList.toggle("show");
+  showSection(contactSec);
+}
+
+const hideHambergerMenu = () => {
+  navLinks.classList.toggle("show");
+  burgerMenu.checked = false;
+};
+
+enrollBtn.onclick = () => {
+  showSection(enrollSec);
+  hideHambergerMenu();
+};
+
+paymentBtn.onclick = () => {
+  showSection(paymentSec);
+  hideHambergerMenu()
+};
+accomodationBtn.onclick = () => {
+  showSection(accomodationSec);
+  hideHambergerMenu();
+};
+settingBtn.onclick = () => {
+  showSection(settingSec);
+  hideHambergerMenu();
+};
+contactBtn.onclick = () => {
+  showSection(contactSec);
+  hideHambergerMenu();
+};
+
 
 const countDownDate = new Date("February 15, 2024 23:59:00").getTime();
 

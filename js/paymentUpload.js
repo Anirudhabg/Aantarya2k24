@@ -131,19 +131,19 @@ function uploadAccommo() {
   const num_boys = document.getElementById('no-b');
   const num_girls = document.getElementById('no-g');
   if (checkbox.checked) {
-    openAlert("Contact officials for details about Accommodation!");
+    openAlert("Details Updated! Contact officials for details about Accommodation!");
     if (num_boys.value === "") {
       openAlert("Specify number of Men! (0-if none)");
     }
     else if (num_girls.value === "") {
       openAlert("Specify number of Women! (0-if none)");
     }
-    else if (num_boys.value === 0 && num_girls.value === 0) {
+    else if (num_boys.value <= 0 && num_girls.value <= 0) {
       openAlert("Please specify proper counts!");
     }
     else{
       //DATA IS VALIDATED
-      
+
     }
 
 

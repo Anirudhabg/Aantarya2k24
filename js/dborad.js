@@ -8,6 +8,7 @@ const teamId = localStorage.getItem("teamId");
 
 const burgerMenu = document.querySelector(".burger-click");
 const navLinks = document.querySelector(".left-fixed-nav");
+const burgerCheck=document.getElementById("check");
 
 
 burgerMenu.onclick = () => {
@@ -90,11 +91,32 @@ const showSection = (section) => {
   section.classList.remove("hide");
 };
 
-enrollBtn.onclick = () => showSection(enrollSec);
-paymentBtn.onclick = () => showSection(paymentSec);
-accomodationBtn.onclick = () => showSection(accomodationSec);
-settingBtn.onclick = () => showSection(settingSec);
-contactBtn.onclick = () => showSection(contactSec);
+enrollBtn.onclick = () => {
+  burgerCheck.checked=false;
+  navLinks.classList.toggle("show");
+  showSection(enrollSec);
+}
+
+paymentBtn.onclick = () => {
+  burgerCheck.checked=false;
+  navLinks.classList.toggle("show");
+  showSection(paymentSec);
+}
+accomodationBtn.onclick = () => {
+  burgerCheck.checked=false;
+  navLinks.classList.toggle("show");
+  showSection(accomodationSec);
+}
+settingBtn.onclick = () => {
+  burgerCheck.checked=false;
+  navLinks.classList.toggle("show");
+  showSection(settingSec);
+}
+contactBtn.onclick = () => {
+  burgerCheck.checked=false;
+  navLinks.classList.toggle("show");
+  showSection(contactSec);
+}
 
 const countDownDate = new Date("February 15, 2024 23:59:00").getTime();
 

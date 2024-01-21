@@ -243,6 +243,7 @@ a {
     background: #fed201;
     border: 1px solid #ffffff;
     transition: all .3s;
+    cursor: pointer;
     /* box-shadow: 6px 6px 12px #c5c5c5,
         -6px -6px 12px #ffffff; */
 }
@@ -1011,15 +1012,14 @@ input {
         0 0 70px #fed201;
 }
 
-#set-reg-status-complete {
+/* #set-reg-status-complete {
     color: green;
-    display: none;
 }
 
 #set-reg-status-not {
     color: red;
-
-}
+    display: none;
+} */
 
 .settings-foot-div {
     display: flex;

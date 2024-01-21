@@ -2,6 +2,9 @@
 const checkbox = document.getElementById("cbx");
 const num_boys = document.getElementById("no-b");
 const num_girls = document.getElementById("no-g");
+const checkbox = document.getElementById("cbx");
+const num_boys = document.getElementById("no-b");
+const num_girls = document.getElementById("no-g");
 // const accBtn = document.getElementById('accomodation-btn');
 
 /* Accomodation toggle */
@@ -20,13 +23,27 @@ function uploadAccommo() {
       "Details Updated! Contact officials for details about Accommodation!"
     );
     const totalCount = parseInt(num_boys.value) + parseInt(num_girls.value);
+    openAlert(
+      "Details Updated! Contact officials for details about Accommodation!"
+    );
+    const totalCount = parseInt(num_boys.value) + parseInt(num_girls.value);
 
     if (num_boys.value === "") {
       openAlert("Specify number of Men! (0-if none)");
     } else if (num_girls.value === "") {
+    } else if (num_girls.value === "") {
       openAlert("Specify number of Women! (0-if none)");
     } else if (num_boys.value == 0 && num_girls.value == 0) {
+    } else if (num_boys.value == 0 && num_girls.value == 0) {
       openAlert("Please specify proper counts!");
+    } else if (totalCount > 15) {
+      openAlert("Please specify proper counts!");
+    } else if (
+      num_boys.value < 0 ||
+      num_boys.value > 15 ||
+      num_girls.value < 0 ||
+      num_girls.value > 15
+    ) {
     } else if (totalCount > 15) {
       openAlert("Please specify proper counts!");
     } else if (
@@ -38,9 +55,12 @@ function uploadAccommo() {
       openAlert("Please specify proper counts!");
     } else {
       updateAccomodation(num_boys.value, num_girls.value);
+    } else {
+      updateAccomodation(num_boys.value, num_girls.value);
     }
   } else {
     // The checkbox is not checked
+    openAlert("Accommodation is not needed!");
     openAlert("Accommodation is not needed!");
   }
 }
@@ -50,7 +70,9 @@ const getAccommodationData = async () => {
     const res = await fetch(`${API_URL}/team/${teamId}`);
     const data = await res.json();
     if (data.accommodation) {
+    if (data.accommodation) {
       checkbox.checked = true;
+      toggleAccNumsDiv();
       toggleAccNumsDiv();
       num_boys.value = data.accommodation.countOfBoys;
       num_girls.value = data.accommodation.countOfGirls;
@@ -60,6 +82,8 @@ const getAccommodationData = async () => {
   }
 };
 getAccommodationData();
+};
+getAccommodationData();
 
 const updateAccomodation = async (countOfBoys, countOfGirls) => {
   if (!teamId) {
@@ -67,9 +91,12 @@ const updateAccomodation = async (countOfBoys, countOfGirls) => {
     return;
   }
 
+
   const accommodationData = {
     accommodation: {
       countOfBoys: countOfBoys,
+      countOfGirls: countOfGirls,
+    },
       countOfGirls: countOfGirls,
     },
   };

@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
   links.forEach(function (link) {
     link.addEventListener("click", function (event) {
       let targetId = link.getAttribute("href");
-      console.log(targetId);
+      // console.log(targetId);
       if (isURL(targetId)) {
-        console.log("valid url");
+        // console.log("valid url");
         return;
       }
       targetId = targetId.substring(1);

@@ -1,5 +1,5 @@
 const AUTH_URL = `${API_URL}/team/${teamId}/verify`;
-console.log(teamId);
+// console.log(teamId);
 
 const imagekit = new ImageKit({
   publicKey: "public_KYo+rOuJkO2Bf74Wbbr5RrBz8lE=",

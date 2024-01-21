@@ -343,13 +343,9 @@ button.ghost {
     position: absolute;
     top: 45%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid #3498db;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
+    transform: translate(-50%, 0%);
+    width: 70px;
+    height: 70px;
     margin: auto;
     margin-top: 20px;
     display: none; /* Initially hidden */

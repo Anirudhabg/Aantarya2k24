@@ -635,7 +635,7 @@ input {
 
 /* payment-section */
 
-.loader {
+/* .loader {
     position: absolute;
     top: 50%;
     left: 58%;
@@ -643,6 +643,17 @@ input {
     width: 150px;
     transition: 1.5s ease-in-out;
     display: none;
+    z-index: 999;
+} */
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 58%;
+    transform: translate(-50%, 0%);
+    width: 70px;
+    height: 70px;
+    display: none; /* Initially hidden */
     z-index: 999;
 }
 

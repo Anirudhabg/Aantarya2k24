@@ -15,11 +15,16 @@
 
     <script src="../js/auth.js" defer></script>
     <!-- <script src="../js/keepAlive.js" async></script> -->
+    <script type="module" src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script>
 
 
 </head>
 
 <body>
+
+
+
+
 
 
     <!-- ALERT -->
@@ -43,7 +48,14 @@
 
 
     <section class="main-section">
-        <div class="loader"></div>
+
+        <!-- Loader -->
+
+        <div id="loader-lottie-div" class="loader">
+            <dotlottie-player id="loader-lottie" autoplay loop mode="normal" src="/assets/icon/loader-yellow.lottie"
+                style="width: 70px;height:70px;"></dotlottie-player>
+        </div>
+
         <div class="container" id="container">
             <div class="form-container sign-up-container">
                 <form name="signUpForm" method="post" onsubmit="return false">

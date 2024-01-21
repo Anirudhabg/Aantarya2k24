@@ -597,8 +597,6 @@ function checkValidation() {
     return false;
   }
 
-  const displayErr = document.querySelector(".displayErr");
-
   // To remove existing "displayErr" classes
   const errorElements = document.querySelectorAll(".displayErr");
   errorElements.forEach((element) => {
@@ -619,19 +617,19 @@ function checkValidation() {
       scrollToElement(codingMem1);
       return false;
     }
-    if (codingMemCon1.value === "" || codingMemCon1.value === "N/A") {
+    if (codingMemCon1.value === "" || codingMemCon1.value === "N/A" || codingMemCon1.value.length < 10) {
       codingMemCon1err.classList.add("displayErr");
       scrollToElement(codingMem1);
       return false;
     }
     if (codingMem2.value === "" || codingMem2.value === "N/A") {
       codingMem2err.classList.add("displayErr");
-      scrollToElement(codingMem1);
+      scrollToElement(codingMem2);
       return false;
     }
-    if (codingMemCon2.value === "" || codingMemCon2.value === "N/A") {
+    if (codingMemCon2.value === "" || codingMemCon2.value === "N/A" || codingMemCon2.value.length < 10) {
       codingMemCon2err.classList.add("displayErr");
-      scrollToElement(codingMem1);
+      scrollToElement(codingMem2);
       return false;
     }
   }
@@ -650,19 +648,19 @@ function checkValidation() {
       scrollToElement(webMem1);
       return false;
     }
-    if (webMemCon1.value === "" || webMemCon1.value === "N/A") {
+    if (webMemCon1.value === "" || webMemCon1.value === "N/A" || webMemCon1.value.length < 10) {
       webMemCon1err.classList.add("displayErr");
       scrollToElement(webMem1);
       return false;
     }
     if (webMem2.value === "" || webMem2.value === "N/A") {
       webMem2err.classList.add("displayErr");
-      scrollToElement(webMem1);
+      scrollToElement(webMem2);
       return false;
     }
-    if (webMemCon2.value === "" || webMemCon2.value === "N/A") {
+    if (webMemCon2.value === "" || webMemCon2.value === "N/A" || webMemCon2.value.length < 10) {
       webMemCon2err.classList.add("displayErr");
-      scrollToElement(webMem1);
+      scrollToElement(webMem2);
       return false;
     }
   }
@@ -681,19 +679,19 @@ function checkValidation() {
       scrollToElement(quizMem1);
       return false;
     }
-    if (quizMemCon1.value === "" || quizMemCon1.value === "N/A") {
+    if (quizMemCon1.value === "" || quizMemCon1.value === "N/A" || quizMemCon1.value.length < 10) {
       quizMemCon1err.classList.add("displayErr");
       scrollToElement(quizMem1);
       return false;
     }
     if (quizMem2.value === "" || quizMem2.value === "N/A") {
       quizMem2err.classList.add("displayErr");
-      scrollToElement(quizMem1);
+      scrollToElement(quizMem2);
       return false;
     }
-    if (quizMemCon2.value === "" || quizMemCon2.value === "N/A") {
+    if (quizMemCon2.value === "" || quizMemCon2.value === "N/A" || quizMemCon2.value.length < 10) {
       quizMemCon2err.classList.add("displayErr");
-      scrollToElement(quizMem1);
+      scrollToElement(quizMem2);
       return false;
     }
   }
@@ -710,7 +708,7 @@ function checkValidation() {
       scrollToElement(debateMem1);
       return false;
     }
-    if (debateMemCon1.value === "" || debateMemCon1.value === "N/A") {
+    if (debateMemCon1.value === "" || debateMemCon1.value === "N/A" || debateMemCon1.value.length < 10) {
       debateMemCon1err.classList.add("displayErr");
       scrollToElement(debateMem1);
       return false;
@@ -741,62 +739,62 @@ function checkValidation() {
       scrollToElement(danceMem1);
       return false;
     }
-    if (danceMemCon1.value === "" || danceMemCon1.value === "N/A") {
+    if (danceMemCon1.value === "" || danceMemCon1.value === "N/A" || danceMemCon1.value.length < 10) {
       danceMemCon1err.classList.add("displayErr");
       scrollToElement(danceMem1);
       return false;
     }
     if (danceMem2.value === "" || danceMem2.value === "N/A") {
       danceMem2err.classList.add("displayErr");
-      scrollToElement(danceMem1);
+      scrollToElement(danceMem2);
       return false;
     }
-    if (danceMemCon2.value === "" || danceMemCon2.value === "N/A") {
+    if (danceMemCon2.value === "" || danceMemCon2.value === "N/A" || danceMemCon2.value.length < 10) {
       danceMemCon2err.classList.add("displayErr");
-      scrollToElement(danceMem1);
+      scrollToElement(danceMem2);
       return false;
     }
     if (danceMem3.value === "" || danceMem3.value === "N/A") {
       danceMem3err.classList.add("displayErr");
-      scrollToElement(danceMem1);
+      scrollToElement(danceMem3);
       return false;
     }
-    if (danceMemCon3.value === "" || danceMemCon3.value === "N/A") {
+    if (danceMemCon3.value === "" || danceMemCon3.value === "N/A" || danceMemCon3.value.length < 10) {
       danceMemCon3err.classList.add("displayErr");
-      scrollToElement(danceMem1);
+      scrollToElement(danceMem3);
       return false;
     }
     if (danceMem4.value === "" || danceMem4.value === "N/A") {
       danceMem4err.classList.add("displayErr");
-      scrollToElement(danceMem1);
+      scrollToElement(danceMem4);
       return false;
     }
-    if (danceMemCon4.value === "" || danceMemCon4.value === "N/A") {
+    if (danceMemCon4.value === "" || danceMemCon4.value === "N/A" || danceMemCon4.value.length < 10) {
       danceMemCon4err.classList.add("displayErr");
-      scrollToElement(danceMem1);
+      scrollToElement(danceMem4);
       return false;
     }
     if (danceMem5.value === "" || danceMem5.value === "N/A") {
       danceMem5err.classList.add("displayErr");
-      scrollToElement(danceMem1);
+      scrollToElement(danceMem5);
       return false;
     }
-    if (danceMemCon5.value === "" || danceMemCon5.value === "N/A") {
+    if (danceMemCon5.value === "" || danceMemCon5.value === "N/A" || danceMemCon5.value.length < 10) {
       danceMemCon5err.classList.add("displayErr");
-      scrollToElement(danceMem1);
+      scrollToElement(danceMem5);
       return false;
     }
     if (danceMem6.value !== "" && danceMem6.value !== "N/A") {
-      if (danceMemCon6.value === "" || danceMemCon6.value === "N/A") {
+      if (danceMemCon6.value === "" || danceMemCon6.value === "N/A" || danceMemCon6.value.length < 10) {
         danceMemCon6err.classList.add("displayErr");
-        scrollToElement(danceMem1);
+        scrollToElement(danceMem6);
         return false;
       }
     }
     if (danceMem7.value !== "" && danceMem7.value !== "N/A") {
-      if (danceMemCon7.value === "" || danceMemCon7.value === "N/A") {
+      if (danceMemCon7.value === "" || danceMemCon7.value === "N/A" || danceMemCon7.value.length < 10) {
         danceMemCon7err.classList.add("displayErr");
-        scrollToElement(danceMem1);
+        scrollToElement(danceMem7);
         return false;
       }
     }
@@ -814,7 +812,7 @@ function checkValidation() {
       scrollToElement(photographyMem1);
       return false;
     }
-    if (photographyMemCon1.value === "" || photographyMemCon1.value === "N/A") {
+    if (photographyMemCon1.value === "" || photographyMemCon1.value === "N/A" || photographyMemCon1.value.length < 10) {
       photoMemCon1err.classList.add("displayErr");
       scrollToElement(photographyMem1);
       return false;
@@ -835,19 +833,19 @@ function checkValidation() {
       scrollToElement(gamingMem1);
       return false;
     }
-    if (gamingMemCon1.value === "" || gamingMemCon1.value === "N/A") {
+    if (gamingMemCon1.value === "" || gamingMemCon1.value === "N/A" || gamingMemCon1.value.length < 10) {
       gameMemCon1err.classList.add("displayErr");
       scrollToElement(gamingMem1);
       return false;
     }
     if (gamingMem2.value === "" || gamingMem2.value === "N/A") {
       gameMem2err.classList.add("displayErr");
-      scrollToElement(gamingMem1);
+      scrollToElement(gamingMem2);
       return false;
     }
-    if (gamingMemCon2.value === "" || gamingMemCon2.value === "N/A") {
+    if (gamingMemCon2.value === "" || gamingMemCon2.value === "N/A" || gamingMemCon2.value.length < 10) {
       gameMemCon2err.classList.add("displayErr");
-      scrollToElement(gamingMem1);
+      scrollToElement(gamingMem2);
       return false;
     }
   }
@@ -866,7 +864,7 @@ function checkValidation() {
       scrollToElement(treasureMem1);
       return false;
     }
-    if (treasureMemCon1.value === "" || treasureMemCon1.value === "N/A") {
+    if (treasureMemCon1.value === "" || treasureMemCon1.value === "N/A" || treasureMemCon1.value.length < 10) {
       treasureMemCon1err.classList.add("displayErr");
       scrollToElement(treasureMem1);
       return false;
@@ -876,7 +874,7 @@ function checkValidation() {
       scrollToElement(treasureMem1);
       return false;
     }
-    if (treasureMemCon2.value === "" || treasureMemCon2.value === "N/A") {
+    if (treasureMemCon2.value === "" || treasureMemCon2.value === "N/A" || treasureMemCon2.value.length < 10) {
       treasureMemCon2err.classList.add("displayErr");
       scrollToElement(treasureMem1);
       return false;
@@ -895,7 +893,7 @@ function checkValidation() {
       scrollToElement(productMem1);
       return false;
     }
-    if (productMemCon1.value === "" || productMemCon1.value === "N/A") {
+    if (productMemCon1.value === "" || productMemCon1.value === "N/A" || productMemCon1.value.length < 10) {
       productMemCon1err.classList.add("displayErr");
       scrollToElement(productMem1);
       return false;
@@ -914,7 +912,7 @@ function checkValidation() {
       scrollToElement(itManagerMem1);
       return false;
     }
-    if (itManagerMemCon1.value === "" || itManagerMemCon1.value === "N/A") {
+    if (itManagerMemCon1.value === "" || itManagerMemCon1.value === "N/A" || itManagerMemCon1.value.length < 10) {
       itManagerMemCon1err.classList.add("displayErr");
       scrollToElement(itManagerMem1);
       return false;
@@ -933,7 +931,7 @@ function checkValidation() {
       scrollToElement(designingMem1);
       return false;
     }
-    if (designingMemCon1.value === "" || designingMemCon1.value === "N/A") {
+    if (designingMemCon1.value === "" || designingMemCon1.value === "N/A" || designingMemCon1.value.length < 10) {
       designingCon1err.classList.add("displayErr");
       scrollToElement(designingMem1);
       return false;
@@ -954,19 +952,20 @@ function checkValidation() {
       scrollToElement(dumbchMem1);
       return false;
     }
-    if (dumbchMemCon1.value === "" || dumbchMemCon1.value === "N/A") {
+    if (dumbchMemCon1.value === "" || dumbchMemCon1.value === "N/A" || dumbchMemCon1.value.length < 10) {
       dumbchMemCon1err.classList.add("displayErr");
       scrollToElement(dumbchMem1);
       return false;
     }
+
     if (dumbchMem2.value === "" || dumbchMem2.value === "N/A") {
       dumbchMem2err.classList.add("displayErr");
-      scrollToElement(dumbchMem1);
+      scrollToElement(dumbchMem2);
       return false;
     }
-    if (dumbchMemCon2.value === "" || dumbchMemCon2.value === "N/A") {
+    if (dumbchMemCon2.value === "" || dumbchMemCon2.value === "N/A" || dumbchMemCon2.value.length < 10) {
       dumbchMemCon2err.classList.add("displayErr");
-      scrollToElement(dumbchMem1);
+      scrollToElement(dumbchMem2);
       return false;
     }  
   }

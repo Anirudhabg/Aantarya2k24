@@ -6,6 +6,78 @@ const signUpAnim = document.getElementById("signUp");
 const signInAnim = document.getElementById("signIn");
 const container = document.getElementById("container");
 const loader = document.querySelector(".loader");
+const collegeNameDropdownList = document.getElementById("collegeName");
+
+
+const addCollegeNamestoDropdown = async () => {
+  const ugList = [
+      "SDM Degree College, Ujire",
+      "Sri Rama Degree College, Kaladka",
+      "Vivekananda College Puttur",
+      "Sri Venkataramana Swamy College, Bantwal",
+      "Sri Dhavala College, Moodbidri",
+      "Sacred Heart College, Madanthyar",
+      "Govinda Dasa College, Surathkal",
+      "Sri Mahaveera College, Kodangallu",
+      "Alvas College, Moodabidri",
+      "K S G Degree College, Sullia",
+      "Philomena College, Puttur",
+      "P A First Grade College, Kairangala",
+      "Besant Women's College, Mangalore",
+      "Canara College, Mangaluru",
+      "Government First Grade College, Mangalore",
+      "Shree Devi College, Mangalore",
+      "St Agnes College, Mangalore",
+      "St Aloysius College Autonomous, Mangaluru",
+      "The Yenepoya Institute of Arts, Science, Commerce and Management"
+    ];
+    
+    const pgList = [
+      "AIMIT Mangalore",
+      "MITE Mangalore",
+      "SDIT Mangalore",
+      "SJEC Mangalore",
+      "The Yenepoya Institute of Arts, Science, Commerce and Management",
+      "AIGS Bangalore",
+      "Srinivas Institute of Technology (SIT)",
+      "Yenapoya Bangalore",
+      "East West College, Bangalore"
+    ];
+
+    let collegeList = pgList;
+
+    let isUg = document.forms["signUpForm"]["isUg"].value;
+    isUg = isUg === "true" ? true : false;
+
+    if(isUg){
+      collegeList = ugList;
+    }
+
+    collegeNameDropdownList.innerHTML = "";
+    const option = document.createElement("option");
+    option.value = "";
+    option.text = "Select College";
+    collegeNameDropdownList.appendChild(option);
+
+
+    collegeList.forEach((collegeName) => {
+      const option = document.createElement("option");
+      option.value = collegeName;
+      option.text = collegeName;
+      collegeNameDropdownList.appendChild(option);
+    });
+
+}
+
+addCollegeNamestoDropdown();
+
+const ugRadio = document.getElementById('ugRadio')
+const pgRadio = document.getElementById('pgRadio')
+
+ugRadio.onclick = () => addCollegeNamestoDropdown
+pgRadio.onclick = () => addCollegeNamestoDropdown();
+
+
 
 signUpAnim.onclick = () => {
   container.classList.add("right-panel-active");

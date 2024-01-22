@@ -16,6 +16,7 @@
     <script src="../js/paymentUpload.js" defer></script>
     <script src="../js/accomodationAndAccountSettings.js" defer></script>
 
+    <script type="module" src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script>
 
 
 </head>
@@ -247,6 +248,11 @@
             <!-- enroll-section  -->
 
             <div class="enroll-section" id="enroll-section-id">
+
+                <div id="loader-lottie-div" class="loader">
+                    <dotlottie-player id="loader-lottie" autoplay loop mode="normal"
+                        src="/assets/icon/loader-yellow.lottie" style="width: 70px;height:70px;"></dotlottie-player>
+                </div>
 
                 <div class="section-heading">
                     <p class="enroll-title">ENROLL FOR THE EVENTS...</p>

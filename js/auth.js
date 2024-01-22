@@ -8,6 +8,14 @@ const container = document.getElementById("container");
 const loader = document.querySelector(".loader");
 const collegeNameDropdownList = document.getElementById("collegeName");
 
+
+window.addEventListener('load', () => {
+  loader.style.display = "block";
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 2000);
+})
+
 const ugList = [
   "SDM Degree College, Ujire",
   "Sri Rama Degree College, Kaladka",
@@ -42,22 +50,22 @@ const pgList = [
   "East West College, Bangalore"
 ];
 
-const addCollegeNamestoDropdown = (collegeList=ugList) => {
+const addCollegeNamestoDropdown = (collegeList = ugList) => {
 
 
-    collegeNameDropdownList.innerHTML = "";
+  collegeNameDropdownList.innerHTML = "";
+  const option = document.createElement("option");
+  option.value = "";
+  option.text = "Select College";
+  collegeNameDropdownList.appendChild(option);
+
+
+  collegeList.forEach((collegeName) => {
     const option = document.createElement("option");
-    option.value = "";
-    option.text = "Select College";
+    option.value = collegeName;
+    option.text = collegeName;
     collegeNameDropdownList.appendChild(option);
-
-
-    collegeList.forEach((collegeName) => {
-      const option = document.createElement("option");
-      option.value = collegeName;
-      option.text = collegeName;
-      collegeNameDropdownList.appendChild(option);
-    });
+  });
 
 }
 
@@ -158,24 +166,24 @@ const loginBtn = document.forms["loginForm"]["submitBtnLogin"];
 loginBtn.onclick = async () => {
   const email = document.forms["loginForm"]["email"].value;
   const password = document.forms["loginForm"]["password"].value;
-  
+
   if (!validateLogin(email, password)) {
     return false;
   }
-  
+
   loader.style.display = "block";
-    try {
-      const isPosted = await postDataLogin(email, password);
-      if (isPosted) {
-        openAlert("Logged in successfully");
-        window.location.href = "/pages/dashboard.html";
-      }
-    } catch (error) {
-      console.error(error);
-      openAlert("Error logging in. Please try again.");
-    } finally {
-      loader.style.display = "none";
+  try {
+    const isPosted = await postDataLogin(email, password);
+    if (isPosted) {
+      openAlert("Logged in successfully");
+      window.location.href = "/pages/dashboard.html";
     }
+  } catch (error) {
+    console.error(error);
+    openAlert("Error logging in. Please try again.");
+  } finally {
+    loader.style.display = "none";
+  }
 };
 
 const storeToken = (token) => {
@@ -201,7 +209,7 @@ const postDataLogin = async (email, password) => {
     const data = await res.json();
 
     if (res.status == 400) {
-     openAlert(data.error);
+      openAlert(data.error);
       return false;
     }
 
@@ -217,8 +225,8 @@ const postDataLogin = async (email, password) => {
 
 const checkTokenExist = () => {
   const token = localStorage.getItem("jwtToken");
-  if(token){
-      window.location.href = "/pages/dashboard.html";
+  if (token) {
+    window.location.href = "/pages/dashboard.html";
   }
 }
 

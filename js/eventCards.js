@@ -457,28 +457,9 @@ function closePopup() {
   document.getElementById("popup-bg-div").style.display = "none";
 }
 
-//go to top button
+// //go to top button
+
 const button = document.querySelector('.buttonTop');
-let isScrolling;
-
-function handleScroll() {
-  clearTimeout(isScrolling);
-
-  if (window.scrollY > 0) {
-    button.classList.remove('hidden1');
-  } else {
-    button.classList.add('hidden1');
-  }
-
-  isScrolling = setTimeout(() => {
-    button.classList.add('hidden1');
-  }, 1000);
-}
-
-// Initial check to hide the button if already at the top
-handleScroll();
-
-window.addEventListener('scroll', handleScroll);
 
 button.addEventListener('click', () => {
   window.scrollTo({
@@ -486,7 +467,3 @@ button.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
-
-
-
-

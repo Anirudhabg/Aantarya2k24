@@ -1631,11 +1631,9 @@ button:hover .star-6 {
         width: 30px;
     }
 
-
-
-   
-
-
+    .buttonTop {
+        margin-right: 5vw;
+    }
 
     /* POPUP */
     .pop-txt1 b {

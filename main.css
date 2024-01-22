@@ -19,6 +19,20 @@
 }
 
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fed201;
+    border-radius: 50px;
+    border: 1px solid white;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
 * {
     padding: 0;
     margin: 0;

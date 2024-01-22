@@ -456,4 +456,35 @@ function closePopup() {
   document.getElementById("popup-container").style.display = "none";
   document.getElementById("popup-bg-div").style.display = "none";
 }
+const button = document.querySelector('.buttonTop');
+let isScrolling;
+
+function handleScroll() {
+  clearTimeout(isScrolling);
+
+  if (window.scrollY > 0) {
+    button.classList.remove('hidden1');
+  } else {
+    button.classList.add('hidden1');
+  }
+
+  isScrolling = setTimeout(() => {
+    button.classList.add('hidden1');
+  }, 1000);
+}
+
+// Initial check to hide the button if already at the top
+handleScroll();
+
+window.addEventListener('scroll', handleScroll);
+
+button.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+
+
 

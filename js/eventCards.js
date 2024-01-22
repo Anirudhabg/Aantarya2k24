@@ -467,3 +467,17 @@ button.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+
+// Register Now text changing
+
+const regNowBtn = document.getElementById('register-now-button');
+
+const checkTokenExist = () => {
+  const token = localStorage.getItem("jwtToken");
+  if (token) {
+    regNowBtn.innerText="EDIT INFO";
+  }
+}
+
+checkTokenExist()

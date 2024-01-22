@@ -9,6 +9,9 @@ const burgerMenu = document.querySelector(".burger-click");
 const navLinks = document.querySelector(".left-fixed-nav");
 const burgerCheck=document.getElementById("check");
 
+//to clear and replace the backstack state
+window.history.pushState({}, document.title, "/");
+
 burgerMenu.onclick = () => {
   navLinks.classList.toggle("show");
 };
@@ -62,7 +65,7 @@ logOutBtn.onclick = () => {
   if (history.replaceState) {
     history.replaceState(null, null, window.location.href);
   }
-  window.location.href = "/pages/login.html";
+  window.location.href = "/";
 };
 
 

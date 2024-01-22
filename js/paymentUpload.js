@@ -7,6 +7,7 @@ const imagekit = new ImageKit({
   authenticationEndpoint: AUTH_URL,
 });
 
+
 // Function to handle image upload
 
 function uploadImage() {

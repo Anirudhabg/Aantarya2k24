@@ -4,6 +4,9 @@ const num_boys = document.getElementById("no-b");
 const num_girls = document.getElementById("no-g");
 // const accBtn = document.getElementById('accomodation-btn');
 
+
+
+
 /* Accomodation toggle */
 function toggleAccNumsDiv() {
   var accNumsDiv = document.querySelector(".acc-nums-div");
@@ -103,15 +106,15 @@ const getAccountData = async () => {
       college.innerText = data.collegeName;
       teamName.innerText = data.teamName;
       const verificationStatus = data.paymentStatus.verificationStatus;
-      if(verificationStatus){
+      if (verificationStatus) {
         registrationStatus.innerText = "Completed";
         registrationStatus.style.color = "green";
       }
-      else{
+      else {
         registrationStatus.innerText = "Not Completed";
         registrationStatus.style.color = "red";
       }
-     
+
     }
   } catch (err) {
     console.error(err);

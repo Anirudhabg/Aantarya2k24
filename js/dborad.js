@@ -159,7 +159,7 @@ const getTeamName = async () => {
   try {
     const res = await fetch(`${API_URL}/team/${teamId}`);
     const data = await res.json();
-    console.log(data.teamName);
+    // console.log(data.teamName);
     assignedTeamName.innerText = data.teamName;
   } catch (err) {
     console.log(err);

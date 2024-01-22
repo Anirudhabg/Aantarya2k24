@@ -1,4 +1,4 @@
-// const API_KEY = "https://mca-fest.onrender.com";
+const API_KEY = "https://mca-fest.onrender.com";
 
 const makeServerActive = async () => {
     const res = await fetch(`${API_KEY}`);

@@ -456,6 +456,8 @@ function closePopup() {
   document.getElementById("popup-container").style.display = "none";
   document.getElementById("popup-bg-div").style.display = "none";
 }
+
+//go to top button
 const button = document.querySelector('.buttonTop');
 let isScrolling;
 

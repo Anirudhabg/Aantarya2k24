@@ -1,0 +1,10 @@
+body{
+    background-color:#0a579b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loader-lottie{
+    width: 1px;
+    height: 1px;
+}

@@ -52,6 +52,7 @@ const pgList = [
 
 const addCollegeNamestoDropdown = (collegeList = ugList) => {
 
+  collegeList.sort();
 
   collegeNameDropdownList.innerHTML = "";
   const option = document.createElement("option");

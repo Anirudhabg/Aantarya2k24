@@ -1276,7 +1276,7 @@ button:hover .star-6 {
 }
 
 .footer-image-bottom {
-    background: url('./assets/images/footer-image-latest.png');
+    background: url('./assets/images/footer-image.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 35vh;

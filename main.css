@@ -130,7 +130,7 @@
 
 .landingpage {
     position: relative;
-    background: url('./assets/images/home-background-reduced-new.png');
+    background: url('./assets/images/home-background-reduced-new-latest.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1276,7 +1276,7 @@ button:hover .star-6 {
 }
 
 .footer-image-bottom {
-    background: url('./assets/images/footer-image.png');
+    background: url('./assets/images/footer-image-latest.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 35vh;

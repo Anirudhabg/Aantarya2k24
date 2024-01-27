@@ -42,7 +42,7 @@
 }
 
 .loader-container {
-    display: none;
+    /* display: none; */
     position: fixed;
     top: 0;
     left: 0;
@@ -131,7 +131,8 @@
 
 .landingpage {
     position: relative;
-    background: url('./assets/images/home-background-reduced-new-latest.png');
+    /* background: url('./assets/images/home-background-reduced-new-latest.png'); */
+    background: url('https://aantarya.tech/assets/images/home-background-reduced-new-latest.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

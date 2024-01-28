@@ -131,8 +131,8 @@
 
 .landingpage {
     position: relative;
-    /* background: url('./assets/images/home-background-reduced-new-latest.png'); */
-    background: url('https://aantarya.tech/assets/images/home-background-reduced-new-latest.png');
+    background: url('./assets/images/home-background-reduced-new-latest.png');
+    /* background: url('https://aantarya.tech/assets/images/home-background-reduced-new-latest.png'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -725,7 +725,7 @@ button:hover .star-6 {
 #pg-list {
     margin-top: 4vh;
     margin-right: 2vh;
-    /* max-width: 45vw; */
+    max-width: 45vw;
 }
 
 
@@ -1522,7 +1522,6 @@ button:hover .star-6 {
 
     }
 
-
     .streak-bg-img {
         width: 18.5rem;
 
@@ -1530,6 +1529,9 @@ button:hover .star-6 {
 
     .center-text-dpt span {
         font-size: 1.5rem;
+    }
+    #pg-list {
+        max-width: 100%;
     }
 
 

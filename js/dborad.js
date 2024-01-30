@@ -12,6 +12,10 @@ const burgerCheck=document.getElementById("check");
 //to clear and replace the backstack state
 window.history.pushState({}, document.title, "/");
 
+//to default mobile nav displaying for enhanced accessibility
+navLinks.classList.toggle("show");
+burgerMenu.checked = true;
+
 burgerMenu.onclick = () => {
   navLinks.classList.toggle("show");
 };

@@ -8,6 +8,8 @@ const imagekit = new ImageKit({
 });
 
 
+
+
 // Function to handle image upload
 
 function uploadImage() {

@@ -4,17 +4,13 @@ const loaderlottie=document.querySelector('.loader-lottie');
 
 
 window.addEventListener('load', () => {
-    loaderlottie.classList.add("loader-hidden");
-        // loaderContainer.style.display = 'none';
-        loaderPc.classList.add("loader-hidden");
-        loaderMobile.classList.add("loader-hidden");
-   
-
-    // setTimeout(() => {
-    //     loaderContainer.style.display = 'none';
-    // }, 3000);
-
-})
+  loaderlottie.classList.add("loader-hidden");
+  setTimeout(() => {
+      // loaderContainer.style.display = 'none';
+      loaderPc.classList.add("loader-hidden");
+      loaderMobile.classList.add("loader-hidden");
+  }, 3000);
+}); 
 /*
 
     document.addEventListener("DOMContentLoaded", function() {

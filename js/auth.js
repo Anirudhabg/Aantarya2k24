@@ -97,7 +97,10 @@ const validateSignUp = (collegeName, email, password, isUg) => {
     openAlert("Please fill all the fields");
     return false;
   }
-
+  else if(password.length < 5){
+    openAlert("Password must contain 5 characters!");
+    return false;
+  }
   return true;
 };
 
@@ -118,7 +121,7 @@ signUpButton.onclick = async () => {
 
   const isPosted = await postDataSignUp(collegeName, email, password, isUg);
   if (isPosted) {
-    openAlert("account created successfully");
+    openAlert("Account created Successfully!");
     container.classList.remove("right-panel-active");
   }
 

@@ -48,11 +48,12 @@ body {
     width: 25vw;
     padding: 12px;
     position: absolute;
-    top:1vh;
+    top: 1vh;
     left: 50%;
     transform: translate(-50%, 0%);
     z-index: 10;
-    display: none; /* Display need to be none */
+    display: none;
+    /* Display need to be none */
     flex-direction: row;
     align-items: center;
     justify-content: start;
@@ -60,48 +61,50 @@ body {
     border-radius: 8px;
     border: 1px solid white;
     box-shadow: 0px 0px 5px -3px #111;
-  }
-  
-  .info__icon {
+}
+
+.info__icon {
     width: 20px;
     height: 20px;
     transform: translateY(-2px);
     margin-right: 8px;
-  }
-  
-  .info__icon path {
+}
+
+.info__icon path {
     fill: #fff;
-  }
-  
-  .info__title {
+}
+
+.info__title {
     font-weight: 500;
     font-size: 14px;
     color: #fff;
-  }
-  
-  .info__close {
+}
+
+.info__close {
     width: 20px;
     height: 20px;
     cursor: pointer;
     margin-left: auto;
-  }
-  .info__close path {
+}
+
+.info__close path {
     fill: #fff;
-  }
+}
 
 
-  
-  /*Error msg*/
-  .error-msg{
+
+/*Error msg*/
+.error-msg {
     font-size: 14px;
     color: red;
     display: none;
-  }
-  .displayErr{
+}
+
+.displayErr {
     display: block;
-  }
-  
-  
+}
+
+
 
 .main-contents {
     display: flex;
@@ -668,7 +671,8 @@ input {
     transform: translate(-50%, 0%);
     width: 70px;
     height: 70px;
-    display: none; /* Initially hidden */
+    display: none;
+    /* Initially hidden */
     z-index: 999;
 }
 
@@ -956,7 +960,7 @@ input {
 .acc-nums-txt1 {
     margin: 7vh 0;
     padding-right: 2vw;
-    
+
 }
 
 .acc-check-txt1 {
@@ -976,6 +980,8 @@ input {
 .acc-con {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .acc-con-name {
@@ -1131,11 +1137,11 @@ input {
 
 @media only screen and (max-width: 1000px) {
 
-/* ALERT */
-.info {
-    width: 90%;
-   
-  }
+    /* ALERT */
+    .info {
+        width: 90%;
+
+    }
 
     .left-fixed-nav {
         display: none;
@@ -1368,7 +1374,7 @@ input {
     }
 
     .acc-contacts {
-        width: 100vw;
+        width: 90vw;
     }
 
     /* Settings*/

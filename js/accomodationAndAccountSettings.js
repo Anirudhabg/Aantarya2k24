@@ -1,5 +1,5 @@
 //ACCOMMODATION
-const checkbox = document.getElementById("cbx");
+const chkAccomodation = document.getElementById("cbx");
 const num_boys = document.getElementById("no-b");
 const num_girls = document.getElementById("no-g");
 // const accBtn = document.getElementById('accomodation-btn');
@@ -10,7 +10,7 @@ const num_girls = document.getElementById("no-g");
 /* Accomodation toggle */
 function toggleAccNumsDiv() {
   var accNumsDiv = document.querySelector(".acc-nums-div");
-  if (checkbox.checked) {
+  if (chkAccomodation.checked) {
     accNumsDiv.classList.add("show");
   } else {
     accNumsDiv.classList.remove("show");
@@ -18,7 +18,7 @@ function toggleAccNumsDiv() {
 }
 
 function uploadAccommo() {
-  if (checkbox.checked) {
+  if (chkAccomodation.checked) {
     openAlert(
       "Details Updated! Contact officials for details about Accommodation!"
     );
@@ -53,7 +53,7 @@ const getAccommodationData = async () => {
     const res = await fetch(`${API_URL}/team/${teamId}`);
     const data = await res.json();
     if (data.accommodation) {
-      checkbox.checked = true;
+      chkAccomodation.checked = true;
       toggleAccNumsDiv();
       num_boys.value = data.accommodation.countOfBoys;
       num_girls.value = data.accommodation.countOfGirls;

@@ -1,6 +1,8 @@
 const AUTH_URL = `${API_URL}/team/${teamId}/verify`;
 // console.log(teamId);
 
+const paymentLoader = document.querySelector("#loader-lottie-div-payment");
+
 const imagekit = new ImageKit({
   publicKey: "public_KYo+rOuJkO2Bf74Wbbr5RrBz8lE=",
   urlEndpoint: "https://ik.imagekit.io/afnan011/",
@@ -8,11 +10,10 @@ const imagekit = new ImageKit({
 });
 
 
-
-
 // Function to handle image upload
+const uploadImageBtn = document.querySelector("#payment-upload-btn");
 
-function uploadImage() {
+uploadImageBtn.onclick = () => {
   const transactionId = document.querySelector(".acc-nums1").value;
   const fileInput = document.getElementById("fileInput");
   const file = fileInput.files[0];
@@ -23,7 +24,7 @@ function uploadImage() {
       return;
     }
 
-    loader.style.display = "block";
+    paymentLoader.style.display = "block";
     // Fetch authentication parameters from the backend
     fetch(AUTH_URL)
       .then((response) => response.json())
@@ -56,20 +57,18 @@ function uploadImage() {
                 console.log("Image uploaded successfully:", result);
               }
             }
-            loader.style.display = "none";
+            paymentLoader.style.display = "none";
           }
         );
       })
       .catch((error) => {
         console.error("Error fetching authentication parameters:", error);
-        setTimeout(() => {
-          loader.style.display = "none";
-          openAlert("Error uploading image. Please try again");
-        }, 2000);
+        paymentLoader.style.display = "none";
+        openAlert("Error uploading image. Please try again");
       });
   } else {
     console.error("No file selected.");
-    loader.style.display = "none";
+    paymentLoader.style.display = "none";
     openAlert("No file selected!");
   }
 }

@@ -664,7 +664,7 @@ input {
     z-index: 999;
 } */
 
-.loader {
+.loader, #loader-lottie-div-payment {
     position: absolute;
     top: 50%;
     left: 58%;
@@ -673,20 +673,9 @@ input {
     height: 70px;
     display: none;
     /* Initially hidden */
-    z-index: 999;
+    z-index: 9999;
 }
 
-/* @keyframes spin {
-    from {
-        transform: rotate(0deg);
-        opacity: 0.2;
-    }
-
-    to{
-        transform: rotate(360deg);
-        opacity: 1;
-    }
-} */
 
 .payment-section {
     margin-top: 0;
@@ -1193,6 +1182,12 @@ input {
     }
 
     /* Enroll-section1 */
+
+    .loader, #loader-lottie-div-payment {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     .enroll {
         padding: 1.5vw 4.5vw;

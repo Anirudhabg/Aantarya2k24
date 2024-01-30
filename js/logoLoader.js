@@ -4,19 +4,13 @@ const loaderlottie=document.querySelector('.loader-lottie');
 const loaderContainer = document.querySelector('.loader-container')
 
 window.addEventListener('load', () => {
-    loaderlottie.classList.add("loader-hidden");
-        loaderContainer.style.display = 'none';
-        loaderPc.classList.add("loader-hidden");
-        loaderMobile.classList.add("loader-hidden");
-   
-        const token = localStorage.getItem("jwtToken");
-        if (!token) {
-          setTimeout(() => {
-              loaderContainer.style.display = 'block';
-          }, 3000);
-        }
-
-})
+  loaderlottie.classList.add("loader-hidden");
+  setTimeout(() => {
+      // loaderContainer.style.display = 'none';
+      loaderPc.classList.add("loader-hidden");
+      loaderMobile.classList.add("loader-hidden");
+  }, 3000);
+}); 
 /*
 
     document.addEventListener("DOMContentLoaded", function() {

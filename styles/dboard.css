@@ -328,6 +328,26 @@ input[type]:checked~span.mid {
 
 }
 
+
+.enroll-footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.75rem;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background: #f6f5f7;
+    box-shadow: 0px 0px 3px black;
+    z-index: 1;
+    padding-right: 10vw;
+}
+
+
+.enroll-footer button{
+    margin: 0;
+}
+
 .team-name {
     display: flex;
     flex-direction: row;
@@ -463,8 +483,6 @@ input[type]:checked~span.mid {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 3vw 0;
-
 }
 
 .event {
@@ -1312,6 +1330,10 @@ input {
 
     .file-name {
         text-align: center;
+    }
+
+    .enroll-footer{
+        padding-right: 0;
     }
 
 

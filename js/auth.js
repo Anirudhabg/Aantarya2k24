@@ -163,6 +163,10 @@ const validateLogin = (email, password) => {
     openAlert("Please fill all the fields");
     return false;
   }
+  if(password.length<5){
+    openAlert("Password must contain 5 characters!");
+    return false;
+  }
   return true;
 };
 

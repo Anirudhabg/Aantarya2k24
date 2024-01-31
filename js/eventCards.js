@@ -440,7 +440,7 @@ window.addEventListener("scroll", () => {
 
 //FOR REGISTRATION POPUP
 document.addEventListener("DOMContentLoaded", function () {
-  const delay = 8000;
+  const delay = 12000;
 
   setTimeout(function () {
     showPopup();

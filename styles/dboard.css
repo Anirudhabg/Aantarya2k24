@@ -334,8 +334,10 @@ input[type]:checked~span.mid {
     justify-content: flex-end;
     align-items: center;
     padding: 0.75rem;
-    position: sticky;
+    padding-left: 0;
+    position: fixed;
     bottom: 0;
+    right: 0;
     width: 100%;
     background: #f6f5f7;
     box-shadow: 0px 0px 3px black;
@@ -478,7 +480,10 @@ input[type]:checked~span.mid {
 
 
 /* Section forms */
-
+.marquee-text{
+    font-weight: 100;
+    color: #434343;
+}
 
 .forms-events {
     display: flex;
@@ -643,7 +648,9 @@ input {
 }
 
 
-
+.enroll-lst-item{
+    margin-bottom: 11vh;
+}
 
 
 .forallsec {
@@ -730,6 +737,8 @@ input {
     -moz-box-shadow: 3px 18px 54px -24px rgba(0, 0, 0, 0.75);
     box-shadow: 3px 18px 54px -24px rgba(0, 0, 0, 0.75);
 }
+
+
 
 
 .qr-code {
@@ -1342,7 +1351,7 @@ input {
     }
 
     .enroll-footer{
-        padding-right: 0;
+        padding-right: 2vw;
     }
 
 

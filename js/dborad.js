@@ -53,7 +53,7 @@ const checkTokenExist = () => {
   }
 };
 
-checkTokenExist();
+// checkTokenExist();
 
 const removeToken = () => {
   localStorage.removeItem("jwtToken");
@@ -125,7 +125,9 @@ settingBtn.onclick = () => {
 };
 
 contactBtn.onclick = () => {
-  showSection(contactSec);
+  //showSection(contactSec);
+  window.location.href = '/index.html#events-section-id';
+  console.log("contact us buttonn");
   hideHambergerMenu();
 };
 

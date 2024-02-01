@@ -359,6 +359,8 @@ input[type]:checked~span.mid {
 
 #team-name-here {
     margin-left: 1vw;
+    color: #000000;
+    font-weight: 700;
     text-shadow: 0 0 5px #fff,
         0 0 10px #fff,
         0 0 20px #fed201,
@@ -1004,7 +1006,7 @@ input {
 
 .settings-section {
     margin: 0;
-    height: 100vh;
+    height: auto;
     background: url(/assets/images/mandala.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -1042,6 +1044,7 @@ input {
 }
 
 #set-team-name {
+    font-weight: 700;
     text-shadow: 0 0 5px #fff,
         0 0 10px #fff,
         0 0 20px #fed201,
@@ -1070,20 +1073,25 @@ input {
     font-size: 0.7vw;
 }
 
+.contact-us-section-heading{
+    margin-top: 0;
+}
+
+
 /* Contact Us */
 
 .contactus-section {
     margin: 0;
-    background: url(/assets/images/mandala.png);
+    /* background: url(/assets/images/mandala.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
 }
 
 .contact-sec1 {
     display: flex;
     flex-direction: column;
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 
 .contact-txthead {
@@ -1095,12 +1103,13 @@ input {
     display: flex;
     flex-direction: column;
     margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 .contact-con-div {
     display: flex;
     flex-direction: column;
-    margin: 5vh 0;
+    margin: 2vh 0;
 }
 
 .con-txt-div {
@@ -1442,6 +1451,7 @@ input {
         text-align: center;
     }
 
+   
     /* Contact Us */
     .contactus-section {
         margin: 0;

@@ -86,8 +86,8 @@ function showPreviousCard() {
 const ugRegisterButton = document.querySelector("#ug-card");
 
 ugRegisterButton.addEventListener("click", () => {
-  console.log(ugList[ugIdx]);
-  console.log(ugListNorm[ugNIdx]);
+  // console.log(ugList[ugIdx]);
+  // console.log(ugListNorm[ugNIdx]);
 
   window.location.href.replace("readmore.html");
 });
@@ -198,6 +198,7 @@ const ugPhone = [
   [["6362441958"], ["9353959843"]], //Nidhisangrah
   [["8867035467"], ["8861513800"]], //Pracharan
 ];
+
 //pg cards
 function showNextCard2() {
   pgIdx = (pgIdx - 1 + pgList.length) % pgList.length;
@@ -214,11 +215,11 @@ function showPreviousCard2() {
 }
 
 const pgRegisterButton = document.querySelector("#pg-card");
-console.log(pgRegisterButton);
+// console.log(pgRegisterButton);
 
 pgRegisterButton.addEventListener("click", () => {
-  console.log(pgList[pgIdx]);
-  console.log(pgListNorm[pgNIdx]);
+  // console.log(pgList[pgIdx]);
+  // console.log(pgListNorm[pgNIdx]);
 });
 
 //pg overlay
@@ -438,6 +439,8 @@ window.addEventListener("scroll", () => {
   dateDisplay.style.transform = `scale(${scale})`;
 });
 
+
+
 //FOR REGISTRATION POPUP
 document.addEventListener("DOMContentLoaded", function () {
   const delay = 12000;
@@ -456,6 +459,8 @@ function closePopup() {
   document.getElementById("popup-container").style.display = "none";
   document.getElementById("popup-bg-div").style.display = "none";
 }
+
+
 
 // //go to top button
 

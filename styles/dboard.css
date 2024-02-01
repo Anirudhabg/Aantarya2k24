@@ -612,6 +612,9 @@ input {
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
     margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .animated-button span:last-child {

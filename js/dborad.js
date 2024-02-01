@@ -10,7 +10,7 @@ const navLinks = document.querySelector(".left-fixed-nav");
 const burgerCheck=document.getElementById("check");
 
 //to clear and replace the backstack state
-window.history.pushState({}, document.title, "/");
+// window.history.pushState({}, document.title, "/");
 
 //to default mobile nav displaying for enhanced accessibility
 navLinks.classList.toggle("show");

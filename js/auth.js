@@ -103,7 +103,8 @@ const pgList = [
   "The Yenepoya Institute , Mangalore",
   "Mangalore University College",
   "St Agnes Mangalore",
-  "Canara College"
+  "Canara College",
+  "Kristu Jayanti College, Autonomous Bangalore"
 ];
 
 

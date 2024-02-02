@@ -8,6 +8,7 @@ const teamId = localStorage.getItem("teamId");
 const burgerMenu = document.querySelector(".burger-click");
 const navLinks = document.querySelector(".left-fixed-nav");
 const burgerCheck=document.getElementById("check");
+// const marquee = document.getElementById("marqueeElement");
 
 //to clear and replace the backstack state
 // window.history.pushState({}, document.title, "/");

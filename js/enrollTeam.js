@@ -376,7 +376,7 @@ const displayUGFields = () => {
 
 const displayPGFields = () => {
   dumbCharadesSection.classList.add("hide");
-  itManagerMem1.classList.remove("hide");
+  itManagerSection.classList.remove("hide");
   designSection.classList.remove("hide");
 };
 

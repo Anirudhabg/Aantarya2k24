@@ -18,39 +18,106 @@ window.addEventListener('load', () => {
   }, 2000);
 })
 
+// const ugList = [
+//   "SDM Degree College, Ujire",
+//   "Sri Rama Degree College, Kaladka",
+//   "Vivekananda College Puttur",
+//   "Sri Venkataramana Swamy College, Bantwal",
+//   "Sri Dhavala College, Moodbidri",
+//   "Sacred Heart College, Madanthyar",
+//   "Govinda Dasa College, Surathkal",
+//   "Sri Mahaveera College, Kodangallu",
+//   "Alvas College, Moodabidri",
+//   "K S G Degree College, Sullia",
+//   "Philomena College, Puttur",
+//   "P A First Grade College, Kairangala",
+//   "Besant Women's College, Mangalore",
+//   "Canara College, Mangaluru",
+//   "Government First Grade College, Mangalore",
+//   "Shree Devi College, Mangalore",
+//   "St Agnes College, Mangalore",
+//   "St Aloysius College Autonomous, Mangaluru",
+//   "The Yenepoya Institute of Arts, Science, Commerce and Management"
+// ];
+
+
+
 const ugList = [
-  "SDM Degree College, Ujire",
-  "Sri Rama Degree College, Kaladka",
-  "Vivekananda College Puttur",
-  "Sri Venkataramana Swamy College, Bantwal",
-  "Sri Dhavala College, Moodbidri",
-  "Sacred Heart College, Madanthyar",
-  "Govinda Dasa College, Surathkal",
-  "Sri Mahaveera College, Kodangallu",
-  "Alvas College, Moodabidri",
-  "K S G Degree College, Sullia",
-  "Philomena College, Puttur",
-  "P A First Grade College, Kairangala",
-  "Besant Women's College, Mangalore",
-  "Canara College, Mangaluru",
-  "Government First Grade College, Mangalore",
-  "Shree Devi College, Mangalore",
-  "St Agnes College, Mangalore",
-  "St Aloysius College Autonomous, Mangaluru",
-  "The Yenepoya Institute of Arts, Science, Commerce and Management"
+  "Vivekananda Degree College Puttur",
+  "Sri Raama First grade college Kalladka",
+  "St Philomena College, Puttur",
+  "Sri Dharamastala Manjunatheshwara College Ujire(SDM)",
+  "Government First Grade College Bettampady",
+  "Sacred Heart College Madanthyar",
+  "Nehru Memorial College, Sullia(NMC)",
+  "Vidyarashmi Vidyalaya Savanoor",
+  "Government First Grade College, Sullia",
+  "Sri Dhavala College Moodbidre",
+  "Government first grade college uppinangady",
+  "SVS Bantwal",
+  "Government first grade college, carstreet, mangalore",
+  "Carmel Degree College , Modankap, Bantwal",
+  "Sharada Degree college thalapady JHC",
+  "Meridian College Mangalore",
+  "Govindas College Surathkal",
+  "Sri Mahaveera College Kodangallu",
+  "Alvas College Moodbidre",
+  "P A First grade College Kairangala",
+  "Besant Women's College mangalore",
+  "Canara College Mangaluru",
+  "Shreedevi College mangalore",
+  "St Agnes College Mangalore",
+  "St Aloysius College Mangalore",
+  "Yenopoya institute of Arts, Science, Commerce  and Management",
+  "St Anne's Degree College, Virajpet Kodagu",
+  "Field Marshal KM Cariappa College, Madikeri(FMC Madikeri)",
+  "Cauvery College Gonikoppal,Kodagu",
+  "Government first grade college madikeri",
+  "Government first grade college Virajpet",
+  "MGM Degree college Kushalnagara",
+  "Shri Ramakrishna College Mangalore",
+  "MAPs Mangalore",
+  "Milagres College",
+  "Padva College Mangalore",
+  "Bhuvanendra College Karkala",
+  "St Raymonds Vamajoor",
+  "Vijaya College Mulki",
+  "SCS Mangalore",
+  "Mangalore University College Mangalore",
+  "GFWGS Balmata",
+  "Srinivas College Pandeshwar",
+  "St Aloysious",
+  "Akshaya College Puttur"
 ];
 
 const pgList = [
   "AIMIT Mangalore",
-  "MITE Mangalore",
+  "MITE Moodbidre Mangalore",
   "SDIT Mangalore",
   "SJEC Mangalore",
-  "The Yenepoya Institute of Arts, Science, Commerce and Management",
+  "The Yenepoya Institute , bangalore",
   "AIGS Bangalore",
-  "Srinivas Institute of Technology (SIT)",
-  "Yenapoya Bangalore",
-  "East West College, Bangalore"
+  "Srinivas Institute of Technology",
+  "Nitte Institute of technology , Karkala",
+  "East West College , bangalore",
+  "The Yenepoya Institute , Mangalore",
+  "Mangalore University College",
+  "St Agnes Mangalore",
+  "Canara College"
 ];
+
+
+// const pgList = [
+//   "AIMIT Mangalore",
+//   "MITE Mangalore",
+//   "SDIT Mangalore",
+//   "SJEC Mangalore",
+//   "The Yenepoya Institute of Arts, Science, Commerce and Management",
+//   "AIGS Bangalore",
+//   "Srinivas Institute of Technology (SIT)",
+//   "Yenapoya Bangalore",
+//   "East West College, Bangalore"
+// ];
 
 const addCollegeNamestoDropdown = (collegeList = ugList) => {
 
@@ -97,7 +164,7 @@ const validateSignUp = (collegeName, email, password, isUg) => {
     openAlert("Please fill all the fields");
     return false;
   }
-  else if(password.length < 5){
+  else if (password.length < 5) {
     openAlert("Password must contain 5 characters!");
     return false;
   }
@@ -163,7 +230,7 @@ const validateLogin = (email, password) => {
     openAlert("Please fill all the fields");
     return false;
   }
-  if(password.length<5){
+  if (password.length < 5) {
     openAlert("Password must contain 5 characters!");
     return false;
   }

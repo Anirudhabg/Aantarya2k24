@@ -1170,18 +1170,21 @@ input {
     }
 
     .left-fixed-nav {
-        display: none;
+        
         flex-direction: column;
         position: absolute;
-        left: 0;
+        left: -100%;
         width: auto;
         height: auto;
         text-align: center;
         z-index: 2;
+        transition: left 0.3s ease;
     }
 
     .left-fixed-nav.show {
         display: flex;
+        left: 0;
+        transition: left 0.3s ease;
         box-shadow: 5px 5px 20px -4px rgba(235, 235, 235, 0.75);
         -webkit-box-shadow: 5px 5px 20px -4px rgba(0, 0, 0, 0.55);
         -moz-box-shadow: 5px 5px 20px -4px rgba(0, 0, 0, 0.55);

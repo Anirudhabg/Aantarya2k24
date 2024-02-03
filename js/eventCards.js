@@ -72,15 +72,31 @@ function showNextCard() {
   ugIdx = (ugIdx - 1 + ugList.length) % ugList.length;
   ugNIdx = (ugNIdx - 1 + ugListNorm.length) % ugListNorm.length;
 
-  ugCard.innerText = ugList[ugIdx];
-  ugNCard.innerText = ugListNorm[ugNIdx];
+  ugCard.style.opacity=0;
+  ugNCard.style.opacity=0;
+
+  setTimeout(() => {
+    ugCard.innerText = ugList[ugIdx];
+    ugNCard.innerText = ugListNorm[ugNIdx];
+    ugCard.style.opacity=1;
+    ugNCard.style.opacity=1;
+}, 200);
+
 }
 
 function showPreviousCard() {
   ugIdx = (ugIdx + 1) % ugList.length;
   ugNIdx = (ugNIdx + 1) % ugListNorm.length;
-  ugCard.innerText = ugList[ugIdx];
-  ugNCard.innerText = ugListNorm[ugNIdx];
+  
+  ugCard.style.opacity=0;
+  ugNCard.style.opacity=0;
+
+  setTimeout(() => {
+    ugCard.innerText = ugList[ugIdx];
+    ugNCard.innerText = ugListNorm[ugNIdx];
+    ugCard.style.opacity=1;
+    ugNCard.style.opacity=1;
+}, 200);
 }
 
 const ugRegisterButton = document.querySelector("#ug-card");
@@ -203,15 +219,33 @@ const ugPhone = [
 function showNextCard2() {
   pgIdx = (pgIdx - 1 + pgList.length) % pgList.length;
   pgNIdx = (pgNIdx - 1 + pgListNorm.length) % pgListNorm.length;
-  pgCard.innerText = pgList[pgIdx];
-  pgNCard.innerText = pgListNorm[pgNIdx];
+
+  pgCard.style.opacity=0;
+  pgNCard.style.opacity=0;
+
+  setTimeout(() => {
+    pgCard.innerText = pgList[pgIdx];
+    pgNCard.innerText = pgListNorm[pgNIdx];
+    pgCard.style.opacity=1;
+    pgNCard.style.opacity=1;
+}, 200);
+
+  
 }
 
 function showPreviousCard2() {
   pgIdx = (pgIdx + 1) % pgList.length;
   pgNIdx = (pgNIdx + 1) % pgListNorm.length;
-  pgCard.innerText = pgList[pgIdx];
-  pgNCard.innerText = pgListNorm[pgNIdx];
+
+  pgCard.style.opacity=0;
+  pgNCard.style.opacity=0;
+
+  setTimeout(() => {
+    pgCard.innerText = pgList[pgIdx];
+    pgNCard.innerText = pgListNorm[pgNIdx];
+    pgCard.style.opacity=1;
+    pgNCard.style.opacity=1;
+}, 200);
 }
 
 const pgRegisterButton = document.querySelector("#pg-card");

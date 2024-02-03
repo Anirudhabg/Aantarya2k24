@@ -569,6 +569,7 @@ button:hover .star-6 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .inside-card-normal-h3 {
@@ -579,6 +580,7 @@ button:hover .star-6 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .button-card-inside {

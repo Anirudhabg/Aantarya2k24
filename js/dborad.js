@@ -25,6 +25,7 @@ function validateNumericInput(inputElement) {
   inputElement.value = inputElement.value.replace(/\D/g, "");
 }
 
+
 document.addEventListener("click", function () {
   const activeElement = document.activeElement;
 
@@ -54,7 +55,7 @@ const checkTokenExist = () => {
   }
 };
 
-// checkTokenExist();
+checkTokenExist();
 
 const removeToken = () => {
   localStorage.removeItem("jwtToken");

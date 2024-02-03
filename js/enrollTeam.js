@@ -776,6 +776,7 @@ function checkValidation() {
     }
     if (danceMem5.value === "" || danceMem5.value === "N/A") {
       danceMem5err.classList.add("displayErr");
+      openAlert("Minimum 5 participants!")
       scrollToElement(danceMem5);
       return false;
     }

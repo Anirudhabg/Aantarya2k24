@@ -410,7 +410,7 @@ button:hover .star-6 {
     font-weight: bolder;
     color: black;
     display: none;
-    transition: transform 0.5s ease-in-out, border 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
 .card.active {
@@ -899,12 +899,12 @@ button:hover .star-6 {
 #linktologin {
     text-decoration: none;
     color: black;
-    transition: color 0.5s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
 
 #linktologin:hover {
     color: #fed201;
-    transition: color 0.5s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
 
 .rules-card {
@@ -1065,7 +1065,7 @@ button:hover .star-6 {
     backdrop-filter: blur(6px);
     border-radius: 17px;
     text-align: center;
-    transition: all 0.5s;
+    transition: all 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;

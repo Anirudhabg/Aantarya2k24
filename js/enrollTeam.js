@@ -474,6 +474,19 @@ const getEventData = () => {
 const saveBtn = document.querySelector("#enroll-save-btn");
 
 saveBtn.onclick = async () => {
+  enrollSave();
+};
+
+//Ctrl+S
+document.addEventListener('keydown', function(event) {
+  if (event.ctrlKey && event.key === 's') {
+    event.preventDefault();
+    enrollSave();
+  }
+});
+
+
+async function enrollSave(){
   if (checkValidation() == true) {
     loader.style.display = "block";
     const eventData = getEventData();
@@ -499,7 +512,7 @@ saveBtn.onclick = async () => {
     }
     loader.style.display = "none";
   }
-};
+}
 
 /* Nav active border */
 

@@ -475,14 +475,27 @@ button.addEventListener('click', () => {
 
 
 // Register Now text changing
-
 const regNowBtn = document.getElementById('register-now-button');
+const regNowa = document.getElementById('reg-now-a');
 
 const checkTokenExist = () => {
-  const token = localStorage.getItem("jwtToken");
-  if (token) {
-    regNowBtn.innerText="EDIT INFO";
-  }
+    const token = localStorage.getItem("jwtToken");
+    if (token) {
+        regNowBtn.innerText = "EDIT INFO";
+    }
 }
 
-checkTokenExist()
+const handleRegNowClick = () => {
+    const token = localStorage.getItem("jwtToken");
+    if (token) {
+        window.location.href = 'pages/dashboard.html';
+    } else {
+        window.location.href = 'pages/login.html';
+    }
+}
+
+regNowa.onclick = async () => {
+    handleRegNowClick();
+}
+
+checkTokenExist();

@@ -180,17 +180,19 @@ article {
     line-height: normal;
     letter-spacing: 12.32px;
     padding: 1.7vh;
-    transition: background-image 0.3s ease-in-out;
     opacity: 0.9;
+    transition: opacity 0.3s ease-in-out;
 }
 
+
 .nav-text:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
     background-image: url('./assets/images/streak-paint.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    opacity: 1;
-    transition: background-image 0.3s ease-in-out;
+    
 }
 
 .nav-text:hover a {

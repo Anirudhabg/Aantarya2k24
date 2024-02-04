@@ -477,7 +477,7 @@ window.addEventListener("scroll", () => {
 
 //FOR REGISTRATION POPUP
 document.addEventListener("DOMContentLoaded", function () {
-  const delay = 12000;
+  const delay = 120;
 
   setTimeout(function () {
     showPopup();
@@ -487,6 +487,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function showPopup() {
   document.getElementById("popup-container").style.display = "block";
   document.getElementById("popup-bg-div").style.display = "block";
+
 }
 
 function closePopup() {

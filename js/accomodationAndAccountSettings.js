@@ -14,6 +14,9 @@ function toggleAccNumsDiv() {
     accNumsDiv.classList.add("show");
   } else {
     accNumsDiv.classList.remove("show");
+    num_boys.value = 0;
+    num_girls.value = 0;
+    updateAccomodation(0, 0)
   }
 }
 
@@ -36,15 +39,16 @@ function uploadAccommo() {
       num_boys.value < 0 ||
       num_boys.value > 15 ||
       num_girls.value < 0 ||
-      num_girls.value > 15
+      num_girls.value > 15 ||
+      totalCount <= 0
     ) {
       openAlert("Please specify proper counts!");
-    } else {
+    } 
+    else {
       updateAccomodation(num_boys.value, num_girls.value);
     }
   } else {
-    // The checkbox is not checked
-    openAlert("Accommodation is not needed!");
+    openAlert("Accommodation is not required!");
   }
 }
 
@@ -53,10 +57,12 @@ const getAccommodationData = async () => {
     const res = await fetch(`${API_URL}/team/${teamId}`);
     const data = await res.json();
     if (data.accommodation) {
-      chkAccomodation.checked = true;
-      toggleAccNumsDiv();
-      num_boys.value = data.accommodation.countOfBoys;
-      num_girls.value = data.accommodation.countOfGirls;
+      if(data.accommodation.countOfBoys > 0 || data.accommodation.countOfGirls > 0){
+        chkAccomodation.checked = true;
+        toggleAccNumsDiv();
+        num_boys.value = data.accommodation.countOfBoys;
+        num_girls.value = data.accommodation.countOfGirls;
+      }
     }
   } catch (err) {
     console.error(err);

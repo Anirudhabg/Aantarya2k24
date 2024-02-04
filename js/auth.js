@@ -312,6 +312,25 @@ checkTokenExist()
 
 
 
+// show or hide password
+function togglePasswordVisibility(inputField, icon) {
+  const passwordInput = document.getElementById(inputField);
+  const toggleIcon = document.getElementById(icon);
+
+  console.log(passwordInput);
+  console.log(toggleIcon);
+
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    toggleIcon.classList.remove("fa-eye");
+    toggleIcon.classList.add("fa-eye-slash");
+  } else {
+    passwordInput.type = "password";
+    toggleIcon.classList.remove("fa-eye-slash");
+    toggleIcon.classList.add("fa-eye");
+  }
+}
+
 
 
 /* ALERT */

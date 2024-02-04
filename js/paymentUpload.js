@@ -46,7 +46,7 @@ uploadImageBtn.onclick = () => {
             const imgUrl = imagekit.url({
               src: result.url
             });
-            console.log(imgUrl);
+            // console.log(imgUrl);
             if (err) {
               openAlert("Error uploading image. Please try again.");
               console.error("Error uploading image:", err);
@@ -54,7 +54,7 @@ uploadImageBtn.onclick = () => {
               if(sendPaymentMail1()){
                 updateScreenshot(imgUrl, transactionId);
                 openAlert("Payment screenshot uploaded successfully");
-                console.log("Image uploaded successfully:", result);
+                // console.log("Image uploaded successfully:", result);
               }
             }
             paymentLoader.style.display = "none";

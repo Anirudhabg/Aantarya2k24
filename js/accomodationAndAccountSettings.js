@@ -91,7 +91,7 @@ const updateAccomodation = async (countOfBoys, countOfGirls) => {
       body: JSON.stringify(accommodationData),
     });
     const data = await res.json();
-    console.log(data.accommodation);
+    // console.log(data.accommodation);
   } catch (err) {
     console.error(err);
   }

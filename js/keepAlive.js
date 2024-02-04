@@ -9,7 +9,7 @@ const makeServerActive = async () => {
     }
   
     if (res.status == 500) {
-      console.log(data.message);
+      console.error(data.message);
       console.log("internal server error");
       return;
     }

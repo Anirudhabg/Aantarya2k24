@@ -217,7 +217,7 @@ const postDataSignUp = async (collegeName, email, password, isUg) => {
       return;
     }
 
-    console.log(data);
+    // console.log(data);
     return true;
   } catch (err) {
     console.error(err);
@@ -290,7 +290,7 @@ const postDataLogin = async (email, password) => {
       return false;
     }
 
-    console.log(data);
+    // console.log(data);
     storeToken(data.data.token);
     storeTeamId(data.teamId);
     return true;

@@ -133,7 +133,7 @@ settingBtn.onclick = () => {
 contactBtn.onclick = () => {
   //showSection(contactSec);
   window.location.href = '/index.html#events-section-id';
-  console.log("contact us buttonn");
+  // console.log("contact us button");
   hideHambergerMenu();
 };
 
@@ -177,7 +177,7 @@ const getTeamName = async () => {
     // console.log(data.teamName);
     assignedTeamName.innerText = data.teamName;
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
 getTeamName()

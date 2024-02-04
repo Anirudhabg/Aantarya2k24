@@ -329,6 +329,7 @@ function togglePasswordVisibility(inputField, icon) {
     toggleIcon.classList.remove("fa-eye-slash");
     toggleIcon.classList.add("fa-eye");
   }
+  inputField.focus();
 }
 
 

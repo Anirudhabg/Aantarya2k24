@@ -476,23 +476,24 @@ window.addEventListener("scroll", () => {
 
 
 //FOR REGISTRATION POPUP
-document.addEventListener("DOMContentLoaded", function () {
-  const delay = 120;
-
-  setTimeout(function () {
-    showPopup();
-  }, delay);
-});
+const overlayPopUp = document.querySelector('.overlay-popup')
+const popupContainer = document.querySelector(".popup-container-main")
 
 function showPopup() {
-  document.getElementById("popup-container").style.display = "block";
-  document.getElementById("popup-bg-div").style.display = "block";
+  const delay = 12000;
 
+  setTimeout(() => {
+    popupContainer.classList.remove('hide')
+    overlayPopUp.classList.remove('hide')
+
+  }, delay);
 }
+closePopup()
+showPopup()
 
 function closePopup() {
-  document.getElementById("popup-container").style.display = "none";
-  document.getElementById("popup-bg-div").style.display = "none";
+  popupContainer.classList.add('hide')
+  overlayPopUp.classList.add('hide')
 }
 
 

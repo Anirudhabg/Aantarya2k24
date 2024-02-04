@@ -313,13 +313,18 @@ checkTokenExist()
 
 
 // show or hide password
-function togglePasswordVisibility(inputField, icon) {
+function togglePasswordVisibility(event, inputField, icon) {
   const passwordInput = document.getElementById(inputField);
   const toggleIcon = document.getElementById(icon);
 
   console.log(passwordInput);
   console.log(toggleIcon);
 
+  event.preventDefault();
+  
+  console.log(passwordInput);
+  console.log(toggleIcon);
+  
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
     toggleIcon.classList.remove("fa-eye");
@@ -329,7 +334,7 @@ function togglePasswordVisibility(inputField, icon) {
     toggleIcon.classList.remove("fa-eye-slash");
     toggleIcon.classList.add("fa-eye");
   }
-  inputField.focus();
+  passwordInput.focus();
 }
 
 

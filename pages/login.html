@@ -95,7 +95,7 @@
                     <input type="email" name="email" placeholder="Email" />
                     <div class="password-container">
                         <input type="password" name="password" placeholder="Password" maxlength="20" id="signUpPassword"/>
-                        <span class="password-toggle" onclick="togglePasswordVisibility('signUpPassword', 'toggleIcon1')">
+                        <span class="password-toggle" onclick="togglePasswordVisibility(event, 'signUpPassword', 'toggleIcon1')">
                           <i id="toggleIcon1" class="fas fa-eye fa-fw"></i>
                         </span>
                     </div>
@@ -103,7 +103,7 @@
                     <button id="submitBtn">Sign Up</button>
                 </form>
             </div>
-
+            
             <div class="form-container sign-in-container">
                 <form name="loginForm" method="post" onsubmit="return false">
                     <h1>Sign in</h1>
@@ -111,7 +111,7 @@
                     <input type="email" name="email" placeholder="Email" />
                     <div class="password-container">
                         <input type="password" name="password" placeholder="Password" maxlength="20" id="loginPassword"/>
-                        <span class="password-toggle" onclick="togglePasswordVisibility('loginPassword', 'toggleIcon2')">
+                        <span class="password-toggle" onclick="togglePasswordVisibility(event, 'loginPassword', 'toggleIcon2')">
                           <i id="toggleIcon2" class="fas fa-eye fa-fw" ></i>
                         </span>
                     </div>

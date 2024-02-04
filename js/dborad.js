@@ -8,6 +8,7 @@ const teamId = localStorage.getItem("teamId");
 const burgerMenu = document.querySelector(".burger-click");
 const navLinks = document.querySelector(".left-fixed-nav");
 const burgerCheck=document.getElementById("check");
+const overlay = document.querySelector('.overlay');
 // const marquee = document.getElementById("marqueeElement");
 
 //to clear and replace the backstack state
@@ -19,6 +20,7 @@ burgerMenu.checked = true;
 
 burgerMenu.onclick = () => {
   navLinks.classList.toggle("show");
+  overlay.classList.toggle("hide")
 };
 
 function validateNumericInput(inputElement) {
@@ -104,11 +106,13 @@ const showSection = (section) => {
 const hideHambergerMenu = () => {
   navLinks.classList.toggle("show");
   burgerMenu.checked = false;
+  overlay.classList.toggle("hide")
 };
 
 enrollBtn.onclick = () => {
   showSection(enrollSec);
   hideHambergerMenu();
+  
 };
 
 paymentBtn.onclick = () => {

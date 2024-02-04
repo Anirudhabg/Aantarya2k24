@@ -187,12 +187,10 @@ article {
 
 .nav-text:hover {
     opacity: 1;
-    transition: opacity 0.3s ease-in-out;
     background-image: url('./assets/images/streak-paint.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
 }
 
 .nav-text:hover a {
@@ -1272,9 +1270,9 @@ button:hover .star-6 {
     box-sizing: border-box;
 }
 
-.map-div:active {
+/* .map-div:active {
     transform: scale(1.0) rotateZ(1.7deg);
-}
+} */
 
 .map-id-iframe {
     border-radius: 17px;

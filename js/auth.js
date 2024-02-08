@@ -103,7 +103,8 @@ const pgList = [
   "YENEPOYA (DEEMED TO BE UNIVERSITY), Mangalore",
   "Mangalore University",
   "St. Agnes College (Autonomous), Mangaluru",
-  "Kristu Jayanti College, Autonomous, Bangalore"
+  "Kristu Jayanti College, Autonomous, Bangalore",
+  "PES University, Bangalore"
 ];
 
 
@@ -217,7 +218,7 @@ const postDataSignUp = async (collegeName, email, password, isUg) => {
       return;
     }
 
-    // console.log(data);
+    // console.log(res.status);
     return true;
   } catch (err) {
     console.error(err);

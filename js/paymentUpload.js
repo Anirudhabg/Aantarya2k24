@@ -157,3 +157,26 @@ document.getElementById('upiId').addEventListener('click', function () {
   openAlert("Copied to clipboard!");
 });
 
+//to display custom amounts for UG and PG
+async function displayPaymentAmount() {
+  const pay_amt = document.getElementById("pay_amt");
+  const qr_code_image = document.getElementById("qr_code_img");
+
+  
+  try {
+    const data = await fetchData();
+    const isUG = data.isUG;
+    if (isUG) {
+      pay_amt.innerText = "Rs.750";
+      qr_code_image.src = "/assets/images/qr-code-ug.png"; 
+    } else {
+      pay_amt.innerText = "Rs.1500";
+      qr_code_image.src = "/assets/images/princi-qr-code.png"; 
+    }
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
+displayPaymentAmount();
+
+

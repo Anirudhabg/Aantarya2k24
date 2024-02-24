@@ -88,7 +88,8 @@ const ugList = [
   "Government First Grade College, Madikeri",
   "Government First Grade College for Women, Mangalore",
   "Yenepoya(Deemed-to-be-University), Bangalore",
-  "Kristu Jayanti College, Autonomous, Bangalore"
+  "Kristu Jayanti College, Autonomous, Bangalore",
+  "SDM College of Business Management, Mangalore"
 ];
 
 const pgList = [
@@ -107,8 +108,7 @@ const pgList = [
   "Kristu Jayanti College, Autonomous, Bangalore",
   "PES University, Bangalore",
   "BMS Institute of Technology and Management, Bangalore",
-  "Nirmala College of Information Technology",
-  "SDM College of Business Management, Mangalore"
+  "Nirmala College of Information Technology"
 ];
 
 

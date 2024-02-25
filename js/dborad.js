@@ -138,7 +138,7 @@ contactBtn.onclick = () => {
 };
 
 
-const countDownDate = new Date("February 24, 2024 23:59:00").getTime();
+const countDownDate = new Date("February 26, 2024 23:59:00").getTime();
 
 function calculateTimeDifference() {
   const now = new Date().getTime();

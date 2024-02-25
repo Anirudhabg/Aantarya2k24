@@ -108,7 +108,8 @@ const pgList = [
   "Kristu Jayanti College, Autonomous, Bangalore",
   "PES University, Bangalore",
   "BMS Institute of Technology and Management, Bangalore",
-  "Nirmala College of Information Technology"
+  "Nirmala College of Information Technology",
+  "Sri Dharmasthala Manjunatheshwara College, Ujire"
 ];
 
 
